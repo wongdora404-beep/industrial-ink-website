@@ -31,3 +31,35 @@ input,textarea,select{padding:10px;border:1px solid #e6e9ee;border-radius:6px}
   .hero{flex-direction:column}
   .form-row{grid-template-columns:1fr}
 }
+.hero {
+  height: 90vh;
+  background-image: url("images/koyinta-hero-banner.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+  color: #ffffff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
