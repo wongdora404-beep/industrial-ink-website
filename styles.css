@@ -1,149 +1,160 @@
 
-/* ===== Reset ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #111;
+  color: #222;
   line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ===== Layout ===== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-gray {
+  background: #f5f7f9;
+}
+
+.center-text {
+  text-align: center;
 }
 
 /* ===== Header ===== */
 .site-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.6);
-  z-index: 1000;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
 }
 
-.nav-container {
-  max-width: 1200px;
-  margin: auto;
+.header-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 24px;
+  padding: 20px 0;
 }
 
 .logo {
-  color: #fff;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   letter-spacing: 2px;
 }
 
 nav a {
-  color: #fff;
   margin-left: 24px;
-  text-decoration: none;
-  font-size: 14px;
-  opacity: 0.9;
+  color: #333;
+  font-weight: 500;
 }
 
-nav a:hover {
-  opacity: 1;
+.nav-btn {
+  padding: 8px 18px;
+  border: 1px solid #00a3e0;
+  border-radius: 4px;
+  color: #00a3e0;
 }
 
-/* ===== Hero Section ===== */
+/* ===== Hero ===== */
 .hero {
-  position: relative;
-  height: 100vh;
-  background-image: url("images/koyinta-hero-banner.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
+  height: 90vh;
+  background: url("images/koyinta-hero-banner.png") center center / cover no-repeat;
   display: flex;
   align-items: center;
-  padding-left: 8%;
-  color: #fff;
-}
-
-/* Overlay */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
+  color: #ffffff;
 }
 
 .hero-content {
-  position: relative;
-  max-width: 640px;
-  z-index: 1;
+  width: 90%;
+  max-width: 800px;
+  margin-left: 10%;
 }
 
 .hero h1 {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 18px;
+  font-size: 42px;
+  margin-bottom: 20px;
 }
 
 .hero p {
   font-size: 18px;
-  margin-bottom: 32px;
-  opacity: 0.95;
+  max-width: 650px;
 }
 
 .hero-btn {
   display: inline-block;
+  margin-top: 30px;
   padding: 14px 34px;
-  background: #ffffff;
-  color: #000000;
-  text-decoration: none;
+  background: #00a3e0;
+  color: #ffffff;
   font-weight: 600;
   border-radius: 4px;
-  transition: all 0.2s ease;
 }
 
-.hero-btn:hover {
-  background: #eaeaea;
+/* ===== Cards ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
 }
 
-/* ===== Intro Section ===== */
-.intro {
-  max-width: 900px;
-  margin: 120px auto;
-  padding: 0 24px;
+.card {
+  padding: 30px;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+}
+
+.card h3 {
+  margin-bottom: 12px;
+}
+
+/* ===== Why List ===== */
+.why-list {
+  margin-top: 30px;
+  list-style: none;
+}
+
+.why-list li {
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.why-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #00a3e0;
+}
+
+/* ===== CTA ===== */
+.cta {
+  background: #0b1f33;
+  color: #ffffff;
   text-align: center;
+  padding: 80px 20px;
 }
 
-.intro h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+/* ===== Footer ===== */
+.site-footer {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 14px;
+  background: #111;
+  color: #aaa;
 }
 
-.intro p {
-  font-size: 16px;
-  color: #444;
-}
-
-/* ===== Mobile ===== */
-@media (max-width: 768px) {
-
-  .hero {
-    padding-left: 6%;
-    height: 80vh;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  nav {
-    display: none;
-  }
-}
 
 
 
