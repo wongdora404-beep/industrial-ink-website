@@ -347,19 +347,32 @@ section {
   padding: 60px 20px;
   text-align: center; /* 保证居中 */
 }
+/* About 页 CTA 按钮 */
 .cta .hero-btn {
   display: inline-block;
-  margin-top: 20px;
+  padding: 12px 28px;
+  background-color: #007BFF;  /* 蓝色背景 */
+  color: #ffffff;             /* 白色文字 */
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
-.hero-btn .btn-icon {
+
+.cta .hero-btn:hover {
+  background-color: #0056b3; /* 悬停深蓝 */
+}
+
+.cta .hero-btn .btn-icon {
   margin-left: 8px;
-  font-weight: bold;
   transition: margin-left 0.3s;
 }
 
-.hero-btn:hover .btn-icon {
-  margin-left: 12px; /* 鼠标悬停箭头向右移动 */
+.cta .hero-btn:hover .btn-icon {
+  margin-left: 12px;
 }
+
 
 /* Header 容器布局 */
 .site-header .header-flex {
