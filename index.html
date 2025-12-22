@@ -2,77 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>KOYINTA - Industrial Inkjet Solutions</title>
+  <title>KOYINTA | Industrial Inkjet Solutions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* ===== Reset ===== */
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
-    body { line-height: 1.6; color: #333; }
-    a { color: #007BFF; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
-
-    /* ===== Header ===== */
-    .site-header { background-color: #fff; padding: 15px 0; border-bottom: 1px solid #ddd; }
-    .header-flex { display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-weight: bold; font-size: 24px; }
-    nav a { margin-left: 20px; font-size: 16px; padding: 8px 12px; border-radius: 4px; transition: background 0.3s; }
-    nav a:hover, nav a.nav-btn { background-color: #007BFF; color: #fff; }
-
-    /* ===== Hero ===== */
-    .hero { background-color: #f5f5f5; padding: 80px 0; text-align: center; }
-    .hero h1 { font-size: 40px; margin-bottom: 15px; }
-    .hero p { font-size: 18px; margin-bottom: 25px; }
-    .hero a.btn { padding: 12px 25px; background-color: #007BFF; color: #fff; border-radius: 5px; font-size: 16px; display: inline-block; text-decoration: none; }
-    .hero a.btn:hover { background-color: #0056b3; }
-
-    /* ===== Products ===== */
-    .products { padding: 60px 0; background-color: #fff; }
-    .products h2 { text-align: center; font-size: 28px; margin-bottom: 40px; }
-    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-    .product-card { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; text-align: center; transition: box-shadow 0.3s; background-color: #fff; }
-    .product-card:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-    .product-card img { width: 100%; height: 180px; object-fit: cover; }
-    .product-card h3 { font-size: 20px; margin: 15px 0 10px; }
-    .product-card p { font-size: 14px; padding: 0 15px 15px; line-height: 1.4; }
-    .product-card a { display: inline-block; margin-bottom: 15px; color: #007BFF; font-weight: bold; }
-
-    /* ===== Advantages / Applications ===== */
-    .advantages { padding: 60px 0; background-color: #f9f9f9; }
-    .advantages h2 { text-align: center; font-size: 28px; margin-bottom: 40px; }
-    .adv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; }
-    .adv-card img { width: 60px; height: 60px; margin-bottom: 15px; }
-    .adv-card h3 { font-size: 18px; margin-bottom: 10px; }
-    .adv-card p { font-size: 14px; line-height: 1.4; }
-
-    /* ===== CTA ===== */
-    .cta { padding: 60px 0; text-align: center; background-color: #007BFF; color: #fff; }
-    .cta a.btn { background-color: #fff; color: #007BFF; font-weight: bold; }
-    .cta a.btn:hover { background-color: #e6e6e6; color: #007BFF; }
-
-    /* ===== Footer ===== */
-    .site-footer { background-color: #f2f2f2; padding: 20px 0; text-align: center; font-size: 14px; }
-    .site-footer p { margin-bottom: 5px; }
-    .site-footer a { color: #007BFF; margin: 0 5px; text-decoration: none; }
-    .site-footer a:hover { text-decoration: underline; }
-
-    /* ===== Responsive ===== */
-    @media(max-width:900px){
-      .hero h1 { font-size: 30px; }
-      .hero p { font-size: 16px; }
-      .products h2, .advantages h2 { font-size: 24px; }
-      .product-card h3 { font-size: 18px; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<!-- Header -->
+<!-- ================= Header ================= -->
 <header class="site-header">
   <div class="container header-flex">
     <div class="logo">KOYINTA</div>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="products.html">Products</a>
       <a href="about.html">About</a>
       <a href="contact.html" class="nav-btn">Contact</a>
@@ -80,75 +22,83 @@
   </div>
 </header>
 
-<!-- Hero -->
+<main>
+
+<!-- ================= Hero ================= -->
 <section class="hero">
   <div class="container">
     <h1>Reliable Inkjet Solutions for Industrial Printing</h1>
-    <p>Professional inkjet inks, consumables, and components for your printing needs.</p>
-    <a href="contact.html" class="btn">Contact Us</a>
+    <p>
+      High-performance inks, consumables and components engineered for stability,
+      consistency and long-term production.
+    </p>
+    <div class="hero-actions">
+      <a href="contact.html">Contact Us</a>
+    </div>
   </div>
 </section>
 
-<!-- Products -->
-<section class="products">
+<!-- ================= What We Offer ================= -->
+<section>
   <div class="container">
-    <h2>Our Products</h2>
+    <div class="section-title">
+      <h2>What We Offer</h2>
+      <p>Professional inkjet solutions for industrial applications</p>
+    </div>
+
+    <div class="offer-grid">
+      <div class="offer-card">
+        <h3>Inkjet Inks</h3>
+        <p>Industrial-grade inks with stable performance and excellent compatibility.</p>
+      </div>
+      <div class="offer-card">
+        <h3>Consumables</h3>
+        <p>Reliable inkjet consumables designed for continuous production.</p>
+      </div>
+      <div class="offer-card">
+        <h3>Inkjet Components</h3>
+        <p>Key components supporting precision and durability in inkjet systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Featured Products ================= -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>Featured Products</h2>
+      <p>Proven solutions trusted by industrial printing partners</p>
+    </div>
+
     <div class="product-grid">
       <div class="product-card">
-        <img src="images/inks.jpg" alt="Inkjet Inks">
-        <h3>Inkjet Inks</h3>
-        <p>High-quality inks for industrial inkjet printing applications.</p>
-        <a href="products.html#inks">View Details</a>
+        <img src="images/wb220.jpg" alt="WB-220 Inkjet Ink">
+        <h3>WB-220</h3>
+        <p>Water-based inkjet ink for industrial printing applications.</p>
+        <a href="product-wb-220.html">View Details →</a>
       </div>
+
       <div class="product-card">
-        <img src="images/consumables.jpg" alt="Consumables">
-        <h3>Consumables</h3>
-        <p>Reliable consumables to ensure smooth printing operations.</p>
-        <a href="products.html#consumables">View Details</a>
+        <img src="images/consumable-placeholder.jpg" alt="Inkjet Consumables">
+        <h3>Inkjet Consumables</h3>
+        <p>Reliable consumables designed for stable inkjet performance.</p>
+        <a href="products.html">View Category →</a>
       </div>
+
       <div class="product-card">
-        <img src="images/components.jpg" alt="Inkjet Components">
-        <h3>Components</h3>
-        <p>Essential components to support industrial inkjet systems.</p>
-        <a href="products.html#components">View Details</a>
+        <img src="images/equipment-placeholder.jpg" alt="Inkjet Components">
+        <h3>Inkjet Components</h3>
+        <p>Key components supporting industrial inkjet systems.</p>
+        <a href="products.html">View Category →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Advantages / Applications -->
-<section class="advantages">
-  <div class="container">
-    <h2>Why Choose Koyinta</h2>
-    <div class="adv-grid">
-      <div class="adv-card">
-        <img src="images/icon1.png" alt="Quality">
-        <h3>High Quality</h3>
-        <p>Premium inks and consumables for consistent performance.</p>
-      </div>
-      <div class="adv-card">
-        <img src="images/icon2.png" alt="Support">
-        <h3>Technical Support</h3>
-        <p>Professional assistance for all industrial inkjet applications.</p>
-      </div>
-      <div class="adv-card">
-        <img src="images/icon3.png" alt="Efficiency">
-        <h3>Efficient Solutions</h3>
-        <p>Optimized products to save time and costs in printing.</p>
-      </div>
-    </div>
-  </div>
-</section>
+</main>
 
-<!-- CTA -->
-<section class="cta">
-  <div class="container">
-    <h2>Looking for a Reliable Inkjet Partner?</h2>
-    <a href="contact.html" class="btn">Get in Touch</a>
-  </div>
-</section>
-
-<!-- Footer -->
+<!-- ================= Footer ================= -->
 <footer class="site-footer">
   <div class="container">
     <p>© 2026 KOYINTA. All rights reserved.</p>
