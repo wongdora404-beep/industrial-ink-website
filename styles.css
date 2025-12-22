@@ -340,6 +340,14 @@ nav a {
 .product-link:hover {
   text-decoration: underline;
 }
+.product-card {
+  transition: all 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.15);
+}
 
 
 
