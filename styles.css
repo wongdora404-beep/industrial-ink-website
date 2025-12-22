@@ -252,6 +252,47 @@ nav a {
     grid-template-columns: 1fr;
   }
 }
+/* ===== Product Hero ===== */
+.product-hero {
+  padding: 100px 0;
+  background: #0b1f33;
+  color: #ffffff;
+}
+
+.product-hero-flex {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-sub {
+  font-size: 18px;
+  margin: 20px 0 30px;
+  max-width: 500px;
+}
+
+.product-image img {
+  max-width: 360px;
+  width: 100%;
+}
+
+/* ===== Lists ===== */
+.benefit-list,
+.support-list,
+.simple-list {
+  margin-top: 24px;
+  padding-left: 20px;
+}
+
+.benefit-list li,
+.support-list li,
+.simple-list li {
+  margin-bottom: 12px;
+}
 
 
 
