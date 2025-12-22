@@ -185,6 +185,29 @@ nav a {
 .product-text ul li {
   margin-bottom: 10px;
 }
+/* ===== About Page ===== */
+.narrow {
+  max-width: 800px;
+}
+
+.focus-list {
+  margin-top: 30px;
+  list-style: none;
+}
+
+.focus-list li {
+  margin-bottom: 14px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.focus-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #00a3e0;
+  font-size: 18px;
+}
 
 
 
