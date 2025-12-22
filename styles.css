@@ -302,6 +302,10 @@ section {
   font-size: 14px;
 }
 
+.site-footer p {
+  margin-bottom: 5px;
+}
+
 .site-footer a {
   color: #007BFF;
   text-decoration: none;
@@ -311,6 +315,7 @@ section {
 .site-footer a:hover {
   text-decoration: underline;
 }
+
 
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
