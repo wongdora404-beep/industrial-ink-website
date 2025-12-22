@@ -392,6 +392,37 @@ section {
   color: #fff;
   font-weight: 500;
 }
+/* Header 布局 */
+.site-header .header-flex {
+  display: flex;
+  justify-content: space-between; /* 左 logo 右导航 */
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 24px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.site-header nav a.active {
+  color: #0057ff;
+  font-weight: 600;
+}
+
+/* CTA 按钮箭头 */
+.hero-btn .btn-icon {
+  margin-left: 8px;
+  transition: margin-left 0.3s;
+}
+
+.hero-btn:hover .btn-icon {
+  margin-left: 12px;
+}
+
+/* 小屏幕自适应 */
 @media screen and (max-width: 768px) {
   .site-header .header-flex {
     flex-direction: column;
@@ -405,4 +436,3 @@ section {
     gap: 10px;
   }
 }
-
