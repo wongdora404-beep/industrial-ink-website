@@ -47,9 +47,9 @@ section {
 
 .header-flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* 左 logo，右导航 */
   align-items: center;
-  padding: 20px 0;
+  gap: 20px;
 }
 
 .logo {
@@ -341,4 +341,13 @@ section {
   .site-header .logo img {
     height: 40px; /* 小屏幕缩小 */
   }
+}
+.cta {
+  background: #f2f2f2;
+  padding: 60px 20px;
+  text-align: center; /* 保证居中 */
+}
+.cta .hero-btn {
+  display: inline-block;
+  margin-top: 20px;
 }
