@@ -329,3 +329,16 @@ section {
     font-size: 20px;
   }
 }
+/* Desktop */
+.site-header .logo img {
+  height: 50px; /* Header 高度的一半左右，保证垂直居中 */
+  width: auto;  /* 保持比例 */
+  display: block;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .site-header .logo img {
+    height: 40px; /* 小屏幕缩小 */
+  }
+}
