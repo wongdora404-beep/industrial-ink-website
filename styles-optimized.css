@@ -1,0 +1,236 @@
+/* ================= Global ================= */
+:root {
+  --brand-c: #00aaff;
+  --brand-m: #ff0099;
+  --brand-y: #ffcc00;
+  --brand-k: #000000;
+
+  --font-sans: 'Arial', sans-serif;
+  --font-heading: 'Helvetica Neue', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* ================= Container ================= */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ================= Header ================= */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.site-header .logo {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: var(--brand-k);
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+nav a.active,
+nav a.btn-primary {
+  color: #fff;
+  background-color: var(--brand-c);
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--brand-m);
+  color: #fff;
+}
+
+/* 汉堡菜单按钮 */
+.menu-btn {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= Hero ================= */
+.hero {
+  text-align: center;
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-actions a.btn-primary {
+  background-color: var(--brand-c);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero-actions a.btn-primary:hover {
+  background-color: var(--brand-m);
+}
+
+/* ================= Sections ================= */
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* ================= Offer Grid ================= */
+.offer-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.offer-card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 20px;
+  flex: 1 1 250px;
+  text-align: center;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.offer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ================= Product Grid ================= */
+.product-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-card {
+  border: 1px solid #eee;
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: center;
+  flex: 1 1 300px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-card h3 {
+  margin: 15px 0 10px 0;
+  font-size: 1.2rem;
+}
+
+.product-card p {
+  padding: 0 10px;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.product-card a.btn-primary {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+/* ================= Footer ================= */
+.site-footer {
+  text-align: center;
+  padding: 30px 0;
+  background: #f5f5f5;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: var(--brand-c);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--brand-m);
+}
+
+/* ================= Responsive ================= */
+@media screen and (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  nav ul.open {
+    display: block;
+  }
+
+  .offer-grid, .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
