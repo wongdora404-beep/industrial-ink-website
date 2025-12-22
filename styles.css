@@ -154,6 +154,37 @@ nav a {
   background: #111;
   color: #aaa;
 }
+/* ===== Page Hero ===== */
+.page-hero {
+  padding: 80px 0;
+  background: #0b1f33;
+  color: #ffffff;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.page-hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* ===== Product Blocks ===== */
+.product-block {
+  max-width: 900px;
+}
+
+.product-text ul {
+  margin: 20px 0 30px;
+  padding-left: 20px;
+}
+
+.product-text ul li {
+  margin-bottom: 10px;
+}
 
 
 
