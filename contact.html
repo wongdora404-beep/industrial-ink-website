@@ -41,57 +41,55 @@
         <h2>Work with Koyinta</h2>
         <p>
           We support industrial inkjet applications with professional inks,
-          consumables and technical communication.
+          consumables, and technical communication.
         </p>
         <p>
           To help us respond efficiently, please include information about
-          your printing system, application and expected requirements.
+          your printing system, application, and expected requirements.
         </p>
 
         <div class="contact-details">
-          <p><strong>Email:</strong> sales@koyinta.com</p>
+          <p><strong>Email:</strong> <a href="mailto:sales@koyinta.com">sales@koyinta.com</a></p>
           <p><strong>Location:</strong> Hefei, China</p>
         </div>
       </div>
-<h2 style="margin-bottom: 20px;">
-  Send Us Your Inquiry
-</h2>
 
       <!-- ===== Right: Form ===== -->
       <div class="contact-form">
+        <h2>Send Us Your Inquiry</h2>
         <form action="https://formspree.io/f/mwvenvvn" method="POST">
-   <!-- 提交成功后跳转 -->
-  <input type="hidden" name="_redirect" value="https://www.koyinta.com/thank-you.html">
+          <!-- 提交成功后跳转 -->
+          <input type="hidden" name="_redirect" value="https://www.koyinta.com/thank-you.html">
 
-  <!-- 防垃圾询盘 -->
-  <input type="text" name="_gotcha" style="display:none">
+          <!-- 防垃圾询盘 -->
+          <input type="text" name="_gotcha" style="display:none">
 
-  <!-- 邮件标题 -->
-  <input type="hidden" name="_subject" value="New Inquiry from Koyinta Website">
+          <!-- 邮件标题 -->
+          <input type="hidden" name="_subject" value="New Inquiry from Koyinta Website">
 
-          <label>Company Name *</label>
-          <input type="text" name="company" required>
+          <label for="company">Company Name *</label>
+          <input type="text" id="company" name="company" required>
 
-          <label>Contact Person *</label>
-          <input type="text" name="name" required>
+          <label for="name">Contact Person *</label>
+          <input type="text" id="name" name="name" required>
 
-          <label>Email *</label>
-          <input type="email" name="email" required>
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required>
 
-          <label>Country / Region</label>
-          <input type="text" name="country">
+          <label for="country">Country / Region</label>
+          <input type="text" id="country" name="country">
 
-          <label>Product Interest *</label>
-          <select name="interest" required>
+          <label for="interest">Product Interest *</label>
+          <select id="interest" name="interest" required>
             <option value="">Select</option>
             <option>Inkjet Inks</option>
             <option>Consumables</option>
             <option>Inkjet Components</option>
           </select>
 
-          <label>Application / System Details</label>
-          <textarea name="message" rows="5" required
-placeholder="Please describe your inkjet system, application and requirements."></textarea>
+          <label for="message">Application / System Details</label>
+          <textarea id="message" name="message" rows="5" required
+            placeholder="Please describe your inkjet system, application and requirements."></textarea>
 
           <button type="submit" class="hero-btn">Send Inquiry</button>
         </form>
@@ -104,9 +102,14 @@ placeholder="Please describe your inkjet system, application and requirements.">
 
 <!-- ================= Footer ================= -->
 <footer class="site-footer">
-  <p>© 2026 KOYINTA. All rights reserved.</p>
+  <div class="container footer-content">
+    <p>© 2026 KOYINTA. All rights reserved.</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms of Service</a>
+    </p>
+  </div>
 </footer>
 
 </body>
 </html>
-
