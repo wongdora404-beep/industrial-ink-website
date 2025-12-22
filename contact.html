@@ -57,8 +57,14 @@
       <!-- ===== Right: Form ===== -->
       <div class="contact-form">
         <form action="https://formspree.io/f/mwvenvvn" method="POST">
+   <!-- 提交成功后跳转 -->
   <input type="hidden" name="_redirect" value="https://www.koyinta.com/thank-you.html">
 
+  <!-- 防垃圾询盘 -->
+  <input type="text" name="_gotcha" style="display:none">
+
+  <!-- 邮件标题 -->
+  <input type="hidden" name="_subject" value="New Inquiry from Koyinta Website">
 
           <label>Company Name *</label>
           <input type="text" name="company" required>
