@@ -340,14 +340,15 @@ section {
   }
 }
 
-/* ===== Company Vision (Hero-style, no text) ===== */
+/* ===== Vision / Company Philosophy Hero (铺满屏幕) ===== */
 .vision-hero {
   position: relative;
-  background-image: url('images/team-person.jpg'); /* 替换为你的图片 */
+  background-image: url('images/hero-person.png'); /* 替换为你的图片路径 */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 500px; /* 可根据需求调整 */
+  width: 100%;
+  min-height: 100vh; /* 铺满可视窗口高度 */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -356,23 +357,18 @@ section {
 .vision-overlay {
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0); /* 透明，仅保留图片风格 */
+  background: rgba(0,0,0,0); /* 保持透明，仅显示图片 */
 }
 
-/* 额外公司理念模块，如果需要文字可启用 */
+/* 隐藏文字内容，如果以后需要文字可修改 display */
 .vision-content {
-  display: none; /* 隐藏文字，仅显示图片 */
+  display: none;
 }
 
-/* 可选圆角和阴影效果 */
-.vision-hero img {
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-/* ===== Responsive Vision ===== */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
   .vision-hero {
-    height: 350px;
+    min-height: 80vh; /* 移动端适当减少高度 */
   }
 }
+
