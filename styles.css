@@ -438,3 +438,49 @@ section {
     display: none;
   }
 }
+.vision-section {
+  padding: 60px 0;
+  background-color: #f9f9f9; /* 可选浅灰背景 */
+}
+
+.vision-grid {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.vision-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px; /* 可选圆角 */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* 可选阴影 */
+}
+
+.vision-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.vision-content h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.vision-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .vision-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .vision-content {
+    margin-top: 20px;
+  }
+}
