@@ -407,3 +407,34 @@ section {
     gap: 40px;
   }
 }
+/* =====================================================
+   Header Alignment Fix (Home Page Issue)
+   ===================================================== */
+
+/* 桌面端隐藏汉堡按钮 */
+.menu-btn {
+  display: none;
+}
+
+/* 确保 nav 永远靠右 */
+.site-header nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* 移动端才显示菜单按钮 */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  .site-header nav {
+    display: none;
+  }
+}
