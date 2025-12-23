@@ -2,24 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>KOYINTA | Industrial Inkjet Inks, Consumables & Components</title>
+  <title>Contact KOYINTA – Industrial Inkjet Solutions</title>
+  <meta name="description" content="Contact KOYINTA for industrial inkjet inks, consumables, and components. Provide details of your printing system and requirements for fast, accurate support.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="KOYINTA supplies industrial inkjet inks, consumables, and components with stable performance and high reliability. Contact us for technical support and samples.">
   <link rel="stylesheet" href="styles.css">
   <script src="scripts.js" defer></script>
-  <!-- Organization Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "KOYINTA",
-    "url": "https://www.koyinta.com",
-    "logo": "https://www.koyinta.com/images/logo.png",
-    "sameAs": []
-  }
-  </script>
 </head>
-<body class="home-page">
+<body class="contact-page">
 
 <header class="site-header">
   <div class="container header-flex">
@@ -27,58 +16,74 @@
       <img src="images/logo.png" alt="KOYINTA Logo" loading="lazy">
     </div>
     <nav>
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html">Home</a>
       <a href="products.html">Products</a>
       <a href="about.html">About</a>
-      <a href="contact.html" class="btn-primary">Contact Us <span class="btn-icon">→</span></a>
+      <a href="contact.html" class="active btn-primary">Contact Us <span class="btn-icon">→</span></a>
     </nav>
     <button class="menu-btn" aria-label="Toggle Navigation">&#9776;</button>
   </div>
 </header>
 
 <main>
-  <section class="hero" style="background-image:url('images/hero-new.png');">
-    <div class="container hero-content">
-      <h1>Industrial Inkjet Solutions by KOYINTA</h1>
-      <p>Stable, reliable inkjet inks, consumables, and components for industrial printing systems.</p>
-      <a href="contact.html" class="btn-primary">Request Samples <span class="btn-icon">→</span></a>
-    </div>
-  </section>
 
-  <section class="vision-section">
-    <div class="container vision-grid">
-      <div class="vision-content">
-        <h2>Our Mission</h2>
-        <p>We focus on providing stable and reliable inkjet solutions, helping clients improve production efficiency and reduce downtime.</p>
-      </div>
-      <div class="vision-image">
-        <img src="images/hero-person.png" alt="KOYINTA Inkjet Solutions Team">
-      </div>
-    </div>
-  </section>
+<section class="page-hero" style="background-image:url('images/hero-person.png');">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Tell us about your inkjet application and requirements for fast, accurate support.</p>
+  </div>
+</section>
 
-  <section class="offer-grid">
-    <div class="offer-card">
-      <h3>Industrial Inkjet Inks</h3>
-      <p>High-performance inks for consistent jetting and long-term stability.</p>
-      <a href="products.html" class="btn-primary">View Products <span class="btn-icon">→</span></a>
-    </div>
-    <div class="offer-card">
-      <h3>Consumables</h3>
-      <p>Reliable consumables to support continuous production with minimal downtime.</p>
-      <a href="products.html" class="btn-primary">View Products <span class="btn-icon">→</span></a>
-    </div>
-    <div class="offer-card">
-      <h3>Components</h3>
-      <p>Precision components ensuring compatibility and durability for industrial systems.</p>
-      <a href="products.html" class="btn-primary">View Products <span class="btn-icon">→</span></a>
-    </div>
-  </section>
+<section class="section container contact-grid">
 
-  <section class="cta">
-    <h2>Looking for Reliable Inkjet Solutions?</h2>
-    <a href="contact.html" class="btn-primary">Contact Us Today <span class="btn-icon">→</span></a>
-  </section>
+  <!-- Left: Info -->
+  <div class="contact-info">
+    <h2>Work with KOYINTA</h2>
+    <p>We support industrial inkjet applications with professional inks, consumables, and technical communication.</p>
+    <p>To help us respond efficiently, please include your printing system, application, and expected requirements.</p>
+    <div class="contact-details">
+      <p><strong>Email:</strong> <a href="mailto:sales@koyinta.com">sales@koyinta.com</a></p>
+      <p><strong>Location:</strong> Hefei, China</p>
+    </div>
+  </div>
+
+  <!-- Right: Form -->
+  <div class="contact-form">
+    <h2>Send Your Inquiry</h2>
+    <form action="https://formspree.io/f/mwvenvvn" method="POST">
+      <input type="hidden" name="_redirect" value="thank-you.html">
+      <input type="text" name="_gotcha" style="display:none">
+      <input type="hidden" name="_subject" value="New Inquiry from KOYINTA Website">
+
+      <label for="company">Company Name *</label>
+      <input type="text" id="company" name="company" required>
+
+      <label for="name">Contact Person *</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="country">Country / Region</label>
+      <input type="text" id="country" name="country">
+
+      <label for="interest">Product Interest *</label>
+      <select id="interest" name="interest" required>
+        <option value="">Select</option>
+        <option>Inkjet Inks</option>
+        <option>Consumables</option>
+        <option>Inkjet Components</option>
+      </select>
+
+      <label for="message">Application / System Details *</label>
+      <textarea id="message" name="message" rows="5" placeholder="Describe your system, application, and requirements." required></textarea>
+
+      <button type="submit" class="btn-primary">Send Inquiry <span class="btn-icon">→</span></button>
+    </form>
+  </div>
+
+</section>
+
 </main>
 
 <footer class="site-footer">
