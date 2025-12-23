@@ -13,13 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (menuBtn && nav) {
     menuBtn.addEventListener("click", () => {
-      nav.classList.toggle("active");
+      nav.classList.toggle("show"); // 与 CSS 统一
     });
 
     // 点击导航链接后自动关闭菜单（移动端体验更好）
     nav.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", () => {
-        nav.classList.remove("active");
+        nav.classList.remove("show");
       });
     });
   }
@@ -27,21 +27,20 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ===============================
      Hero / Page Hero Text Animation
      =============================== */
-  const heroSection = document.querySelector(".hero, .page-hero");
+  const heroSections = document.querySelectorAll(".hero, .page-hero");
 
-  if (heroSection) {
+  heroSections.forEach(heroSection => {
     const heroTitle = heroSection.querySelector("h1");
     const heroText = heroSection.querySelector("p");
 
-    // 小延迟，确保渲染完成后再触发动画
     setTimeout(() => {
       if (heroTitle) heroTitle.classList.add("active");
       if (heroText) heroText.classList.add("active");
-    }, 150);
-  }
+    }, 200);
+  });
 
   /* ===============================
-     Safety Debug (可选，确认加载成功)
+     Safety Debug (optional)
      =============================== */
   // console.log("KOYINTA scripts.js loaded successfully");
 

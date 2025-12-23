@@ -2,128 +2,151 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Products | KOYINTA Industrial Inkjet Solutions</title>
-
+  <title>KOYINTA | Products</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-        content="Explore KOYINTA industrial inkjet inks, consumables and printing solutions for stable and reliable production.">
+  <meta name="description" content="Explore KOYINTA industrial inkjet inks, consumables, and components. Stable and reliable products for professional printing applications.">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ================= Reset ================= */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Arial', sans-serif; line-height:1.6; color:#333; background:#f9f9f9; }
+    a { text-decoration:none; color:inherit; }
+    img { max-width:100%; display:block; }
 
-  <!-- Scripts -->
-  <script src="scripts.js" defer></script>
+    /* ================= Container ================= */
+    .container { width:90%; max-width:1200px; margin:0 auto; }
+
+    /* ================= Header ================= */
+    .site-header { background:#fff; padding:15px 0; box-shadow:0 2px 6px rgba(0,0,0,0.05); position:sticky; top:0; z-index:100; }
+    .header-flex { display:flex; align-items:center; justify-content:space-between; }
+    .logo img { height:50px; }
+    nav { display:flex; align-items:center; gap:25px; }
+    nav a { font-weight:500; color:#333; transition:color 0.3s; }
+    nav a.active { color:#007bff; }
+    nav a:hover { color:#007bff; }
+    .btn-primary { background:#007bff; color:#fff; padding:10px 20px; border-radius:6px; font-weight:bold; display:inline-flex; align-items:center; gap:6px; transition: background 0.3s; }
+    .btn-primary:hover { background:#0056b3; }
+    .btn-icon { font-weight:bold; }
+    .menu-btn { display:none; font-size:1.5rem; background:none; border:none; cursor:pointer; }
+
+    /* ================= Hero ================= */
+    .hero { height:400px; display:flex; align-items:center; justify-content:center; text-align:center; background-size:cover; background-position:center; position:relative; margin-bottom:50px; }
+    .hero::after { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.4); }
+    .hero-content { position:relative; z-index:1; max-width:700px; margin:0 auto; padding:0 15px; }
+    .hero h1 { font-size:2.5rem; margin-bottom:15px; color:#fff; }
+    .hero p { font-size:1.1rem; margin-bottom:25px; color:#fff; }
+
+    /* ================= Product Section ================= */
+    .section { padding:60px 0; }
+    .section-title h2 { font-size:2rem; margin-bottom:10px; text-align:center; color:#007bff; }
+    .section-title p { text-align:center; color:#666; margin-bottom:40px; }
+    .offer-grid { display:flex; flex-wrap:wrap; gap:30px; justify-content:center; }
+    .offer-card { background:#fff; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08); padding:25px 20px; text-align:center; flex:1 1 280px; transition: transform 0.3s, box-shadow 0.3s; }
+    .offer-card:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.12); }
+    .offer-card h3 { margin:15px 0; color:#007bff; }
+    .offer-card p { color:#555; font-size:0.95rem; }
+
+    /* ================= CTA ================= */
+    .cta { background:#007bff; color:#fff; padding:50px 0; text-align:center; }
+    .cta h2 { font-size:2rem; margin-bottom:20px; }
+
+    /* ================= Footer ================= */
+    .site-footer { background:#222; color:#aaa; padding:25px 0; text-align:center; }
+    .site-footer a { color:#007bff; margin:0 8px; }
+    .site-footer a:hover { text-decoration:underline; }
+
+    /* ================= Responsive ================= */
+    @media(max-width:900px){
+      nav { display:none; flex-direction:column; background:#fff; position:absolute; top:70px; right:20px; padding:10px 20px; border-radius:6px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+      nav.show { display:flex; }
+      .menu-btn { display:block; }
+      .header-flex { position:relative; }
+      .hero { height:320px; }
+      .hero h1 { font-size:2rem; }
+      .hero p { font-size:1rem; }
+      .btn-primary { padding:8px 16px; font-size:0.95rem; }
+    }
+    @media(max-width:500px){
+      .hero { height:260px; }
+      .hero h1 { font-size:1.6rem; }
+      .hero p { font-size:0.9rem; }
+      .btn-primary { padding:6px 12px; font-size:0.85rem; }
+    }
+  </style>
 </head>
-
-<body class="products-page">
+<body>
 
 <!-- ================= Header ================= -->
 <header class="site-header">
   <div class="container header-flex">
-
     <div class="logo">
-      <img src="images/logo.png" alt="KOYINTA Logo" loading="lazy">
+      <img src="images/logo.png" alt="KOYINTA Logo">
     </div>
-
     <nav>
       <a href="index.html">Home</a>
       <a href="products.html" class="active">Products</a>
       <a href="about.html">About</a>
-      <a href="contact.html" class="btn-primary">
-        Contact Us <span class="btn-icon">→</span>
-      </a>
+      <a href="contact.html" class="btn-primary">Contact Us <span class="btn-icon">→</span></a>
     </nav>
-
     <button class="menu-btn" aria-label="Toggle Navigation">&#9776;</button>
-
   </div>
 </header>
 
 <main>
 
-<!-- ================= Page Hero ================= -->
-<section class="page-hero"
-         style="background-image:url('images/koyinta-hero-banner.png');">
-  <div class="container">
-    <h1>Our Products</h1>
-    <p>
-      Industrial inkjet inks, consumables and solutions
-      designed for stable, long-term production.
-    </p>
-  </div>
-</section>
-
-<!-- ================= Product Categories ================= -->
-<section class="section">
-  <div class="container">
-
-    <div class="products-grid">
-
-      <!-- Ink Products -->
-      <div class="product-card">
-        <img src="images/eco-solvent.jpg"
-             alt="Industrial Inkjet Inks"
-             loading="lazy">
-        <h3>Inkjet Inks</h3>
-        <p>
-          Eco-solvent, solvent and specialty inks
-          engineered for consistent jetting and color stability.
-        </p>
-      </div>
-
-      <!-- Consumables -->
-      <div class="product-card">
-        <img src="images/consumable-placeholder.jpg"
-             alt="Inkjet Consumables"
-             loading="lazy">
-        <h3>Consumables</h3>
-        <p>
-          Filters, dampers and fluid components
-          supporting clean ink delivery and system reliability.
-        </p>
-      </div>
-
-      <!-- Equipment -->
-      <div class="product-card">
-        <img src="images/equipment-placeholder.jpg"
-             alt="Inkjet Equipment"
-             loading="lazy">
-        <h3>Equipment & Components</h3>
-        <p>
-          Inkjet-related components and peripherals
-          compatible with major industrial systems.
-        </p>
-      </div>
-
+  <!-- ================= Hero ================= -->
+  <section class="hero" style="background-image:url('images/products-hero.png');">
+    <div class="hero-content">
+      <h1>Our Product Range</h1>
+      <p>Explore KOYINTA industrial inkjet inks, consumables, and components designed for reliable performance.</p>
+      <a href="#products" class="btn-primary">View Products <span class="btn-icon">→</span></a>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- ================= Products ================= -->
+  <section id="products" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Industrial Inkjet Products</h2>
+        <p>Stable inks, consumables, and components for professional printing</p>
+      </div>
 
-<!-- ================= Featured Product ================= -->
-<section class="section section-gray">
-  <div class="container narrow">
-    <h2>Featured Product</h2>
-    <p>
-      WB-220 industrial inkjet ink is designed for
-      stable jetting performance, wide printhead compatibility
-      and consistent results in demanding production environments.
-    </p>
-    <a href="product-wb-220.html" class="btn-secondary">
-      View WB-220 Details →
-    </a>
-  </div>
-</section>
+      <div class="offer-grid">
+        <div class="offer-card">
+          <img src="images/wb220.jpg" alt="Water-based Inkjet Ink">
+          <h3>Water-based Inks</h3>
+          <p>Eco-friendly inks designed for stable jetting and consistent output in industrial printers.</p>
+        </div>
 
-<!-- ================= CTA ================= -->
-<section class="cta">
-  <div class="container">
-    <h2>Not Sure Which Product Fits Your Application?</h2>
-    <a href="contact.html" class="btn-primary">
-      Contact Our Team <span class="btn-icon">→</span>
-    </a>
-  </div>
-</section>
+        <div class="offer-card">
+          <img src="images/eco-solvent.jpg" alt="Eco-solvent Ink">
+          <h3>Eco-solvent Inks</h3>
+          <p>Reliable inks suitable for various substrates, ensuring long-term printing stability.</p>
+        </div>
+
+        <div class="offer-card">
+          <img src="images/consumable-placeholder.jpg" alt="Inkjet Consumables">
+          <h3>Consumables</h3>
+          <p>Filters, fluids, and consumables engineered to support continuous industrial production.</p>
+        </div>
+
+        <div class="offer-card">
+          <img src="images/equipment-placeholder.jpg" alt="Inkjet Components">
+          <h3>Components</h3>
+          <p>High-quality parts compatible with major industrial inkjet systems and printheads.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="cta">
+    <div class="container">
+      <h2>Looking for a Stable Inkjet Partner?</h2>
+      <a href="contact.html" class="btn-primary">Contact KOYINTA <span class="btn-icon">→</span></a>
+    </div>
+  </section>
 
 </main>
 
@@ -137,6 +160,12 @@
     </p>
   </div>
 </footer>
+
+<script>
+  const menuBtn = document.querySelector('.menu-btn');
+  const nav = document.querySelector('nav');
+  menuBtn.addEventListener('click', () => { nav.classList.toggle('show'); });
+</script>
 
 </body>
 </html>
