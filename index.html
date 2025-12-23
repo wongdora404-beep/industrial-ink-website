@@ -2,18 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>KOYINTA | Industrial Inkjet Solutions</title>
+  <title>KOYINTA | Industrial Inkjet Inks & Printing Solutions</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="KOYINTA provides industrial inkjet inks, consumables and components with stable performance and long-term reliability.">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Scripts -->
+  <script src="scripts.js" defer></script>
 </head>
+
 <body>
 
 <!-- ================= Header ================= -->
 <header class="site-header">
   <div class="container header-flex">
+
     <div class="logo">
       <img src="images/logo.png" alt="KOYINTA Logo" loading="lazy">
     </div>
+
     <nav>
       <a href="index.html" class="active">Home</a>
       <a href="products.html">Products</a>
@@ -22,88 +33,115 @@
         Contact Us <span class="btn-icon">→</span>
       </a>
     </nav>
+
     <button class="menu-btn" aria-label="Toggle Navigation">&#9776;</button>
+
   </div>
 </header>
 
+<main>
+
 <!-- ================= Hero ================= -->
-<section class="hero">
-  <div class="hero-bg" style="background-image:url('images/hero-fullscreen.jpg');"></div>
+<section class="hero"
+         style="background-image:url('images/koyinta-hero-banner.png');">
   <div class="container hero-content">
-    <h1>Reliable Industrial Inkjet Solutions</h1>
-    <p>High-performance inks, consumables, and components for stable industrial printing.</p>
-    <a href="contact.html" class="btn-primary">
-      Contact Us <span class="btn-icon">→</span>
+    <h1>Industrial Inkjet Performance You Can Rely On</h1>
+    <p>
+      Stable inkjet inks, consumables and technical support
+      for demanding industrial printing applications.
+    </p>
+    <a href="products.html" class="btn-primary">
+      Explore Products <span class="btn-icon">→</span>
     </a>
   </div>
 </section>
 
-<!-- ================= Company Vision ================= -->
+<!-- ================= Vision / Introduction ================= -->
 <section class="vision-section">
-  <div class="vision-grid container">
+  <div class="container vision-grid">
+
     <div class="vision-image">
-      <img src="images/team-photo.jpg" alt="KOYINTA Team">
+      <img src="images/hero-person.png"
+           alt="Industrial Inkjet Solutions"
+           loading="lazy">
     </div>
+
     <div class="vision-content">
-      <h2>Our Company Vision</h2>
-      <p>Focused on industrial inkjet performance, stability, and long-term reliability.</p>
+      <h2>Focused on Industrial Inkjet Reliability</h2>
+      <p>
+        KOYINTA works with industrial printing companies,
+        system integrators and OEM partners to deliver
+        stable, consistent and production-ready inkjet solutions.
+      </p>
+      <p>
+        Our focus is long-term performance, compatibility
+        and real-world production reliability.
+      </p>
     </div>
+
   </div>
 </section>
 
-<!-- ================= What We Offer ================= -->
-<section>
+<!-- ================= Offerings ================= -->
+<section class="section">
   <div class="container">
+
     <div class="section-title">
       <h2>What We Offer</h2>
-      <p>Professional inkjet solutions for industrial applications</p>
+      <p>Professional inkjet products and technical support</p>
     </div>
+
     <div class="offer-grid">
+
       <div class="offer-card">
+        <img src="images/wb220.jpg"
+             alt="Industrial Inkjet Inks"
+             loading="lazy">
         <h3>Inkjet Inks</h3>
-        <p>Industrial-grade inks with stable performance and excellent compatibility.</p>
+        <p>
+          Water-based, eco-solvent and specialty inks
+          designed for stable jetting and consistent output.
+        </p>
       </div>
+
       <div class="offer-card">
+        <img src="images/consumable-placeholder.jpg"
+             alt="Inkjet Consumables"
+             loading="lazy">
         <h3>Consumables</h3>
-        <p>Reliable inkjet consumables designed for continuous production.</p>
+        <p>
+          Filters, fluids and consumables engineered
+          to support continuous industrial production.
+        </p>
       </div>
+
       <div class="offer-card">
+        <img src="images/equipment-placeholder.jpg"
+             alt="Inkjet Components"
+             loading="lazy">
         <h3>Inkjet Components</h3>
-        <p>Key components supporting precision and durability in inkjet systems.</p>
+        <p>
+          Reliable components compatible with
+          major industrial inkjet systems and printheads.
+        </p>
       </div>
+
     </div>
+
   </div>
 </section>
 
-<!-- ================= Featured Products ================= -->
-<section>
+<!-- ================= CTA ================= -->
+<section class="cta">
   <div class="container">
-    <div class="section-title">
-      <h2>Featured Products</h2>
-      <p>Proven solutions trusted by industrial printing partners</p>
-    </div>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="images/wb220.jpg" alt="WB-220 Inkjet Ink">
-        <h3>WB-220 Inkjet Ink</h3>
-        <p>Water-based ink for industrial printing applications.</p>
-        <a href="product-wb-220.html" class="btn-primary">View Details →</a>
-      </div>
-      <div class="product-card">
-        <img src="images/consumable-placeholder.jpg" alt="Inkjet Consumables">
-        <h3>Consumables</h3>
-        <p>Reliable inkjet consumables for stable performance.</p>
-        <a href="products.html" class="btn-primary">View Category →</a>
-      </div>
-      <div class="product-card">
-        <img src="images/equipment-placeholder.jpg" alt="Inkjet Components">
-        <h3>Components</h3>
-        <p>Key components supporting industrial inkjet systems.</p>
-        <a href="products.html" class="btn-primary">View Category →</a>
-      </div>
-    </div>
+    <h2>Looking for a Stable Inkjet Partner?</h2>
+    <a href="contact.html" class="btn-primary">
+      Contact KOYINTA <span class="btn-icon">→</span>
+    </a>
   </div>
 </section>
+
+</main>
 
 <!-- ================= Footer ================= -->
 <footer class="site-footer">
@@ -115,14 +153,6 @@
     </p>
   </div>
 </footer>
-
-<script>
-  // 当前页面高亮
-  const currentPage = window.location.pathname.split("/").pop();
-  document.querySelectorAll(".site-header nav a").forEach(link => {
-    if(link.getAttribute("href") === currentPage) link.classList.add("active");
-  });
-</script>
 
 </body>
 </html>
