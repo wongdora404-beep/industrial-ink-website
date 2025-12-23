@@ -3,16 +3,259 @@
 <head>
   <meta charset="UTF-8">
   <title>KOYINTA | Industrial Inkjet Inks & Printing Solutions</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-        content="KOYINTA provides industrial inkjet inks, consumables and components with stable performance and long-term reliability.">
+  <meta name="description" content="KOYINTA provides industrial inkjet inks, consumables and components with stable performance and long-term reliability.">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ================= Reset ================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <!-- Scripts -->
-  <script src="scripts.js" defer></script>
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* ================= Container ================= */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ================= Header ================= */
+    .site-header {
+      background: #ffffff;
+      padding: 15px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav a {
+      margin-left: 25px;
+      font-weight: 500;
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #007bff;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+
+    .btn-icon {
+      font-weight: bold;
+    }
+
+    /* ================= Hero ================= */
+    .hero {
+      height: 500px;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background-color: rgba(0,0,0,0.4);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+
+    /* ================= Vision / Introduction ================= */
+    .vision-section {
+      padding: 60px 0;
+      background-color: #fff;
+    }
+
+    .vision-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .vision-image, .vision-content {
+      flex: 1 1 400px;
+    }
+
+    .vision-content h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+
+    .vision-content p {
+      margin-bottom: 15px;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* ================= Offerings ================= */
+    .section {
+      padding: 60px 0;
+    }
+
+    .section-title h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      text-align: center;
+      color: #007bff;
+    }
+
+    .section-title p {
+      text-align: center;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .offer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .offer-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      padding: 20px;
+      text-align: center;
+      flex: 1 1 280px;
+      transition: transform 0.3s;
+    }
+
+    .offer-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .offer-card h3 {
+      margin: 15px 0;
+      color: #007bff;
+    }
+
+    .offer-card p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    /* ================= CTA ================= */
+    .cta {
+      background-color: #007bff;
+      color: #fff;
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    /* ================= Footer ================= */
+    .site-footer {
+      background-color: #222;
+      color: #aaa;
+      padding: 25px 0;
+      text-align: center;
+    }
+
+    .site-footer a {
+      color: #007bff;
+      margin: 0 8px;
+    }
+
+    .site-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ================= Responsive ================= */
+    @media(max-width: 900px) {
+      .vision-grid {
+        flex-direction: column;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .menu-btn {
+        display: block;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -20,126 +263,81 @@
 <!-- ================= Header ================= -->
 <header class="site-header">
   <div class="container header-flex">
-
     <div class="logo">
-      <img src="images/logo.png" alt="KOYINTA Logo" loading="lazy">
+      <img src="images/logo.png" alt="KOYINTA Logo">
     </div>
-
     <nav>
       <a href="index.html" class="active">Home</a>
       <a href="products.html">Products</a>
       <a href="about.html">About</a>
-      <a href="contact.html" class="btn-primary">
-        Contact Us <span class="btn-icon">→</span>
-      </a>
+      <a href="contact.html" class="btn-primary">Contact Us <span class="btn-icon">→</span></a>
     </nav>
-
     <button class="menu-btn" aria-label="Toggle Navigation">&#9776;</button>
-
   </div>
 </header>
 
 <main>
 
-<!-- ================= Hero ================= -->
-<section class="hero"
-         style="background-image:url('images/koyinta-hero-banner.png');">
-  <div class="container hero-content">
-    <h1>Industrial Inkjet Performance You Can Rely On</h1>
-    <p>
-      Stable inkjet inks, consumables and technical support
-      for demanding industrial printing applications.
-    </p>
-    <a href="products.html" class="btn-primary">
-      Explore Products <span class="btn-icon">→</span>
-    </a>
-  </div>
-</section>
-
-<!-- ================= Vision / Introduction ================= -->
-<section class="vision-section">
-  <div class="container vision-grid">
-
-    <div class="vision-image">
-      <img src="images/hero-person.png"
-           alt="Industrial Inkjet Solutions"
-           loading="lazy">
+  <!-- ================= Hero ================= -->
+  <section class="hero" style="background-image:url('images/koyinta-hero-banner.png');">
+    <div class="hero-content">
+      <h1>Industrial Inkjet Performance You Can Rely On</h1>
+      <p>Stable inkjet inks, consumables and technical support for demanding industrial printing applications.</p>
+      <a href="products.html" class="btn-primary">Explore Products <span class="btn-icon">→</span></a>
     </div>
+  </section>
 
-    <div class="vision-content">
-      <h2>Focused on Industrial Inkjet Reliability</h2>
-      <p>
-        KOYINTA works with industrial printing companies,
-        system integrators and OEM partners to deliver
-        stable, consistent and production-ready inkjet solutions.
-      </p>
-      <p>
-        Our focus is long-term performance, compatibility
-        and real-world production reliability.
-      </p>
+  <!-- ================= Vision / Introduction ================= -->
+  <section class="vision-section">
+    <div class="container vision-grid">
+      <div class="vision-image">
+        <img src="images/hero-person.png" alt="Industrial Inkjet Solutions">
+      </div>
+      <div class="vision-content">
+        <h2>Focused on Industrial Inkjet Reliability</h2>
+        <p>KOYINTA works with industrial printing companies, system integrators and OEM partners to deliver stable, consistent and production-ready inkjet solutions.</p>
+        <p>Our focus is long-term performance, compatibility and real-world production reliability.</p>
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
-
-<!-- ================= Offerings ================= -->
-<section class="section">
-  <div class="container">
-
-    <div class="section-title">
-      <h2>What We Offer</h2>
-      <p>Professional inkjet products and technical support</p>
-    </div>
-
-    <div class="offer-grid">
-
-      <div class="offer-card">
-        <img src="images/wb220.jpg"
-             alt="Industrial Inkjet Inks"
-             loading="lazy">
-        <h3>Inkjet Inks</h3>
-        <p>
-          Water-based, eco-solvent and specialty inks
-          designed for stable jetting and consistent output.
-        </p>
+  <!-- ================= Offerings ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>What We Offer</h2>
+        <p>Professional inkjet products and technical support</p>
       </div>
 
-      <div class="offer-card">
-        <img src="images/consumable-placeholder.jpg"
-             alt="Inkjet Consumables"
-             loading="lazy">
-        <h3>Consumables</h3>
-        <p>
-          Filters, fluids and consumables engineered
-          to support continuous industrial production.
-        </p>
-      </div>
+      <div class="offer-grid">
+        <div class="offer-card">
+          <img src="images/wb220.jpg" alt="Industrial Inkjet Inks">
+          <h3>Inkjet Inks</h3>
+          <p>Water-based, eco-solvent and specialty inks designed for stable jetting and consistent output.</p>
+        </div>
 
-      <div class="offer-card">
-        <img src="images/equipment-placeholder.jpg"
-             alt="Inkjet Components"
-             loading="lazy">
-        <h3>Inkjet Components</h3>
-        <p>
-          Reliable components compatible with
-          major industrial inkjet systems and printheads.
-        </p>
-      </div>
+        <div class="offer-card">
+          <img src="images/consumable-placeholder.jpg" alt="Inkjet Consumables">
+          <h3>Consumables</h3>
+          <p>Filters, fluids and consumables engineered to support continuous industrial production.</p>
+        </div>
 
+        <div class="offer-card">
+          <img src="images/equipment-placeholder.jpg" alt="Inkjet Components">
+          <h3>Inkjet Components</h3>
+          <p>Reliable components compatible with major industrial inkjet systems and printheads.</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
-
-<!-- ================= CTA ================= -->
-<section class="cta">
-  <div class="container">
-    <h2>Looking for a Stable Inkjet Partner?</h2>
-    <a href="contact.html" class="btn-primary">
-      Contact KOYINTA <span class="btn-icon">→</span>
-    </a>
-  </div>
-</section>
+  <!-- ================= CTA ================= -->
+  <section class="cta">
+    <div class="container">
+      <h2>Looking for a Stable Inkjet Partner?</h2>
+      <a href="contact.html" class="btn-primary">Contact KOYINTA <span class="btn-icon">→</span></a>
+    </div>
+  </section>
 
 </main>
 
