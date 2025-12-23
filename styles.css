@@ -231,3 +231,79 @@ img { max-width: 100%; display: block; }
   .contact-page .contact-grid {grid-template-columns:1fr; gap:40px;}
   .hero h1,.page-hero h1 {font-size:32px;}
 }
+/* ===== Hero / Page Hero ===== */
+.hero, .page-hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  text-align: center;
+  padding: 120px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1, .page-hero h1,
+.hero p, .page-hero p {
+  opacity: 0;            /* 初始隐藏 */
+  transform: translateY(20px); /* 初始下移20px */
+  transition: opacity 1s ease, transform 1s ease; /* 渐显过渡 */
+}
+
+.hero h1.active, .page-hero h1.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero p.active, .page-hero p.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+  .site-header nav {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    background: #ffffff;
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    padding: 10px 20px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    z-index: 999;
+  }
+  .site-header nav.active {
+    display: flex;
+  }
+}
+.hero h1, .page-hero h1 {
+  font-size: 42px;
+  max-width: 720px;
+  margin: 0 auto 20px auto;
+  line-height: 1.2;
+}
+
+.hero p, .page-hero p {
+  font-size: 18px;
+  max-width: 620px;
+  margin: 0 auto;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .hero h1, .page-hero h1 {
+    font-size: 32px;
+  }
+  .hero p, .page-hero p {
+    font-size: 16px;
+  }
+}
