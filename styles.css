@@ -247,3 +247,77 @@ section {
     gap: 12px;
   }
 }
+/* =====================================================
+   Contact Page – Form Safe Fix
+   ===================================================== */
+
+/* 只作用于 contact 页面 */
+.contact-page .contact-form {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* 表单本体 */
+.contact-page form {
+  display: block;
+  width: 100%;
+}
+
+/* 每一行 */
+.contact-page .form-group {
+  margin-bottom: 20px;
+}
+
+/* label */
+.contact-page label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* input / textarea / select */
+.contact-page input,
+.contact-page textarea,
+.contact-page select {
+  width: 100%;
+  display: block;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+/* textarea 特殊 */
+.contact-page textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* focus 状态 */
+.contact-page input:focus,
+.contact-page textarea:focus,
+.contact-page select:focus {
+  outline: none;
+  border-color: #00a3e0;
+}
+
+/* 提交按钮 */
+.contact-page button[type="submit"] {
+  margin-top: 12px;
+}
+
+/* 防止按钮被 a 样式影响 */
+.contact-page button {
+  font-family: inherit;
+}
+
+/* 移动端 */
+@media (max-width: 768px) {
+  .contact-page .contact-form {
+    padding: 0 10px;
+  }
+}
