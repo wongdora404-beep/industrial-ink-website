@@ -27,7 +27,7 @@ img {
   display: block;
 }
 
-/* ===== Container (ONLY ONE) ===== */
+/* ===== Container ===== */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -57,6 +57,7 @@ section {
   display: flex;
   align-items: center;
   gap: 24px;
+  margin-left: auto;
 }
 
 .site-header nav a {
@@ -69,13 +70,12 @@ section {
   font-weight: 600;
 }
 
-/* Logo size */
 .site-header .logo img {
   height: 48px;
   width: auto;
 }
 
-/* ===== Primary Button (Global) ===== */
+/* ===== Primary Button ===== */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -104,7 +104,7 @@ section {
   transform: translateX(4px);
 }
 
-/* ===== Hero ===== */
+/* ===== Hero Section ===== */
 .hero {
   background: #0b1f33;
   color: #ffffff;
@@ -127,7 +127,25 @@ section {
   margin-top: 32px;
 }
 
-/* ===== Section Title ===== */
+/* ===== Page Hero ===== */
+.page-hero {
+  background: #0b1f33;
+  color: #ffffff;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.page-hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.page-hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* ===== Section Titles ===== */
 .section-title {
   text-align: center;
   margin-bottom: 48px;
@@ -172,25 +190,7 @@ section {
   margin: 16px 0 10px;
 }
 
-/* ===== Page Hero ===== */
-.page-hero {
-  background: #0b1f33;
-  color: #ffffff;
-  text-align: center;
-  padding: 80px 0;
-}
-
-.page-hero h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.page-hero p {
-  font-size: 18px;
-  opacity: 0.9;
-}
-
-/* ===== CTA ===== */
+/* ===== CTA Section ===== */
 .cta {
   background: #f5f7fa;
   text-align: center;
@@ -247,85 +247,8 @@ section {
     gap: 12px;
   }
 }
-/* =====================================================
-   Contact Page – Form Safe Fix
-   ===================================================== */
 
-/* 只作用于 contact 页面 */
-.contact-page .contact-form {
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-/* 表单本体 */
-.contact-page form {
-  display: block;
-  width: 100%;
-}
-
-/* 每一行 */
-.contact-page .form-group {
-  margin-bottom: 20px;
-}
-
-/* label */
-.contact-page label {
-  display: block;
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 6px;
-  color: #333;
-}
-
-/* input / textarea / select */
-.contact-page input,
-.contact-page textarea,
-.contact-page select {
-  width: 100%;
-  display: block;
-  padding: 12px 14px;
-  font-size: 14px;
-  font-family: inherit;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #ffffff;
-}
-
-/* textarea 特殊 */
-.contact-page textarea {
-  resize: vertical;
-  min-height: 140px;
-}
-
-/* focus 状态 */
-.contact-page input:focus,
-.contact-page textarea:focus,
-.contact-page select:focus {
-  outline: none;
-  border-color: #00a3e0;
-}
-
-/* 提交按钮 */
-.contact-page button[type="submit"] {
-  margin-top: 12px;
-}
-
-/* 防止按钮被 a 样式影响 */
-.contact-page button {
-  font-family: inherit;
-}
-
-/* 移动端 */
-@media (max-width: 768px) {
-  .contact-page .contact-form {
-    padding: 0 10px;
-  }
-}
-/* =====================================================
-   Contact Page Layout Fix (Safe Scoped)
-   ===================================================== */
-
-/* Contact 两列布局 */
+/* ===== Contact Page ===== */
 .contact-page .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -333,8 +256,8 @@ section {
   align-items: flex-start;
 }
 
-/* 左侧信息 */
-.contact-page .contact-info h2 {
+.contact-page .contact-info h2,
+.contact-page .contact-form h2 {
   font-size: 26px;
   margin-bottom: 16px;
 }
@@ -344,22 +267,17 @@ section {
   color: #555;
 }
 
-/* 表单容器 */
 .contact-page .contact-form {
+  max-width: 720px;
   width: 100%;
+  margin: 0 auto;
 }
 
-.contact-page .contact-form h2 {
-  font-size: 26px;
-  margin-bottom: 24px;
-}
-
-/* 表单基础重置 */
 .contact-page form {
+  display: block;
   width: 100%;
 }
 
-/* label */
 .contact-page label {
   display: block;
   font-size: 14px;
@@ -368,26 +286,22 @@ section {
   margin-top: 16px;
 }
 
-/* input / select / textarea */
 .contact-page input,
 .contact-page select,
 .contact-page textarea {
   width: 100%;
   padding: 12px 14px;
   font-size: 14px;
-  font-family: inherit;
   border: 1px solid #ccc;
   border-radius: 4px;
   background: #ffffff;
 }
 
-/* textarea */
 .contact-page textarea {
   resize: vertical;
   min-height: 140px;
 }
 
-/* focus */
 .contact-page input:focus,
 .contact-page select:focus,
 .contact-page textarea:focus {
@@ -395,36 +309,24 @@ section {
   border-color: #00a3e0;
 }
 
-/* 提交按钮 —— 统一为主按钮 */
 .contact-page button[type="submit"] {
   margin-top: 24px;
+  font-family: inherit;
 }
 
-/* 移动端 */
+/* Responsive Contact */
 @media (max-width: 768px) {
   .contact-page .contact-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 }
-/* =====================================================
-   Header Alignment Fix (Home Page Issue)
-   ===================================================== */
 
-/* 桌面端隐藏汉堡按钮 */
+/* ===== Header Alignment Fix (Home) ===== */
 .menu-btn {
   display: none;
 }
 
-/* 确保 nav 永远靠右 */
-.site-header nav {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-/* 移动端才显示菜单按钮 */
 @media (max-width: 768px) {
   .menu-btn {
     display: block;
@@ -433,54 +335,44 @@ section {
     font-size: 26px;
     cursor: pointer;
   }
-
   .site-header nav {
     display: none;
   }
 }
-.vision-section {
-  padding: 60px 0;
-  background-color: #f9f9f9; /* 可选浅灰背景 */
-}
 
-.vision-grid {
+/* ===== Company Vision (Hero-style, no text) ===== */
+.vision-hero {
+  position: relative;
+  background-image: url('images/team-person.jpg'); /* 替换为你的图片 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px; /* 可根据需求调整 */
   display: flex;
   align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.vision-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px; /* 可选圆角 */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* 可选阴影 */
+.vision-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0); /* 透明，仅保留图片风格 */
 }
 
+/* 额外公司理念模块，如果需要文字可启用 */
 .vision-content {
-  flex: 1;
-  min-width: 280px;
+  display: none; /* 隐藏文字，仅显示图片 */
 }
 
-.vision-content h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
+/* 可选圆角和阴影效果 */
+.vision-hero img {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.vision-content p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #333;
-  font-weight: 500;
-}
-
+/* ===== Responsive Vision ===== */
 @media (max-width: 768px) {
-  .vision-grid {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .vision-content {
-    margin-top: 20px;
+  .vision-hero {
+    height: 350px;
   }
 }
