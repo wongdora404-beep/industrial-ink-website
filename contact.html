@@ -1,102 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <title>Contact Us | KOYINTA</title>
+  <title>Contact KOYINTA | Industrial Inkjet Solutions</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact KOYINTA for industrial inkjet inks, consumables, and components.">
+  <meta name="description"
+        content="Contact KOYINTA for industrial inkjet inks, consumables and technical printing solutions.">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Scripts -->
   <script src="scripts.js" defer></script>
 </head>
+
 <body class="contact-page">
 
-<!-- Header -->
+<!-- ================= Header ================= -->
 <header class="site-header">
   <div class="container header-flex">
+
     <div class="logo">
       <img src="images/logo.png" alt="KOYINTA Logo" loading="lazy">
     </div>
+
     <nav>
       <a href="index.html">Home</a>
       <a href="products.html">Products</a>
       <a href="about.html">About</a>
-      <a href="contact.html" class="active btn-primary">Contact Us <span class="btn-icon">→</span></a>
+      <a href="contact.html" class="active btn-primary">
+        Contact Us <span class="btn-icon">→</span>
+      </a>
     </nav>
+
     <button class="menu-btn" aria-label="Toggle Navigation">&#9776;</button>
+
   </div>
 </header>
 
 <main>
 
-<!-- Page Hero -->
-<section class="page-hero" style="background-image:url('images/hero-new.png');">
+<!-- ================= Page Hero ================= -->
+<section class="page-hero"
+         style="background-image:url('images/hero-person.png');">
   <div class="container">
-    <h1>Contact Us</h1>
-    <p>Tell us about your inkjet application and requirements.</p>
+    <h1>Contact KOYINTA</h1>
+    <p>
+      Tell us about your inkjet system and application.
+      Our team will respond with practical solutions.
+    </p>
   </div>
 </section>
 
-<!-- Contact Grid -->
+<!-- ================= Contact Form ================= -->
 <section class="section">
-  <div class="container contact-grid">
+  <div class="container narrow">
 
-    <!-- Left: Info -->
-    <div class="contact-info">
-      <h2>Work with Koyinta</h2>
-      <p>We support industrial inkjet applications with professional inks, consumables, and technical communication.</p>
-      <p>Please include details about your printing system, application, and expected requirements for a faster response.</p>
-      <div class="contact-details">
-        <p><strong>Email:</strong> <a href="mailto:sales@koyinta.com">sales@koyinta.com</a></p>
-        <p><strong>Location:</strong> Hefei, China</p>
-      </div>
-    </div>
+    <h2>Request Technical Support or Quotation</h2>
+    <p class="section-intro">
+      Please provide a brief description of your printing system,
+      application and requirements.  
+      The more details you share, the better we can assist you.
+    </p>
 
-    <!-- Right: Form -->
-    <div class="contact-form">
-      <h2>Send Us Your Inquiry</h2>
-      <form action="https://formspree.io/f/mwvenvvn" method="POST">
-        <input type="hidden" name="_redirect" value="thank-you.html">
-        <input type="text" name="_gotcha" style="display:none">
-        <input type="hidden" name="_subject" value="New Inquiry from Koyinta Website">
+    <form action="https://formspree.io/f/mwvenvvn"
+          method="POST"
+          class="contact-form">
 
-        <label for="company">Company Name *</label>
-        <input type="text" id="company" name="company" required>
+      <!-- Redirect after submit -->
+      <input type="hidden" name="_redirect"
+             value="https://www.koyinta.com/thank-you.html">
 
-        <label for="name">Contact Person *</label>
-        <input type="text" id="name" name="name" required>
+      <!-- Anti-spam -->
+      <input type="text" name="_gotcha" style="display:none">
 
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="email" required>
+      <!-- Name -->
+      <label>
+        Full Name *
+        <input type="text" name="name" required>
+      </label>
 
-        <label for="country">Country / Region</label>
-        <input type="text" id="country" name="country">
+      <!-- Company -->
+      <label>
+        Company Name
+        <input type="text" name="company">
+      </label>
 
-        <label for="interest">Product Interest *</label>
-        <select id="interest" name="interest" required>
-          <option value="">Select</option>
-          <option>Inkjet Inks</option>
-          <option>Consumables</option>
-          <option>Inkjet Components</option>
-        </select>
+      <!-- Email -->
+      <label>
+        Email Address *
+        <input type="email" name="email" required>
+      </label>
 
-        <label for="message">Application / System Details *</label>
-        <textarea id="message" name="message" rows="5" placeholder="Please describe your inkjet system, application and requirements." required></textarea>
+      <!-- Application -->
+      <label>
+        Printing Application
+        <input type="text" name="application"
+               placeholder="e.g. Packaging, Labels, Coding & Marking">
+      </label>
 
-        <button type="submit" class="btn-primary">Send Inquiry <span class="btn-icon">→</span></button>
-      </form>
-    </div>
+      <!-- Message -->
+      <label>
+        System & Requirements *
+        <textarea name="message" rows="6" required
+          placeholder="Please describe your inkjet system, printhead model, ink type, substrate and any technical challenges."></textarea>
+      </label>
 
+      <!-- Submit -->
+      <button type="submit" class="btn-primary btn-submit">
+        Send Inquiry <span class="btn-icon">→</span>
+      </button>
+
+    </form>
+
+  </div>
+</section>
+
+<!-- ================= Trust Section ================= -->
+<section class="section section-gray">
+  <div class="container narrow">
+    <h2>What Happens Next?</h2>
+    <ul class="focus-list">
+      <li>Your inquiry is reviewed by a technical specialist</li>
+      <li>We evaluate system compatibility and application needs</li>
+      <li>You receive a clear response or solution proposal</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta">
+  <div class="container">
+    <h2>Reliable Inkjet Performance Starts with the Right Partner</h2>
+    <a href="products.html" class="btn-secondary">
+      View Our Products →
+    </a>
   </div>
 </section>
 
 </main>
 
-<!-- Footer -->
+<!-- ================= Footer ================= -->
 <footer class="site-footer">
   <div class="container">
     <p>© 2026 KOYINTA. All rights reserved.</p>
-    <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms of Service</a>
+    </p>
   </div>
 </footer>
 

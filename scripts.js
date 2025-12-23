@@ -1,52 +1,48 @@
-// scripts.js
+/* =====================================================
+   KOYINTA Website - Final scripts.js
+   Author: Production-ready version
+   ===================================================== */
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
 
-  // ===== 汉堡菜单切换 =====
+  /* ===============================
+     Mobile Navigation (Hamburger)
+     =============================== */
   const menuBtn = document.querySelector(".menu-btn");
   const nav = document.querySelector(".site-header nav");
 
   if (menuBtn && nav) {
-    menuBtn.addEventListener("click", function() {
+    menuBtn.addEventListener("click", () => {
       nav.classList.toggle("active");
+    });
+
+    // 点击导航链接后自动关闭菜单（移动端体验更好）
+    nav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("active");
+      });
     });
   }
 
-  // ===== 点击导航链接自动收起（移动端） =====
-  const navLinks = document.querySelectorAll(".site-header nav a");
-  navLinks.forEach(link => {
-    link.addEventListener("click", function() {
-      if (window.innerWidth <= 768 && nav.classList.contains("active")) {
-        nav.classList.remove("active");
-      }
-    });
-  });
+  /* ===============================
+     Hero / Page Hero Text Animation
+     =============================== */
+  const heroSection = document.querySelector(".hero, .page-hero");
 
-  // ===== 平滑滚动到锚点 =====
-  const smoothLinks = document.querySelectorAll('a[href^="#"]');
-  smoothLinks.forEach(link => {
-    link.addEventListener("click", function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute("href"));
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth" });
-      }
-    });
-  });
+  if (heroSection) {
+    const heroTitle = heroSection.querySelector("h1");
+    const heroText = heroSection.querySelector("p");
 
-  // ===== Hero / Page-Hero 渐显动画 =====
-  const hero = document.querySelector(".hero, .page-hero");
-  if (hero) {
-    const heroTitle = hero.querySelector("h1");
-    const heroText = hero.querySelector("p");
-
-    // 初始样式已在 CSS 设置 opacity:0 和 translateY(20px)
-
-    // 延迟 300ms 后添加 active 类触发 CSS transition
+    // 小延迟，确保渲染完成后再触发动画
     setTimeout(() => {
       if (heroTitle) heroTitle.classList.add("active");
       if (heroText) heroText.classList.add("active");
-    }, 300);
+    }, 150);
   }
+
+  /* ===============================
+     Safety Debug (可选，确认加载成功)
+     =============================== */
+  // console.log("KOYINTA scripts.js loaded successfully");
 
 });
