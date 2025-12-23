@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <title>KOYINTA | Industrial Inkjet Solutions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KOYINTA offers industrial inkjet inks, consumables, and components for stable and reliable production.">
   <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
 </head>
 <body>
 
-<!-- ================= Header ================= -->
+<!-- Header -->
 <header class="site-header">
   <div class="container header-flex">
     <div class="logo">
@@ -18,111 +20,65 @@
       <a href="index.html" class="active">Home</a>
       <a href="products.html">Products</a>
       <a href="about.html">About</a>
-      <a href="contact.html" class="btn-primary">
-        Contact Us <span class="btn-icon">→</span>
-      </a>
+      <a href="contact.html" class="btn-primary">Contact Us <span class="btn-icon">→</span></a>
     </nav>
     <button class="menu-btn" aria-label="Toggle Navigation">&#9776;</button>
   </div>
 </header>
 
-<!-- ================= Hero ================= -->
-<section class="hero">
-  <div class="hero-bg" style="background-image:url('images/hero-fullscreen.jpg');"></div>
-  <div class="container hero-content">
-    <h1>Reliable Industrial Inkjet Solutions</h1>
-    <p>High-performance inks, consumables, and components for stable industrial printing.</p>
-    <a href="contact.html" class="btn-primary">
-      Contact Us <span class="btn-icon">→</span>
-    </a>
-  </div>
-</section>
+<main>
 
-<!-- ================= Company Vision ================= -->
-<section class="vision-section">
-  <div class="vision-grid container">
-    <div class="vision-image">
-      <img src="images/hero-person.png" alt="KOYINTA Team">
+  <!-- Hero -->
+  <section class="page-hero" style="background-image:url('images/koyinta-hero-banner.png');">
+    <div class="container">
+      <h1>Industrial Inkjet Solutions</h1>
+      <p>Providing stable, reliable inks, consumables, and components for your industrial inkjet systems.</p>
+      <a href="contact.html" class="btn-primary">Get in Touch <span class="btn-icon">→</span></a>
     </div>
-    <div class="vision-content">
-      <h2>Our Company Vision</h2>
-      <p>Focused on industrial inkjet performance, stability, and long-term reliability.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- ================= What We Offer ================= -->
-<section>
-  <div class="container">
-    <div class="section-title">
-      <h2>What We Offer</h2>
-      <p>Professional inkjet solutions for industrial applications</p>
-    </div>
-    <div class="offer-grid">
-      <div class="offer-card">
-        <h3>Inkjet Inks</h3>
-        <p>Industrial-grade inks with stable performance and excellent compatibility.</p>
+  <!-- Vision Section -->
+  <section class="vision-section">
+    <div class="container vision-grid">
+      <div class="vision-content">
+        <h2>Our Vision</h2>
+        <p>We focus on stability, compatibility, and reliability in industrial inkjet production, supporting clients with professional solutions and technical expertise.</p>
       </div>
-      <div class="offer-card">
-        <h3>Consumables</h3>
-        <p>Reliable inkjet consumables designed for continuous production.</p>
-      </div>
-      <div class="offer-card">
-        <h3>Inkjet Components</h3>
-        <p>Key components supporting precision and durability in inkjet systems.</p>
+      <div class="vision-image">
+        <img src="images/hero-person.png" alt="Industrial Inkjet Solutions">
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ================= Featured Products ================= -->
-<section>
-  <div class="container">
-    <div class="section-title">
-      <h2>Featured Products</h2>
-      <p>Proven solutions trusted by industrial printing partners</p>
-    </div>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="images/wb220.jpg" alt="WB-220 Inkjet Ink">
-        <h3>WB-220 Inkjet Ink</h3>
-        <p>Water-based ink for industrial printing applications.</p>
-        <a href="product-wb-220.html" class="btn-primary">View Details →</a>
-      </div>
-      <div class="product-card">
-        <img src="images/consumable-placeholder.jpg" alt="Inkjet Consumables">
-        <h3>Consumables</h3>
-        <p>Reliable inkjet consumables for stable performance.</p>
-        <a href="products.html" class="btn-primary">View Category →</a>
-      </div>
-      <div class="product-card">
-        <img src="images/equipment-placeholder.jpg" alt="Inkjet Components">
-        <h3>Components</h3>
-        <p>Key components supporting industrial inkjet systems.</p>
-        <a href="products.html" class="btn-primary">View Category →</a>
+  <!-- Offer Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="offer-grid">
+        <div class="offer-card">
+          <h3>Inkjet Inks</h3>
+          <p>Stable and compatible inks for long-term production.</p>
+        </div>
+        <div class="offer-card">
+          <h3>Consumables</h3>
+          <p>Reliable consumables to maintain continuous operation.</p>
+        </div>
+        <div class="offer-card">
+          <h3>Components</h3>
+          <p>Key components ensuring precision and system compatibility.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ================= Footer ================= -->
+</main>
+
+<!-- Footer -->
 <footer class="site-footer">
   <div class="container">
     <p>© 2026 KOYINTA. All rights reserved.</p>
-    <p>
-      <a href="privacy.html">Privacy Policy</a> |
-      <a href="terms.html">Terms of Service</a>
-    </p>
+    <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
   </div>
 </footer>
-
-<script>
-  // 当前页面高亮
-  const currentPage = window.location.pathname.split("/").pop();
-  document.querySelectorAll(".site-header nav a").forEach(link => {
-    if(link.getAttribute("href") === currentPage) link.classList.add("active");
-  });
-</script>
 
 </body>
 </html>

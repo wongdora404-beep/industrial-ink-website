@@ -1,5 +1,5 @@
 /* =====================================================
-   KOYINTA Official Website – Complete Stylesheet
+   KOYINTA Official Website – Optimized Stylesheet
    ===================================================== */
 
 /* ===== Reset ===== */
@@ -14,22 +14,14 @@ body {
                Roboto, "Helvetica Neue", Arial, sans-serif;
   color: #333;
   line-height: 1.6;
-  background: #ffffff;
+  background: #fff;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
 
 /* ===== Container ===== */
 .container {
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -37,13 +29,13 @@ img {
 
 /* ===== Header ===== */
 .site-header {
-  background: #ffffff;
+  background: #fff;
   border-bottom: 1px solid #e5e5e5;
   position: relative;
   z-index: 10;
 }
 
-.site-header .header-flex {
+.header-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,9 +49,8 @@ img {
 
 .site-header nav {
   display: flex;
-  align-items: center;
   gap: 24px;
-  margin-left: auto;
+  align-items: center;
 }
 
 .site-header nav a {
@@ -72,7 +63,6 @@ img {
   font-weight: 600;
 }
 
-/* 汉堡菜单按钮 */
 .menu-btn {
   display: none;
   background: none;
@@ -82,14 +72,12 @@ img {
 }
 
 @media (max-width: 768px) {
-  .menu-btn {
-    display: block;
-  }
+  .menu-btn { display: block; }
   .site-header nav {
     display: none;
     flex-direction: column;
     gap: 12px;
-    background: #ffffff;
+    background: #fff;
     position: absolute;
     top: 100%;
     right: 20px;
@@ -97,9 +85,8 @@ img {
     border: 1px solid #eee;
     border-radius: 6px;
   }
-  .site-header nav.active {
-    display: flex;
-  }
+  .site-header nav.active { display: flex; }
+  .header-flex { flex-direction: column; align-items: flex-start; gap: 16px; }
 }
 
 /* ===== Buttons ===== */
@@ -109,7 +96,7 @@ img {
   gap: 8px;
   padding: 12px 28px;
   background-color: #00a3e0;
-  color: #ffffff;
+  color: #fff;
   border-radius: 4px;
   font-size: 15px;
   font-weight: 500;
@@ -126,7 +113,6 @@ img {
 .btn-primary .btn-icon {
   transition: transform 0.25s ease;
 }
-
 .btn-primary:hover .btn-icon {
   transform: translateX(4px);
 }
@@ -136,10 +122,10 @@ img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
-  padding: 120px 20px;
-  min-height: 100vh;
+  padding: 80px 20px;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -158,132 +144,66 @@ img {
   opacity: 0.9;
 }
 
-/* ===== Section Titles ===== */
-.section-title {
-  text-align: center;
-  margin-bottom: 48px;
+/* ===== Sections ===== */
+.section {
+  padding: 60px 0;
+}
+.section-gray { background-color: #f9f9f9; }
+
+.container.narrow {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.section-title h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
+.focus-list { list-style: disc inside; color:#333; }
 
-.section-title p {
-  font-size: 16px;
-  color: #666;
-}
-
-/* ===== Offer Grid ===== */
-.offer-grid {
+/* ===== Grid Layouts ===== */
+.offer-grid, .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 32px;
 }
 
-.offer-card {
-  border: 1px solid #eee;
-  padding: 32px;
-  text-align: center;
-}
-
-/* ===== Product Grid ===== */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-}
-
-.product-card {
-  border: 1px solid #eee;
+.offer-card, .product-card {
+  border:1px solid #eee;
   padding: 24px;
+  text-align: center;
 }
 
-.product-card h3 {
-  margin: 16px 0 10px;
-}
-
-/* ===== Company Vision Section (Full Screen Image) ===== */
+/* ===== Vision Section ===== */
 .vision-section {
-  width: 100%;
-  min-height: 100vh;
   display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
   align-items: center;
-  justify-content: center;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
+.vision-content { flex:1; min-width:280px; }
 
-.vision-content {
-  text-align: center;
-}
-
-/* ===== CTA Section ===== */
+/* ===== CTA ===== */
 .cta {
-  background: #f5f7fa;
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.cta h2 {
-  font-size: 32px;
-  margin-bottom: 24px;
+  text-align:center;
+  padding:60px 20px;
+  background:#f5f7fa;
 }
 
 /* ===== Footer ===== */
 .site-footer {
   background: #0b1f33;
-  color: #ffffff;
-  padding: 40px 0;
-  font-size: 14px;
+  color: #fff;
+  padding: 40px 20px;
   text-align: center;
+  font-size: 14px;
 }
+.site-footer a { color:#fff; opacity:0.8; }
+.site-footer a:hover { opacity:1; }
 
-.site-footer p {
-  opacity: 0.7;
-  margin-bottom: 6px;
-}
-
-.site-footer a {
-  color: #ffffff;
-  opacity: 0.8;
-}
-
-.site-footer a:hover {
-  opacity: 1;
-}
-
-/* ===== Contact Page – Scoped Styles ===== */
+/* ===== Contact Page ===== */
 .contact-page .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: flex-start;
 }
-
-.contact-page .contact-form {
-  max-width: 720px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.contact-page .contact-info h2,
-.contact-page .contact-form h2 {
-  font-size: 26px;
-  margin-bottom: 16px;
-}
-
-.contact-page .contact-info p {
-  margin-bottom: 16px;
-  color: #555;
-}
-
-.contact-page form {
-  display: block;
-  width: 100%;
-}
-
 .contact-page label {
   display: block;
   font-size: 14px;
@@ -291,211 +211,23 @@ img {
   margin-bottom: 6px;
   margin-top: 16px;
 }
-
 .contact-page input,
 .contact-page select,
 .contact-page textarea {
   width: 100%;
   padding: 12px 14px;
   font-size: 14px;
-  font-family: inherit;
   border: 1px solid #ccc;
   border-radius: 4px;
-  background: #ffffff;
 }
-
-.contact-page textarea {
-  resize: vertical;
-  min-height: 140px;
-}
-
+.contact-page textarea { min-height: 140px; resize: vertical; }
 .contact-page input:focus,
 .contact-page select:focus,
-.contact-page textarea:focus {
-  outline: none;
-  border-color: #00a3e0;
-}
-
-.contact-page button[type="submit"] {
-  margin-top: 24px;
-  display: inline-flex;
-}
+.contact-page textarea:focus { border-color: #00a3e0; outline: none; }
 
 /* ===== Responsive ===== */
-@media (max-width: 768px) {
-  .hero h1, .page-hero h1 {
-    font-size: 32px;
-  }
-  .offer-grid,
-  .product-grid {
-    grid-template-columns: 1fr;
-  }
-  .site-header .header-flex {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-  .contact-page .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-}
-/* ===== Reset ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-               Roboto, "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background: #fff;
-}
-a { text-decoration: none; color: inherit; }
-img { max-width: 100%; display: block; }
-
-/* ===== Container ===== */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* ===== Header ===== */
-.site-header {
-  background: #fff;
-  border-bottom: 1px solid #e5e5e5;
-}
-.header-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-}
-.site-header nav {
-  display: flex;
-  gap: 24px;
-}
-.site-header nav a {
-  font-weight: 500;
-}
-.site-header nav a.active {
-  color: #0057ff;
-  font-weight: 600;
-}
-.site-header .logo img { height: 48px; width: auto; }
-.menu-btn { display: none; }
-
-/* ===== Buttons ===== */
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 28px;
-  background-color: #00a3e0;
-  color: #fff;
-  border-radius: 4px;
-  font-size: 15px;
-  font-weight: 500;
-  border: none;
-  cursor: pointer;
-  transition: 0.25s ease;
-}
-.btn-primary:hover { background-color: #007bb5; transform: translateY(-1px);}
-.btn-primary .btn-icon { transition: transform 0.25s ease; }
-.btn-primary:hover .btn-icon { transform: translateX(4px); }
-
-/* ===== Hero ===== */
-.hero {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  color: #fff;
-}
-.hero-bg {
-  position: absolute;
-  top:0; left:0;
-  width:100%; height:100%;
-  background-size: cover;
-  background-position: center;
-  z-index:0;
-}
-.hero-content {
-  position: relative;
-  z-index:1;
-  max-width: 720px;
-  padding: 0 20px;
-}
-.hero h1 { font-size: 42px; margin-bottom: 20px; }
-.hero p { font-size: 18px; margin-bottom: 32px; }
-
-/* ===== Vision Section ===== */
-.vision-section {
-  padding: 80px 0;
-  background-color: #f9f9f9;
-}
-.vision-grid {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.vision-image img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-.vision-content { flex:1; min-width:280px; }
-.vision-content h2 { font-size:2rem; margin-bottom:15px;}
-.vision-content p { font-size:1.2rem; color:#333; font-weight:500; line-height:1.6;}
-
-/* ===== Offer Grid ===== */
-.offer-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 32px;
-  margin-top: 40px;
-}
-.offer-card {
-  text-align: center;
-  border: 1px solid #eee;
-  padding: 32px;
-}
-
-/* ===== Product Grid ===== */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 32px;
-  margin-top: 40px;
-}
-.product-card {
-  border:1px solid #eee;
-  padding:24px;
-  text-align:center;
-}
-.product-card h3 { margin:16px 0 10px; }
-
-/* ===== Footer ===== */
-.site-footer {
-  background:#0b1f33;
-  color:#fff;
-  padding:40px 0;
-  text-align:center;
-  font-size:14px;
-}
-.site-footer a { color:#fff; opacity:0.8; }
-.site-footer a:hover { opacity:1; }
-
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-  .offer-grid, .product-grid { grid-template-columns:1fr; }
-  .header-flex { flex-direction: column; align-items: flex-start; gap:16px; }
-  .site-header nav { flex-direction: column; gap:12px; }
-  .vision-grid { flex-direction: column; text-align:center;}
-  .vision-content { margin-top:20px; }
-  .hero h1 { font-size:32px; }
+@media(max-width:768px){
+  .offer-grid,.product-grid {grid-template-columns:1fr;}
+  .contact-page .contact-grid {grid-template-columns:1fr; gap:40px;}
+  .hero h1,.page-hero h1 {font-size:32px;}
 }

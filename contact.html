@@ -4,16 +4,15 @@
   <meta charset="UTF-8">
   <title>Contact Us | KOYINTA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact KOYINTA for industrial inkjet inks, consumables, and components.">
   <link rel="stylesheet" href="styles.css">
-
+  <script src="scripts.js" defer></script>
 </head>
-
 <body class="contact-page">
 
-
-<!-- ================= Header ================= -->
+<!-- Header -->
 <header class="site-header">
-  <div class="container header-flex"> <!-- 加 container -->
+  <div class="container header-flex">
     <div class="logo">
       <img src="images/logo.png" alt="KOYINTA Logo" loading="lazy">
     </div>
@@ -21,105 +20,82 @@
       <a href="index.html">Home</a>
       <a href="products.html">Products</a>
       <a href="about.html">About</a>
-      <a href="contact.html" class="btn-primary">
-       Contact Us <span class="btn-icon">→</span>
-      </a>
-
-
+      <a href="contact.html" class="active btn-primary">Contact Us <span class="btn-icon">→</span></a>
     </nav>
+    <button class="menu-btn" aria-label="Toggle Navigation">&#9776;</button>
   </div>
 </header>
 
-
 <main>
 
-  <!-- ===== Page Hero ===== -->
-  <section class="page-hero">
-    <div class="container">
-      <h1>Contact Us</h1>
-      <p>Tell us about your inkjet application and requirements.</p>
-    </div>
-  </section>
+<!-- Page Hero -->
+<section class="page-hero" style="background-image:url('images/hero-person.png');">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Tell us about your inkjet application and requirements.</p>
+  </div>
+</section>
 
-  <!-- ===== Contact Content ===== -->
-  <section class="section">
-    <div class="container contact-grid">
+<!-- Contact Grid -->
+<section class="section">
+  <div class="container contact-grid">
 
-      <!-- ===== Left: Info ===== -->
-      <div class="contact-info">
-        <h2>Work with Koyinta</h2>
-        <p>
-          We support industrial inkjet applications with professional inks,
-          consumables, and technical communication.
-        </p>
-        <p>
-          To help us respond efficiently, please include information about
-          your printing system, application, and expected requirements.
-        </p>
-
-        <div class="contact-details">
-          <p><strong>Email:</strong> <a href="mailto:sales@koyinta.com">sales@koyinta.com</a></p>
-          <p><strong>Location:</strong> Hefei, China</p>
-        </div>
+    <!-- Left: Info -->
+    <div class="contact-info">
+      <h2>Work with Koyinta</h2>
+      <p>We support industrial inkjet applications with professional inks, consumables, and technical communication.</p>
+      <p>Please include details about your printing system, application, and expected requirements for a faster response.</p>
+      <div class="contact-details">
+        <p><strong>Email:</strong> <a href="mailto:sales@koyinta.com">sales@koyinta.com</a></p>
+        <p><strong>Location:</strong> Hefei, China</p>
       </div>
-
-      <!-- ===== Right: Form ===== -->
-      <div class="contact-form">
-        <h2>Send Us Your Inquiry</h2>
-        <form action="https://formspree.io/f/mwvenvvn" method="POST">
-          <!-- 提交成功后跳转 -->
-          <input type="hidden" name="_redirect" value="https://www.koyinta.com/thank-you.html">
-
-          <!-- 防垃圾询盘 -->
-          <input type="text" name="_gotcha" style="display:none">
-
-          <!-- 邮件标题 -->
-          <input type="hidden" name="_subject" value="New Inquiry from Koyinta Website">
-
-          <label for="company">Company Name *</label>
-          <input type="text" id="company" name="company" required>
-
-          <label for="name">Contact Person *</label>
-          <input type="text" id="name" name="name" required>
-
-          <label for="email">Email *</label>
-          <input type="email" id="email" name="email" required>
-
-          <label for="country">Country / Region</label>
-          <input type="text" id="country" name="country">
-
-          <label for="interest">Product Interest *</label>
-          <select id="interest" name="interest" required>
-            <option value="">Select</option>
-            <option>Inkjet Inks</option>
-            <option>Consumables</option>
-            <option>Inkjet Components</option>
-          </select>
-
-          <label for="message">Application / System Details</label>
-          <textarea id="message" name="message" rows="5" required
-            placeholder="Please describe your inkjet system, application and requirements."></textarea>
-
-          <button type="submit" class="btn-primary">
-           Send Inquiry <span class="btn-icon">→</span>
-          </button>
-
-        </form>
-      </div>
-
     </div>
-  </section>
+
+    <!-- Right: Form -->
+    <div class="contact-form">
+      <h2>Send Us Your Inquiry</h2>
+      <form action="https://formspree.io/f/mwvenvvn" method="POST">
+        <input type="hidden" name="_redirect" value="thank-you.html">
+        <input type="text" name="_gotcha" style="display:none">
+        <input type="hidden" name="_subject" value="New Inquiry from Koyinta Website">
+
+        <label for="company">Company Name *</label>
+        <input type="text" id="company" name="company" required>
+
+        <label for="name">Contact Person *</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="country">Country / Region</label>
+        <input type="text" id="country" name="country">
+
+        <label for="interest">Product Interest *</label>
+        <select id="interest" name="interest" required>
+          <option value="">Select</option>
+          <option>Inkjet Inks</option>
+          <option>Consumables</option>
+          <option>Inkjet Components</option>
+        </select>
+
+        <label for="message">Application / System Details *</label>
+        <textarea id="message" name="message" rows="5" placeholder="Please describe your inkjet system, application and requirements." required></textarea>
+
+        <button type="submit" class="btn-primary">Send Inquiry <span class="btn-icon">→</span></button>
+      </form>
+    </div>
+
+  </div>
+</section>
 
 </main>
 
-<!-- ================= Footer ================= -->
+<!-- Footer -->
 <footer class="site-footer">
-  <div class="container footer-content">
+  <div class="container">
     <p>© 2026 KOYINTA. All rights reserved.</p>
-    <p>
-      <a href="privacy.html">Privacy Policy</a> |
-      <a href="terms.html">Terms of Service</a>
-    </p>
+    <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
   </div>
 </footer>
 
