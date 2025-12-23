@@ -16,9 +16,9 @@
       <img src="images/logo.png" alt="KOYINTA Logo" loading="lazy">
     </div>
     <nav>
-      <a href="index.html" class="nav-link" id="nav-home">Home</a>
-      <a href="products.html" class="nav-link" id="nav-products">Products</a>
-      <a href="about.html" class="nav-link" id="nav-about">About</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
       <a href="contact.html" class="btn-primary">
         Contact Us <span class="btn-icon">→</span>
       </a>
@@ -28,19 +28,14 @@
 </header>
 
 <!-- ================= Hero ================= -->
-<section class="hero" aria-label="Hero Section" style="background-image: url('images/hero-new.png'); background-size: cover; background-position: center;">
-  <div class="container">
+<section class="hero">
+  <img src="images/hero-image.jpg" alt="Hero Image">
+  <div class="hero-content">
     <h1>Reliable Industrial Inkjet Solutions</h1>
-    <p>
-      High-performance inks, consumables, and components engineered for stability,
-      consistency, and long-term production.
-    </p>
-    <div class="hero-actions">
-      <a href="contact.html" class="btn-primary">
-        Contact Us <span class="btn-icon">→</span>
-      </a>
-
-    </div>
+    <p>High-performance inks, consumables, and components engineered for stability, consistency, and long-term production.</p>
+    <a href="contact.html" class="btn-primary">
+      Contact Us <span class="btn-icon">→</span>
+    </a>
   </div>
 </section>
 
@@ -79,21 +74,19 @@
 
     <div class="product-grid">
       <div class="product-card">
-        <img src="images/wb220.jpg" alt="WB-220 Water-based Inkjet Ink" loading="lazy">
+        <img src="images/wb220.jpg" alt="WB-220 Water-based Inkjet Ink">
         <h3>WB-220</h3>
         <p>Water-based inkjet ink for industrial printing applications.</p>
         <a href="product-wb-220.html" class="btn-primary">View Details →</a>
       </div>
-
       <div class="product-card">
-        <img src="images/consumable-placeholder.jpg" alt="Inkjet Consumables" loading="lazy">
+        <img src="images/consumable-placeholder.jpg" alt="Inkjet Consumables">
         <h3>Inkjet Consumables</h3>
         <p>Reliable consumables designed for stable inkjet performance.</p>
         <a href="products.html" class="btn-primary">View Category →</a>
       </div>
-
       <div class="product-card">
-        <img src="images/equipment-placeholder.jpg" alt="Inkjet Components" loading="lazy">
+        <img src="images/equipment-placeholder.jpg" alt="Inkjet Components">
         <h3>Inkjet Components</h3>
         <p>Key components supporting industrial inkjet systems.</p>
         <a href="products.html" class="btn-primary">View Category →</a>
@@ -102,9 +95,9 @@
   </div>
 </section>
 
-<!-- ================= Vision / Company Philosophy Hero ================= -->
+<!-- ================= Company Vision Hero ================= -->
 <section class="vision-hero">
-  <div class="vision-overlay"></div>
+  <img src="images/hero-person.png" alt="Company Vision">
 </section>
 
 <!-- ================= Footer ================= -->
@@ -112,18 +105,18 @@
   <div class="container">
     <p>© 2026 KOYINTA. All rights reserved.</p>
     <p>
-      <a href="privacy.html" rel="noopener noreferrer">Privacy Policy</a> |
-      <a href="terms.html" rel="noopener noreferrer">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms of Service</a>
     </p>
   </div>
 </footer>
 
-<!-- ================= Header 高亮当前页面脚本 ================= -->
 <script>
+  // 高亮当前页面
   const currentPage = window.location.pathname.split("/").pop();
   const navLinks = document.querySelectorAll(".site-header nav a");
   navLinks.forEach(link => {
-    if (link.getAttribute("href") === currentPage) {
+    if(link.getAttribute("href") === currentPage) {
       link.classList.add("active");
     }
   });

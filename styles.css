@@ -1,5 +1,5 @@
 /* =====================================================
-   KOYINTA Official Website – Clean Final Stylesheet
+   KOYINTA Official Website – Complete Stylesheet
    ===================================================== */
 
 /* ===== Reset ===== */
@@ -57,7 +57,6 @@ section {
   display: flex;
   align-items: center;
   gap: 24px;
-  margin-left: auto;
 }
 
 .site-header nav a {
@@ -75,7 +74,27 @@ section {
   width: auto;
 }
 
-/* ===== Primary Button ===== */
+/* 汉堡按钮 */
+.menu-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+  }
+  .site-header nav {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* ===== Buttons ===== */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -104,44 +123,51 @@ section {
   transform: translateX(4px);
 }
 
-/* ===== Hero Section ===== */
-.hero {
-  background: #0b1f33;
+/* 专用表单按钮 */
+.btn-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background-color: #00a3e0;
   color: #ffffff;
-  padding: 120px 0;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
-.hero h1 {
-  font-size: 42px;
-  max-width: 720px;
-  margin-bottom: 20px;
+.btn-submit:hover {
+  background-color: #007bb5;
+  transform: translateY(-1px);
 }
 
-.hero p {
-  font-size: 18px;
-  max-width: 620px;
-  opacity: 0.9;
-}
-
-.hero .btn-primary {
-  margin-top: 32px;
-}
-
-/* ===== Page Hero ===== */
-.page-hero {
-  background: #0b1f33;
+/* ===== Hero / Page Hero ===== */
+.hero, .page-hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #ffffff;
   text-align: center;
-  padding: 80px 0;
+  padding: 120px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.page-hero h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
+.hero h1, .page-hero h1 {
+  font-size: 42px;
+  max-width: 720px;
+  margin: 0 auto 20px auto;
 }
 
-.page-hero p {
+.hero p, .page-hero p {
   font-size: 18px;
+  max-width: 620px;
+  margin: 0 auto;
   opacity: 0.9;
 }
 
@@ -227,33 +253,34 @@ section {
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
-  .hero h1 {
+  .hero h1, .page-hero h1 {
     font-size: 32px;
   }
-
   .offer-grid,
   .product-grid {
     grid-template-columns: 1fr;
   }
-
   .site-header .header-flex {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
   }
-
-  .site-header nav {
-    flex-direction: column;
-    gap: 12px;
-  }
 }
 
-/* ===== Contact Page ===== */
+/* =====================================================
+   Contact Page – Scoped Styles
+   ===================================================== */
 .contact-page .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: flex-start;
+}
+
+.contact-page .contact-form {
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .contact-page .contact-info h2,
@@ -265,12 +292,6 @@ section {
 .contact-page .contact-info p {
   margin-bottom: 16px;
   color: #555;
-}
-
-.contact-page .contact-form {
-  max-width: 720px;
-  width: 100%;
-  margin: 0 auto;
 }
 
 .contact-page form {
@@ -292,6 +313,7 @@ section {
   width: 100%;
   padding: 12px 14px;
   font-size: 14px;
+  font-family: inherit;
   border: 1px solid #ccc;
   border-radius: 4px;
   background: #ffffff;
@@ -311,10 +333,10 @@ section {
 
 .contact-page button[type="submit"] {
   margin-top: 24px;
-  font-family: inherit;
+  display: inline-flex;
 }
 
-/* Responsive Contact */
+/* 移动端表单 */
 @media (max-width: 768px) {
   .contact-page .contact-grid {
     grid-template-columns: 1fr;
@@ -322,53 +344,27 @@ section {
   }
 }
 
-/* ===== Header Alignment Fix (Home) ===== */
-.menu-btn {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .menu-btn {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 26px;
-    cursor: pointer;
-  }
-  .site-header nav {
-    display: none;
-  }
-}
-
-/* ===== Vision / Company Philosophy Hero (铺满屏幕) ===== */
-.vision-hero {
-  position: relative;
-  background-image: url('images/hero-person.png'); /* 替换为你的图片路径 */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+/* =====================================================
+   Company Vision Section – Full Screen Image
+   ===================================================== */
+.vision-section {
   width: 100%;
-  min-height: 100vh; /* 铺满可视窗口高度 */
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.vision-overlay {
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0); /* 保持透明，仅显示图片 */
-}
-
-/* 隐藏文字内容，如果以后需要文字可修改 display */
 .vision-content {
-  display: none;
+  text-align: center;
+  color: #fff; /* 如果需要文字 */
 }
 
-/* ===== Responsive ===== */
 @media (max-width: 768px) {
-  .vision-hero {
-    min-height: 80vh; /* 移动端适当减少高度 */
+  .vision-section {
+    padding: 80px 20px;
   }
 }
-
