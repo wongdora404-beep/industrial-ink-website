@@ -321,3 +321,89 @@ section {
     padding: 0 10px;
   }
 }
+/* =====================================================
+   Contact Page Layout Fix (Safe Scoped)
+   ===================================================== */
+
+/* Contact 两列布局 */
+.contact-page .contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* 左侧信息 */
+.contact-page .contact-info h2 {
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+
+.contact-page .contact-info p {
+  margin-bottom: 16px;
+  color: #555;
+}
+
+/* 表单容器 */
+.contact-page .contact-form {
+  width: 100%;
+}
+
+.contact-page .contact-form h2 {
+  font-size: 26px;
+  margin-bottom: 24px;
+}
+
+/* 表单基础重置 */
+.contact-page form {
+  width: 100%;
+}
+
+/* label */
+.contact-page label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  margin-top: 16px;
+}
+
+/* input / select / textarea */
+.contact-page input,
+.contact-page select,
+.contact-page textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+/* textarea */
+.contact-page textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* focus */
+.contact-page input:focus,
+.contact-page select:focus,
+.contact-page textarea:focus {
+  outline: none;
+  border-color: #00a3e0;
+}
+
+/* 提交按钮 —— 统一为主按钮 */
+.contact-page button[type="submit"] {
+  margin-top: 24px;
+}
+
+/* 移动端 */
+@media (max-width: 768px) {
+  .contact-page .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
