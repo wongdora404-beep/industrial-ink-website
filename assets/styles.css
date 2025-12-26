@@ -170,3 +170,22 @@ a {
     display: none;
   }
 }
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-float img {
+  display: block;
+  border-radius: 50%;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.05);
+}
