@@ -62,23 +62,6 @@ a {
 /* ================= Hero ================= */
 .hero {
   padding: 100px 0;
-}
-
-.hero h1 {
-  font-size: 42px;
-  max-width: 720px;
-}
-
-.hero-desc {
-  margin: 20px 0 32px;
-  max-width: 640px;
-  color: #4b5563;
-  font-size: 18px;
-}
-
-/* ================= Hero Banner Background ================= */
-.hero {
-  padding: 100px 0;
   background: url('/assets/hero.png') no-repeat center center;
   background-size: cover;
   color: #ffffff;
@@ -91,15 +74,26 @@ a {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
-  z-index: 1;
+  pointer-events: none;
 }
 
-.hero h1,
-.hero .hero-desc,
+.hero h1 {
+  font-size: 42px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.hero-desc {
+  margin: 20px auto 32px;
+  max-width: 640px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.hero .container,
 .hero .btn {
   position: relative;
   z-index: 2;
-  color: #ffffff;
 }
 
 
