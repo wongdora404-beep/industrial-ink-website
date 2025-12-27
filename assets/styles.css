@@ -79,7 +79,7 @@ a {
 /* ================= Hero Banner Background ================= */
 .hero {
   padding: 100px 0;
-  background: url('assets/hero.png') no-repeat center center;
+  background: url('/assets/hero.png') no-repeat center center;
   background-size: cover;
   color: #ffffff;
   position: relative;
