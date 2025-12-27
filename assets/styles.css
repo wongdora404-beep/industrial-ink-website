@@ -76,6 +76,21 @@ a {
   font-size: 18px;
 }
 
+/* ================= Hero Banner Background ================= */
+.hero {
+  padding: 100px 0;
+  background: url('assets/hero.png') no-repeat center center;
+  background-size: cover;
+  color: #ffffff; /* 可确保文字在背景上可读 */
+  position: relative;
+  text-align: center;
+}
+
+.hero h1,
+.hero .hero-desc {
+  color: #ffffff;
+}
+
 /* ================= Typography ================= */
 .section-title {
   font-size: 32px;
