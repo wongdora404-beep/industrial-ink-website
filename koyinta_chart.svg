@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="100%" fill="none" style="background-color: #f8fafc;">
+    <!-- Background Technical Grid -->
+    <defs>
+        <pattern id="light-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(148, 163, 184, 0.08)" stroke-width="1"/>
+        </pattern>
+        <linearGradient id="blue-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#2563eb" stop-opacity="0.2"/>
+            <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.05"/>
+        </linearGradient>
+    </defs>
+    <rect width="800" height="400" fill="url(#light-grid)"/>
+    
+    <!-- Outer Border -->
+    <rect x="15" y="15" width="770" height="370" rx="4" stroke="#e2e8f0" stroke-width="1"/>
+
+    <!-- LEFT PANEL: Micron Membrane Mechanics -->
+    <g transform="translate(40, 40)">
+        <text x="0" y="20" font-family="monospace" font-size="12" font-weight="bold" fill="#64748b" letter-spacing="1">FIG 01: MICRON FILTRATION INTEGRITY</text>
+        
+        <!-- Membrane Layer -->
+        <rect x="120" y="50" width="40" height="240" rx="4" fill="url(#blue-glow)" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <text x="140" y="175" font-family="sans-serif" font-size="10" fill="#3b82f6" font-weight="bold" text-anchor="middle" transform="rotate(-90 140 175)">MEMBRANE</text>
+
+        <!-- Fluid Flow Inflow Particles (Aggregated Sediment) -->
+        <circle cx="30" cy="90" r="6" fill="#ef4444" opacity="0.7"/>
+        <circle cx="50" cy="140" r="8" fill="#ef4444" opacity="0.6"/>
+        <circle cx="40" cy="220" r="5" fill="#ef4444" opacity="0.7"/>
+        <circle cx="70" cy="100" r="4" fill="#64748b"/>
+        <circle cx="80" cy="180" r="3" fill="#64748b"/>
+        <circle cx="65" cy="250" r="4" fill="#64748b"/>
+        
+        <!-- Flow Vectors (Arrows) -->
+        <path d="M 40 115 L 100 115 M 90 110 L 100 115 L 90 120" stroke="#3b82f6" stroke-width="1.5" fill="none"/>
+        <path d="M 40 195 L 100 195 M 90 110 M 90 190 L 100 195 L 90 200" stroke="#3b82f6" stroke-width="1.5" fill="none"/>
+
+        <!-- Filtered Outflow (Pristine Fluid) -->
+        <circle cx="200" cy="115" r="2.5" fill="#10b981"/>
+        <circle cx="240" cy="155" r="2" fill="#10b981"/>
+        <circle cx="210" cy="200" r="2.5" fill="#10b981"/>
+        <circle cx="250" cy="235" r="2" fill="#10b981"/>
+        
+        <path d="M 180 115 L 260 115 M 250 110 L 260 115 L 250 120" stroke="#10b981" stroke-width="1.5" fill="none"/>
+        <path d="M 180 195 L 260 195 M 250 190 L 260 195 L 250 200" stroke="#10b981" stroke-width="1.5" fill="none"/>
+    </g>
+
+    <!-- CENTER DIVIDER -->
+    <line x1="400" y1="50" x2="400" y2="350" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="6 6"/>
+
+    <!-- RIGHT PANEL: Dynamic Pulse Analysis -->
+    <g transform="translate(440, 40)">
+        <text x="0" y="20" font-family="monospace" font-size="12" font-weight="bold" fill="#64748b" letter-spacing="1">FIG 02: DYNAMIC PULSE &amp; CROSSTALK CONTROL</text>
+        
+        <!-- Chart Axes -->
+        <path d="M 30 70 L 30 280 L 320 280" stroke="#cbd5e1" stroke-width="1.5" stroke-linecap="round"/>
+        <text x="25" y="65" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="end">Pressure</text>
+        <text x="320" y="295" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="end">Time (t)</text>
+
+        <!-- Unoptimized Wave (Dotted Red) -->
+        <path d="M 30 170 Q 60 70 100 170 T 170 170 T 240 170 T 310 170" stroke="#f87171" stroke-width="1.5" stroke-dasharray="3 3" fill="none"/>
+        <text x="90" y="90" font-family="sans-serif" font-size="10" fill="#ef4444">Standard Fluctuation</text>
+
+        <!-- Optimized Stable Wave (Solid Green) -->
+        <path d="M 30 170 Q 60 140 100 170 T 170 170 T 240 170 T 310 170" stroke="#10b981" stroke-width="2" fill="none"/>
+        <text x="130" y="135" font-family="sans-serif" font-size="10" fill="#10b981" font-weight="bold">Koyinta Optimized Flow</text>
+
+        <!-- Calibration Lines -->
+        <line x1="30" y1="170" x2="320" y2="170" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2 4"/>
+        <text x="20" y="174" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="end">Target</text>
+    </g>
+</svg>
