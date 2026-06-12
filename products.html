@@ -15,32 +15,62 @@
         .custom-badge { display: inline-block; padding: 2px 8px; background: #eee; color: #333; font-size: 12px; font-weight: bold; margin-right: 5px; margin-bottom: 5px; border-radius: 3px; }
         .solution-feature { font-size: 13px; color: #555; margin: 5px 0; padding-left: 10px; border-left: 2px solid #000; }
         
-        /* 🛠️ 重新设计的全卡片覆盖工业底图样式 */
+        /* 🛠️ 高级解构主义：卡片双层分流排版 */
         .card-solution {
             position: relative;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             border: 1px solid #eee;
-            overflow: hidden; /* 防止放大的图片溢出卡片边界 */
+            overflow: hidden; /* 允许右下角图纸自然裁切溢出，制造纵深感 */
             z-index: 1;
-            background-color: #fff; /* 确保卡片有白底，衬托图纸线条 */
+            background-color: #fff;
+            padding: 30px 25px; /* 适当增加内边距 */
+            min-height: 420px; /* 固化卡片高度，让整体更整齐 */
         }
         
-        /* 利用伪元素让工业图纸完美铺满背景 */
+        /* 💡 核心改变：限制文字容器只占左侧 65% 空间，坚决不跟右侧图纸重叠 */
+        .solution-text-wrapper {
+            max-width: 65%;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* 💡 按钮同步靠左，并自适应文字宽度，不再傻大粗地横跨整个底部 */
+        .solution-btn {
+            display: inline-block;
+            text-align: center;
+            padding: 12px 28px;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.2s ease;
+            align-self: flex-start; /* 确保按钮在 flex 布局下靠左对齐 */
+            margin-top: auto; /* 推到卡片最底部 */
+            position: relative;
+            z-index: 2;
+        }
+        .solution-btn:hover {
+            background-color: #333;
+        }
+        
+        /* 📐 伪元素图纸：死死锁定在右侧，靠右下放大并允许溢出裁切 */
         .card-solution::after {
             content: "";
             position: absolute;
-            bottom: 5%;      /* 整体居中偏下靠右 */
-            right: 5%;
-            width: 90%;      /* 💡 放大到 90%，几乎覆盖整个卡片 */
-            height: 90%;
+            top: 10%;         /* 从上方延伸 */
+            right: -25%;      /* 💡 关键：向右自然溢出 25%，只露出一半多的精密车削线条 */
+            width: 65%;       /* 保持合理的视觉体量 */
+            height: 85%;
             background-repeat: no-repeat;
             background-size: contain;
-            background-position: bottom right; /* 保持精密的机械图纸朝向 */
-            opacity: 0.18;    /* 💡 放大后微调至 18% 透明度，高级且不干扰文字阅读 */
-            z-index: 0;      /* 绝对垫在文字下方 */
-            pointer-events: none; /* 让鼠标动作能够穿透 */
+            background-position: center right;
+            opacity: 0.15;     /* 15% 的微弱墨线感，低调深邃 */
+            z-index: 0;       /* 垫在底部 */
+            pointer-events: none;
         }
         
         /* 🔗 精准对应你的 PNG 文件名 */
@@ -94,60 +124,54 @@
                     <img src="assets/all-products.jpg" alt="KOYINTA Digital Inkjet Capsule Filters Portfolio" style="width: 100%; height: auto; display: block; object-fit: cover;">
                 </div>
 
-                <!-- 💥 板块 1：成熟应用解决方案 (Ready-to-Ship Solutions) - 全覆盖底图版 -->
+                <!-- 💥 板块 1：成熟应用解决方案 (Ready-to-Ship Solutions) - 优雅错位排版版 -->
                 <h3 style="font-size: 20px; margin-top: 40px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">1. Ready-to-Ship Standard Solutions</h3>
                 <p style="color: #666; font-size: 15px; margin-bottom: 25px;">Select our pre-configured, rigorously field-tested drop-in assemblies optimized for specific equipment matrix architectures:</p>
                 
                 <div class="grid-3" style="margin-bottom: 50px;">
                     <!-- Solution 1: Packaging -->
                     <div class="card card-solution solution-mini">
-                        <div style="position: relative; z-index: 2;">
+                        <div class="solution-text-wrapper">
                             <span style="font-size: 11px; color: #fff; background: #000; padding: 2px 6px; text-transform: uppercase; font-weight: bold; border-radius: 3px;">Application 01</span>
-                            <h3 style="margin-top: 10px; font-size: 18px;">Corrugated & Packaging Loop</h3>
-                            <p style="font-size: 13px; color: #666;">Optimized for high-speed single-pass packaging systems running heavy UV-curable or water-based industrial inks.</p>
+                            <h3 style="margin-top: 10px; font-size: 18px; line-height: 1.3;">Corrugated & Packaging Loop</h3>
+                            <p style="font-size: 13px; color: #666; line-height: 1.5; margin: 12px 0;">Optimized for high-speed single-pass packaging systems running heavy UV-curable or water-based industrial inks.</p>
                             <div style="margin: 15px 0;">
-                                <div class="solution-feature"><strong>Core Filter:</strong> KXT-60 Standard (350 cm²)</div>
-                                <div class="solution-feature"><strong>Housing:</strong> Absolute UV-Block Deep Black</div>
-                                <div class="solution-feature"><strong>Hydraulic Link:</strong> 1/4" NPT Thread Interface</div>
+                                <div class="solution-feature"><strong>Core Filter:</strong> KXT-60 Standard</div>
+                                <div class="solution-feature"><strong>Housing:</strong> UV-Block Black</div>
+                                <div class="solution-feature"><strong>Link:</strong> 1/4" NPT Interface</div>
                             </div>
                         </div>
-                        <div style="margin-top: 15px; position: relative; z-index: 2;">
-                            <a href="mailto:info@koyinta.com?subject=Inquiry: Packaging Filtration Loop Solution" style="display: block; text-align: center; padding: 10px 15px; background-color: #000; color: #fff; text-decoration: none; font-size: 14px; border-radius: 4px; font-weight: bold;">Inquire Now</a>
-                        </div>
+                        <a href="mailto:info@koyinta.com?subject=Inquiry: Packaging Filtration Loop Solution" class="solution-btn">Inquire Now</a>
                     </div>
 
                     <!-- Solution 2: Commercial Graphics -->
                     <div class="card card-solution solution-standard">
-                        <div style="position: relative; z-index: 2;">
+                        <div class="solution-text-wrapper">
                             <span style="font-size: 11px; color: #fff; background: #000; padding: 2px 6px; text-transform: uppercase; font-weight: bold; border-radius: 3px;">Application 02</span>
-                            <h3 style="margin-top: 10px; font-size: 18px;">Wide-Format Commercial Setup</h3>
-                            <p style="font-size: 13px; color: #666;">Tailored for industrial graphics scanning printers requiring agile printhead carriage tracking and minimum hydraulic payload.</p>
+                            <h3 style="margin-top: 10px; font-size: 18px; line-height: 1.3;">Wide-Format Commercial Setup</h3>
+                            <p style="font-size: 13px; color: #666; line-height: 1.5; margin: 12px 0;">Tailored for industrial graphics scanning printers requiring agile printhead carriage tracking and minimum hydraulic payload.</p>
                             <div style="margin: 15px 0;">
-                                <div class="solution-feature"><strong>Core Filter:</strong> KXT-60 Mini Compact (150 cm²)</div>
-                                <div class="solution-feature"><strong>Housing:</strong> Translucent Virgin Polypropylene</div>
-                                <div class="solution-feature"><strong>Hydraulic Link:</strong> Secure Male Luer Lock</div>
+                                <div class="solution-feature"><strong>Core Filter:</strong> KXT-60 Mini</div>
+                                <div class="solution-feature"><strong>Housing:</strong> Virgin Polypropylene</div>
+                                <div class="solution-feature"><strong>Link:</strong> Male Luer Lock</div>
                             </div>
                         </div>
-                        <div style="margin-top: 15px; position: relative; z-index: 2;">
-                            <a href="mailto:info@koyinta.com?subject=Inquiry: Wide-Format Commercial Solution" style="display: block; text-align: center; padding: 10px 15px; background-color: #000; color: #fff; text-decoration: none; font-size: 14px; border-radius: 4px; font-weight: bold;">Inquire Now</a>
-                        </div>
+                        <a href="mailto:info@koyinta.com?subject=Inquiry: Wide-Format Commercial Solution" class="solution-btn">Inquire Now</a>
                     </div>
 
                     <!-- Solution 3: Textile Loop -->
                     <div class="card card-solution solution-max">
-                        <div style="position: relative; z-index: 2;">
+                        <div class="solution-text-wrapper">
                             <span style="font-size: 11px; color: #fff; background: #000; padding: 2px 6px; text-transform: uppercase; font-weight: bold; border-radius: 3px;">Application 03</span>
-                            <h3 style="margin-top: 10px; font-size: 18px;">High-Viscosity Textile Loop</h3>
-                            <p style="font-size: 13px; color: #666;">Engineered specifically for high-loading reactive dyes, disperse inks, and highly volatile heavy organic pigment formulations.</p>
+                            <h3 style="margin-top: 10px; font-size: 18px; line-height: 1.3;">High-Viscosity Textile Loop</h3>
+                            <p style="font-size: 13px; color: #666; line-height: 1.5; margin: 12px 0;">Engineered specifically for high-loading reactive dyes, disperse inks, and highly volatile heavy organic pigment formulations.</p>
                             <div style="margin: 15px 0;">
-                                <div class="solution-feature"><strong>Core Filter:</strong> KXT-60 Max Pleated (Up to 532 cm²)</div>
-                                <div class="solution-feature"><strong>Housing:</strong> Solvent-Resistant Reinforced PP</div>
-                                <div class="solution-feature"><strong>Hydraulic Link:</strong> 1/4" Swagelok Quick Joint</div>
+                                <div class="solution-feature"><strong>Core Filter:</strong> KXT-60 Max Pleated</div>
+                                <div class="solution-feature"><strong>Housing:</strong> Reinforced PP</div>
+                                <div class="solution-feature"><strong>Link:</strong> 1/4" Swagelok Joint</div>
                             </div>
                         </div>
-                        <div style="margin-top: 15px; position: relative; z-index: 2;">
-                            <a href="mailto:info@koyinta.com?subject=Inquiry: High-Viscosity Textile Solution" style="display: block; text-align: center; padding: 10px 15px; background-color: #000; color: #fff; text-decoration: none; font-size: 14px; border-radius: 4px; font-weight: bold;">Inquire Now</a>
-                        </div>
+                        <a href="mailto:info@koyinta.com?subject=Inquiry: High-Viscosity Textile Solution" class="solution-btn">Inquire Now</a>
                     </div>
                 </div>
 
@@ -192,7 +216,7 @@
                 </div>
 
 
-                <!-- 📊 板块 3：硬核 product 技术参数表格区 -->
+                <!-- 📊 板块 3：硬核参数表格区 -->
                 <h3 style="font-size: 20px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;">3. Certified Engineering Specifications</h3>
                 <div class="specs-table-wrapper">
                     <table class="specs-table">
