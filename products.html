@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products | KOYINTA Precision Fluid Systems</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 为参数表格增加优雅的工业级响应式样式 */
+        .specs-table-wrapper { width: 100%; overflow-x: auto; margin: 30px 0; }
+        .specs-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
+        .specs-table th { background-color: #000; color: #fff; padding: 12px 15px; font-weight: 600; }
+        .specs-table td { padding: 12px 15px; border-bottom: 1px solid #eee; color: #333; }
+        .specs-table tr:nth-child(even) { background-color: #f9f9f9; }
+        .custom-badge { display: inline-block; padding: 2px 8px; background: #eee; color: #333; font-size: 12px; font-weight: bold; margin-right: 5px; margin-bottom: 5px; border-radius: 3px; }
+    </style>
 </head>
 <body>
 
-    <!-- Unified Header Structure -->
     <header class="site-header">
         <div class="container">
             <div class="logo">
@@ -28,83 +36,124 @@
     </header>
 
     <main>
-        <!-- Product Section Hero -->
         <section class="hero">
             <div class="container">
                 <h1>Industrial Inkjet & Fluid System Supplies</h1>
                 <p class="hero-desc">
-                    High-integrity consumables and precision filtration components designed to extend equipment lifespan and ensure jetting consistency.
+                    High-integrity consumables, precision custom filtration matrices, and fluidic delivery components designed for cross-platform OEM integrations.
                 </p>
             </div>
         </section>
 
-        <!-- Category 1: Upgraded Star Products -->
         <section class="section">
             <div class="container">
                 <h2 class="section-title">High-Performance Digital Inkjet Capsule Filters</h2>
                 <p class="section-desc">
-                    Engineered with optimized fluid dynamics, filtration kinetics, and absolute photophobic mechanics. Features proprietary absolute UV-block deep-black configurations to protect sensitive UV-curable chemistries from premature intra-capsule polymerization.
+                    Engineered for single-pass and scanning industrial inkjet infrastructures. We provide highly adaptable modular configurations alongside proprietary, absolute photophobic deep-black housings to protect UV-curable formulations from premature polymerization.
                 </p>
 
-                <!-- 📸 核心产品全家福大图展示区（确保 all-products.jpg 在 assets 文件夹内） -->
                 <div class="product-showroom" style="width: 100%; margin: 30px 0 40px 0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
                     <img src="assets/all-products.jpg" alt="KOYINTA Digital Inkjet Capsule Filters Portfolio" style="width: 100%; height: auto; display: block; object-fit: cover;">
                 </div>
 
-                <!-- Product Matrix (Mini, Standard, Max) -->
-                <div class="grid-3">
+                <h3 style="font-size: 20px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;">1. Modular Customization Architecture (OEM/ODM Ready)</h3>
+                <p style="color: #666; font-size: 15px; margin-top: -10px; margin-bottom: 25px;">Instead of rigid standard items, KOYINTA operates on a modular blueprint. You configure the exact micro-environment your fluid requires:</p>
+
+                <div class="grid-3" style="margin-bottom: 40px;">
                     <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
                         <div>
-                            <span style="font-size: 12px; color: #888; text-transform: uppercase; font-weight: bold;">KXT-60 Mini</span>
-                            <h3 style="margin-top: 5px;">Fluidic Compact Filter</h3>
-                            <p><strong>Effective Filtration Area:</strong> 80 - 150 cm²</p>
-                            <p><strong>Interface:</strong> Male Luer Lock</p>
-                            <p>Optimized for tight printhead carriage configurations and low-volume single-pass setup requirements.</p>
-                        </div>
-                        <div style="margin-top: 15px;">
-                            <a href="mailto:info@koyinta.com?subject=Inquiry for KXT-60 Mini" style="display: inline-block; padding: 8px 15px; background-color: #000; color: #fff; text-decoration: none; font-size: 14px; border-radius: 4px; font-weight: bold;">Inquire Now</a>
+                            <span style="font-size: 12px; color: #888; text-transform: uppercase; font-weight: bold;">Step 01: Media & Size</span>
+                            <h3 style="margin-top: 5px; font-size: 18px;">Membrane Selection</h3>
+                            <p style="margin-bottom: 15px;">Match chemical properties with premium pore mechanics across 3 footprint footprints:</p>
+                            <div>
+                                <span class="custom-badge">Hydrophobic PTFE</span>
+                                <span class="custom-badge">Polypropylene (PP)</span>
+                                <span class="custom-badge">Polyethersulfone (PES)</span>
+                                <span class="custom-badge">Nylon 66 (N66)</span>
+                            </div>
+                            <p style="font-size: 13px; color: #666; margin-top: 10px;"><strong>Form Factors:</strong> Mini (80-150 cm²) / Standard (260-350 cm²) / Max (Up to 532 cm² Effective Filtration Area)</p>
                         </div>
                     </div>
 
-                    <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; border: 2px solid #000; position: relative;">
-                        <span style="position: absolute; top: -12px; right: 15px; background: #000; color: #fff; padding: 2px 10px; font-size: 11px; text-transform: uppercase; font-weight: bold; border-radius: 10px;">Flagship</span>
+                    <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #ccc;">
                         <div>
-                            <span style="font-size: 12px; color: #888; text-transform: uppercase; font-weight: bold;">KXT-60 Standard</span>
-                            <h3 style="margin-top: 5px;">Universal Main Ink Loop</h3>
-                            <p><strong>Effective Filtration Area:</strong> 260 - 350 cm²</p>
-                            <p><strong>Interface:</strong> 1/4" NPT Thread</p>
-                            <p>The industry benchmark for commercial packaging and scanning corrugated inkjet printer systems. Rugged and leak-proof.</p>
-                        </div>
-                        <div style="margin-top: 15px;">
-                            <a href="mailto:info@koyinta.com?subject=Inquiry for KXT-60 Standard" style="display: inline-block; padding: 8px 15px; background-color: #000; color: #fff; text-decoration: none; font-size: 14px; border-radius: 4px; font-weight: bold;">Inquire Now</a>
+                            <span style="font-size: 12px; color: #888; text-transform: uppercase; font-weight: bold;">Step 02: Light Shielding</span>
+                            <h3 style="margin-top: 5px; font-size: 18px;">Housing Formulations</h3>
+                            <p style="margin-bottom: 15px;">Isolate your fluidic loop from ambient environments based on active chemistry wavelengths:</p>
+                            <div>
+                                <span class="custom-badge" style="background:#f0f0f0;">100% Virgin Translucent PP</span>
+                                <span class="custom-badge" style="background:#000; color:#fff;">Absolute UV-Block Black Composite</span>
+                            </div>
+                            <p style="font-size: 13px; color: #666; margin-top: 10px;">Ensures zero light leakage, preventing intra-capsule monomer cross-linking and premium fluid crystallization.</p>
                         </div>
                     </div>
 
                     <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
                         <div>
-                            <span style="font-size: 12px; color: #888; text-transform: uppercase; font-weight: bold;">KXT-60 Max</span>
-                            <h3 style="margin-top: 5px;">High-Capacity Throughput</h3>
-                            <p><strong>Effective Filtration Area:</strong> Up to 532 cm²</p>
-                            <p><strong>Interface:</strong> 1/4" Swagelok Quick</p>
-                            <p>High-density asymmetry pleat geometry for high-viscosity textile or heavy pigment formulations. Minimum maintenance downtime.</p>
-                        </div>
-                        <div style="margin-top: 15px;">
-                            <a href="mailto:info@koyinta.com?subject=Inquiry for KXT-60 Max" style="display: inline-block; padding: 8px 15px; background-color: #000; color: #fff; text-decoration: none; font-size: 14px; border-radius: 4px; font-weight: bold;">Inquire Now</a>
+                            <span style="font-size: 12px; color: #888; text-transform: uppercase; font-weight: bold;">Step 03: Hydraulic Coupling</span>
+                            <h3 style="margin-top: 5px; font-size: 18px;">Mechanical Interfaces</h3>
+                            <p style="margin-bottom: 15px;">Eliminate plumbing leaks in high-vibration carriage layouts with standard adaptive threads:</p>
+                            <div>
+                                <span class="custom-badge">1/4" NPT Thread</span>
+                                <span class="custom-badge">Male Luer Lock</span>
+                                <span class="custom-badge">1/4" Swagelok Quick Coupling</span>
+                            </div>
+                            <p style="font-size: 13px; color: #666; margin-top: 10px;">Custom connective flanges and dynamic custom fittings are available upon technical specification submission.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Technical Validation Resources & Download Link（已完美同步新文件名） -->
-                <div style="margin-top: 40px; padding: 25px; background-color: #f9f9f9; border-left: 4px solid #000; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <h3 style="font-size: 20px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;">2. Certified Engineering Specifications</h3>
+                <div class="specs-table-wrapper">
+                    <table class="specs-table">
+                        <thead>
+                            <tr>
+                                <th>Engineering Parameter</th>
+                                <th>Certified Specifications & Operational Limits</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Removal Ratings</strong></td>
+                                <td>&ge; 99.8% Absolute Efficiency (&beta; &ge; 500) via modified ISO 16889 protocols</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Available Micron Ratings</strong></td>
+                                <td>1.5 &mu;m, 2.0 &mu;m, 3.0 &mu;m, 5.0 &mu;m, 10 &mu;m, 20 &mu;m, 50 &mu;m</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Chemical pH Compatibility</strong></td>
+                                <td>pH 1 - 14 (Full-spectrum solvent, eco-solvent, aqueous, and UV chemical resistance)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Max. Operating Temperature</strong></td>
+                                <td>50°C at Differential Pressure (&Delta;P) &le; 0.10 MPa</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Maximum Forward Pressure</strong></td>
+                                <td>5.5 bar at 25°C</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Recommended Change-out Limit</strong></td>
+                                <td>&Delta;P = 1.5 bar at 25°C (To avert fluid stagnation and pump overloading)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Bio-Safety & Cleanliness</strong></td>
+                                <td>Meets USP Class VI Plastics Biological Standards; 18 M&Omega;&middot;cm UPW flushed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="margin-top: 30px; padding: 25px; background-color: #f9f9f9; border-left: 4px solid #000; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
                     <div style="max-width: 700px;">
-                        <h4 style="margin: 0 0 8px 0; font-size: 18px; color: #333;">Looking for Certified Engineering Specifications?</h4>
+                        <h4 style="margin: 0 0 8px 0; font-size: 17px; color: #333;">Need Contractual Validation Challenges?</h4>
                         <p style="margin: 0; color: #666; font-size: 14px; line-height: 1.5;">
-                            Download our official Technical Whitepaper to review certified removal ratings (≥ 99.8% Absolute Efficiency, &beta; &ge; 500), chemical pH compatibility charts (pH 1-14), and biological test protocols.
+                            Download our complete Technical Whitepaper for complete dynamic flow curves, particle-counting logs, and custom configuration codes.
                         </p>
                     </div>
                     <div>
-                        <!-- 🔗 这里已精准更新为您的新文件名 -->
-                        <a href="koyinta_technical_whitepaper.pdf" target="_blank" style="display: inline-block; padding: 12px 24px; background-color: #fff; color: #000; border: 2px solid #000; text-decoration: none; font-weight: bold; border-radius: 4px; font-size: 14px; transition: all 0.3s ease;">
+                        <a href="koyinta_technical_whitepaper.pdf" target="_blank" style="display: inline-block; padding: 12px 24px; background-color: #fff; color: #000; border: 2px solid #000; text-decoration: none; font-weight: bold; border-radius: 4px; font-size: 14px;">
                             & Download Technical Whitepaper (PDF)
                         </a>
                     </div>
@@ -113,7 +162,6 @@
             </div>
         </section>
 
-        <!-- Category 2: Secondary Filtration Components -->
         <section class="section section-light">
             <div class="container">
                 <h2 class="section-title">Supplementary Filtration Systems</h2>
@@ -138,18 +186,17 @@
             </div>
         </section>
 
-        <!-- Category 3 -->
         <section class="section">
             <div class="container">
                 <h2 class="section-title">Ink Delivery & System Components</h2>
                 <p class="section-desc">
-                    Ensuring smooth, laminar flow from bulk storage tanks to the microscopic printhead nozzles.
+                    Ensuring smooth, laminar, pulseless flow from bulk storage distribution tanks to the microscopic nozzle rows.
                 </p>
 
                 <div class="grid-3">
                     <div class="card">
-                        <h3>Compatible Printheads</h3>
-                        <p>Strictly inspected and calibrated industrial printheads guaranteeing accurate droplet volume and consistent firing frequencies.</p>
+                        <h3>Precision Diaphragm Ink Pumps</h3>
+                        <p>Heavy-duty, micro-metering brushless DC pumps engineered for volatile chemical ink recirculation. Delivers stable pressure loops without pulsing.</p>
                     </div>
                     <div class="card">
                         <h3>Chemically Inert Tubing</h3>
@@ -164,7 +211,6 @@
         </section>
     </main>
 
-    <!-- Unified Footer Structure -->
     <footer class="site-footer">
         <div class="container">
             <p>&copy; 2026 KOYINTA. All rights reserved.</p>
