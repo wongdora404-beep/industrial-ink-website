@@ -15,28 +15,27 @@
         .custom-badge { display: inline-block; padding: 2px 8px; background: #eee; color: #333; font-size: 12px; font-weight: bold; margin-right: 5px; margin-bottom: 5px; border-radius: 3px; }
         .solution-feature { font-size: 13px; color: #555; margin: 5px 0; padding-left: 10px; border-left: 2px solid #000; }
         
-        /* 🛠️ 高级解构主义：卡片双层分流排版 */
+        /* 🛠️ 终极解构主义：水印质感卡片布局 */
         .card-solution {
             position: relative;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             border: 1px solid #eee;
-            overflow: hidden; /* 允许右下角图纸自然裁切溢出，制造纵深感 */
+            overflow: hidden; 
             z-index: 1;
             background-color: #fff;
-            padding: 30px 25px; /* 适当增加内边距 */
-            min-height: 420px; /* 固化卡片高度，让整体更整齐 */
+            padding: 30px 25px; 
+            min-height: 420px; 
         }
         
-        /* 💡 核心改变：限制文字容器只占左侧 65% 空间，坚决不跟右侧图纸重叠 */
+        /* 💡 调整 1：文字比例从 65% 扩大到 70%，更舒展大气 */
         .solution-text-wrapper {
-            max-width: 65%;
+            max-width: 70%;
             position: relative;
             z-index: 2;
         }
 
-        /* 💡 按钮同步靠左，并自适应文字宽度，不再傻大粗地横跨整个底部 */
         .solution-btn {
             display: inline-block;
             text-align: center;
@@ -48,8 +47,8 @@
             border-radius: 4px;
             font-weight: bold;
             transition: background 0.2s ease;
-            align-self: flex-start; /* 确保按钮在 flex 布局下靠左对齐 */
-            margin-top: auto; /* 推到卡片最底部 */
+            align-self: flex-start; 
+            margin-top: auto; 
             position: relative;
             z-index: 2;
         }
@@ -57,19 +56,19 @@
             background-color: #333;
         }
         
-        /* 📐 伪元素图纸：死死锁定在右侧，靠右下放大并允许溢出裁切 */
+        /* 💡 调整 2：图片右移减少（只向右溢出10%让轮廓更完整），但透明度压到 0.08（极淡的水印感） */
         .card-solution::after {
             content: "";
             position: absolute;
-            top: 10%;         /* 从上方延伸 */
-            right: -25%;      /* 💡 关键：向右自然溢出 25%，只露出一半多的精密车削线条 */
-            width: 65%;       /* 保持合理的视觉体量 */
-            height: 85%;
+            top: 12%;         
+            right: -10%;      /* 💡 拉回来一些，让滤清器的经典瓶身轮廓更完整可见 */
+            width: 65%;       
+            height: 80%;
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center right;
-            opacity: 0.15;     /* 15% 的微弱墨线感，低调深邃 */
-            z-index: 0;       /* 垫在底部 */
+            opacity: 0.08;     /* 💡 关键微调：降到 8% 的极致透明度，带来高级的空气感，绝不干扰文字 */
+            z-index: 0;       
             pointer-events: none;
         }
         
@@ -124,7 +123,7 @@
                     <img src="assets/all-products.jpg" alt="KOYINTA Digital Inkjet Capsule Filters Portfolio" style="width: 100%; height: auto; display: block; object-fit: cover;">
                 </div>
 
-                <!-- 💥 板块 1：成熟应用解决方案 (Ready-to-Ship Solutions) - 优雅错位排版版 -->
+                <!-- 💥 板块 1：成熟应用解决方案 (Ready-to-Ship Solutions) -->
                 <h3 style="font-size: 20px; margin-top: 40px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">1. Ready-to-Ship Standard Solutions</h3>
                 <p style="color: #666; font-size: 15px; margin-bottom: 25px;">Select our pre-configured, rigorously field-tested drop-in assemblies optimized for specific equipment matrix architectures:</p>
                 
