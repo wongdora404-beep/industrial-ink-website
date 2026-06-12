@@ -14,10 +14,43 @@
         .specs-table tr:nth-child(even) { background-color: #f9f9f9; }
         .custom-badge { display: inline-block; padding: 2px 8px; background: #eee; color: #333; font-size: 12px; font-weight: bold; margin-right: 5px; margin-bottom: 5px; border-radius: 3px; }
         .solution-feature { font-size: 13px; color: #555; margin: 5px 0; padding-left: 10px; border-left: 2px solid #000; }
+        
+        /* 🛠️ 高级半透明 PNG 工业底图样式实现 */
+        .card-solution {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #eee;
+            overflow: hidden; /* 防止图片溢出边界 */
+            z-index: 1;
+        }
+        
+        /* 利用伪元素单独控制底图的透明度和位置，完美保护文字不被干扰 */
+        .card-solution::after {
+            content: "";
+            position: absolute;
+            bottom: -10px; /* 沉底在右下角 */
+            right: -10px;
+            width: 180px;  /* 宽度控制在按钮右下方，形成漂亮的几何机械感 */
+            height: 180px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: bottom right;
+            opacity: 0.05; /* 5% 的极低透明度，像精致的水印，完全不干扰文字阅读 */
+            z-index: -1;   /* 绝对垫在文字下方 */
+            pointer-events: none; /* 让鼠标动作能够穿透 */
+        }
+        
+        /* 🔗 这里已完美更新为你的 PNG 文件后缀 */
+        .solution-mini::after { background-image: url('assets/kxt-60-mini.png'); }
+        .solution-standard::after { background-image: url('assets/kxt-60-standard.png'); }
+        .solution-max::after { background-image: url('assets/kxt-60-max.png'); }
     </style>
 </head>
 <body>
 
+    <!-- Unified Header Structure -->
     <header class="site-header">
         <div class="container">
             <div class="logo">
@@ -37,6 +70,7 @@
     </header>
 
     <main>
+        <!-- Product Section Hero -->
         <section class="hero">
             <div class="container">
                 <h1>Industrial Inkjet & Fluid System Supplies</h1>
@@ -46,6 +80,7 @@
             </div>
         </section>
 
+        <!-- Category 1: Star Products Area -->
         <section class="section">
             <div class="container">
                 <h2 class="section-title">High-Performance Digital Inkjet Capsule Filters</h2>
@@ -53,15 +88,18 @@
                     Engineered to maintain ultimate jetting stability and eliminate micro-particle crisis. We provide immediate off-the-shelf system drop-ins side by side with custom agile blueprints.
                 </p>
 
+                <!-- 📸 Core Product Showroom Image -->
                 <div class="product-showroom" style="width: 100%; margin: 30px 0 40px 0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
                     <img src="assets/all-products.jpg" alt="KOYINTA Digital Inkjet Capsule Filters Portfolio" style="width: 100%; height: auto; display: block; object-fit: cover;">
                 </div>
 
+                <!-- ⚡ 板块 1：成熟应用解决方案 (Ready-to-Ship Solutions) - 已整合半透明 PNG 底图 -->
                 <h3 style="font-size: 20px; margin-top: 40px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">1. Ready-to-Ship Standard Solutions</h3>
                 <p style="color: #666; font-size: 15px; margin-bottom: 25px;">Select our pre-configured, rigorously field-tested drop-in assemblies optimized for specific equipment matrix architectures:</p>
                 
                 <div class="grid-3" style="margin-bottom: 50px;">
-                    <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #eee;">
+                    <!-- Solution 1: Packaging -->
+                    <div class="card card-solution solution-mini">
                         <div>
                             <span style="font-size: 11px; color: #fff; background: #000; padding: 2px 6px; text-transform: uppercase; font-weight: bold; border-radius: 3px;">Application 01</span>
                             <h3 style="margin-top: 10px; font-size: 18px;">Corrugated & Packaging Loop</h3>
@@ -72,12 +110,13 @@
                                 <div class="solution-feature"><strong>Hydraulic Link:</strong> 1/4" NPT Thread Interface</div>
                             </div>
                         </div>
-                        <div style="margin-top: 15px;">
-                            <a href="mailto:info@koyinta.com?subject=Inquiry: Packaging Filtration Loop Solution" style="display: block; text-align: center; padding: 10px 15px; background-color: #000; color: #fff; text-decoration: none; font-size: 14px; border-radius: 4px; font-weight: bold;">Get Instant Quote</a>
+                        <div style="margin-top: 15px; z-index: 2;">
+                            <a href="mailto:info@koyinta.com?subject=Inquiry: Packaging Filtration Loop Solution" style="display: block; text-align: center; padding: 10px 15px; background-color: #000; color: #fff; text-decoration: none; font-size: 14px; border-radius: 4px; font-weight: bold;">Inquire Now</a>
                         </div>
                     </div>
 
-                    <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #eee;">
+                    <!-- Solution 2: Commercial Graphics -->
+                    <div class="card card-solution solution-standard">
                         <div>
                             <span style="font-size: 11px; color: #fff; background: #000; padding: 2px 6px; text-transform: uppercase; font-weight: bold; border-radius: 3px;">Application 02</span>
                             <h3 style="margin-top: 10px; font-size: 18px;">Wide-Format Commercial Setup</h3>
@@ -88,12 +127,13 @@
                                 <div class="solution-feature"><strong>Hydraulic Link:</strong> Secure Male Luer Lock</div>
                             </div>
                         </div>
-                        <div style="margin-top: 15px;">
-                            <a href="mailto:info@koyinta.com?subject=Inquiry: Wide-Format Commercial Solution" style="display: block; text-align: center; padding: 10px 15px; background-color: #000; color: #fff; text-decoration: none; font-size: 14px; border-radius: 4px; font-weight: bold;">Request Samples</a>
+                        <div style="margin-top: 15px; z-index: 2;">
+                            <a href="mailto:info@koyinta.com?subject=Inquiry: Wide-Format Commercial Solution" style="display: block; text-align: center; padding: 10px 15px; background-color: #000; color: #fff; text-decoration: none; font-size: 14px; border-radius: 4px; font-weight: bold;">Inquire Now</a>
                         </div>
                     </div>
 
-                    <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #eee;">
+                    <!-- Solution 3: Textile Loop -->
+                    <div class="card card-solution solution-max">
                         <div>
                             <span style="font-size: 11px; color: #fff; background: #000; padding: 2px 6px; text-transform: uppercase; font-weight: bold; border-radius: 3px;">Application 03</span>
                             <h3 style="margin-top: 10px; font-size: 18px;">High-Viscosity Textile Loop</h3>
@@ -104,13 +144,14 @@
                                 <div class="solution-feature"><strong>Hydraulic Link:</strong> 1/4" Swagelok Quick Joint</div>
                             </div>
                         </div>
-                        <div style="margin-top: 15px;">
-                            <a href="mailto:info@koyinta.com?subject=Inquiry: High-Viscosity Textile Solution" style="display: block; text-align: center; padding: 10px 15px; background-color: #000; color: #fff; text-decoration: none; font-size: 14px; border-radius: 4px; font-weight: bold;">Consult System Engineer</a>
+                        <div style="margin-top: 15px; z-index: 2;">
+                            <a href="mailto:info@koyinta.com?subject=Inquiry: High-Viscosity Textile Solution" style="display: block; text-align: center; padding: 10px 15px; background-color: #000; color: #fff; text-decoration: none; font-size: 14px; border-radius: 4px; font-weight: bold;">Inquire Now</a>
                         </div>
                     </div>
                 </div>
 
 
+                <!-- ⚙️ 板块 2：柔性定制内容 (Advanced Customization Blueprint) -->
                 <h3 style="font-size: 20px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: #333;">2. Need Tailored Modifications? Advanced Customization Blueprint</h3>
                 <p style="color: #666; font-size: 15px; margin-top: 0; margin-bottom: 25px;">If our standard setups do not perfectly match your internal plumbing spacing or unique fluid properties, KOYINTA provides full adaptive modular modifications:</p>
 
@@ -150,6 +191,7 @@
                 </div>
 
 
+                <!-- 📊 板块 3：硬核产品技术参数表格区 -->
                 <h3 style="font-size: 20px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;">3. Certified Engineering Specifications</h3>
                 <div class="specs-table-wrapper">
                     <table class="specs-table">
@@ -192,6 +234,7 @@
                     </table>
                 </div>
 
+                <!-- Technical Validation Resources & Download Link -->
                 <div style="margin-top: 30px; padding: 25px; background-color: #f9f9f9; border-left: 4px solid #000; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
                     <div style="max-width: 700px;">
                         <h4 style="margin: 0 0 8px 0; font-size: 17px; color: #333;">Need Contractual Validation Challenges?</h4>
@@ -209,6 +252,7 @@
             </div>
         </section>
 
+        <!-- Category 2: Supplementary Filtration Systems -->
         <section class="section section-light">
             <div class="container">
                 <h2 class="section-title">Supplementary Filtration Systems</h2>
@@ -233,6 +277,7 @@
             </div>
         </section>
 
+        <!-- Category 3: Clean Fluidic Systems -->
         <section class="section">
             <div class="container">
                 <h2 class="section-title">Ink Delivery & System Components</h2>
@@ -258,6 +303,7 @@
         </section>
     </main>
 
+    <!-- Unified Footer Structure -->
     <footer class="site-footer">
         <div class="container">
             <p>&copy; 2026 KOYINTA. All rights reserved.</p>
