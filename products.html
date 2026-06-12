@@ -15,35 +15,35 @@
         .custom-badge { display: inline-block; padding: 2px 8px; background: #eee; color: #333; font-size: 12px; font-weight: bold; margin-right: 5px; margin-bottom: 5px; border-radius: 3px; }
         .solution-feature { font-size: 13px; color: #555; margin: 5px 0; padding-left: 10px; border-left: 2px solid #000; }
         
-        /* 🛠️ 优化后的半透明 PNG 工业底图样式结构 */
+        /* 🛠️ 重新设计的全卡片覆盖工业底图样式 */
         .card-solution {
             position: relative;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             border: 1px solid #eee;
-            overflow: hidden; /* 防止图片溢出边界 */
+            overflow: hidden; /* 防止放大的图片溢出卡片边界 */
             z-index: 1;
-            background-color: #fff; /* 确保卡片有白底，衬托黑色图纸线条 */
+            background-color: #fff; /* 确保卡片有白底，衬托图纸线条 */
         }
         
-        /* 利用伪元素单独控制底图的透明度和位置，完美保护文字不被干扰 */
+        /* 利用伪元素让工业图纸完美铺满背景 */
         .card-solution::after {
             content: "";
             position: absolute;
-            bottom: 10px;    /* 稍微往上提一点，避开最底部的边框和按钮 */
-            right: 10px;     /* 稍微往左移一点，靠右下角对齐 */
-            width: 160px;    /* 调整图片尺寸大小 */
-            height: 160px;
+            bottom: 5%;      /* 整体居中偏下靠右 */
+            right: 5%;
+            width: 90%;      /* 💡 放大到 90%，几乎覆盖整个卡片 */
+            height: 90%;
             background-repeat: no-repeat;
             background-size: contain;
-            background-position: bottom right;
-            opacity: 0.3;    /* 💡 调高到 30% 透明度，确保黑线图纸在白底上清晰显现 */
-            z-index: 0;      /* 垫在文字和背景之间 */
+            background-position: bottom right; /* 保持精密的机械图纸朝向 */
+            opacity: 0.18;    /* 💡 放大后微调至 18% 透明度，高级且不干扰文字阅读 */
+            z-index: 0;      /* 绝对垫在文字下方 */
             pointer-events: none; /* 让鼠标动作能够穿透 */
         }
         
-        /* 🔗 精准对应你在 assets 文件夹里的 PNG 文件名 */
+        /* 🔗 精准对应你的 PNG 文件名 */
         .solution-mini::after { background-image: url('assets/kxt-60-mini.png'); }
         .solution-standard::after { background-image: url('assets/kxt-60-standard.png'); }
         .solution-max::after { background-image: url('assets/kxt-60-max.png'); }
@@ -51,6 +51,7 @@
 </head>
 <body>
 
+    <!-- Unified Header Structure -->
     <header class="site-header">
         <div class="container">
             <div class="logo">
@@ -70,6 +71,7 @@
     </header>
 
     <main>
+        <!-- Product Section Hero -->
         <section class="hero">
             <div class="container">
                 <h1>Industrial Inkjet & Fluid System Supplies</h1>
@@ -79,6 +81,7 @@
             </div>
         </section>
 
+        <!-- Category 1: Star Products Area -->
         <section class="section">
             <div class="container">
                 <h2 class="section-title">High-Performance Digital Inkjet Capsule Filters</h2>
@@ -86,14 +89,17 @@
                     Engineered to maintain ultimate jetting stability and eliminate micro-particle crisis. We provide immediate off-the-shelf system drop-ins side by side with custom agile blueprints.
                 </p>
 
+                <!-- 📸 Core Product Showroom Image -->
                 <div class="product-showroom" style="width: 100%; margin: 30px 0 40px 0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
                     <img src="assets/all-products.jpg" alt="KOYINTA Digital Inkjet Capsule Filters Portfolio" style="width: 100%; height: auto; display: block; object-fit: cover;">
                 </div>
 
+                <!-- 💥 板块 1：成熟应用解决方案 (Ready-to-Ship Solutions) - 全覆盖底图版 -->
                 <h3 style="font-size: 20px; margin-top: 40px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">1. Ready-to-Ship Standard Solutions</h3>
                 <p style="color: #666; font-size: 15px; margin-bottom: 25px;">Select our pre-configured, rigorously field-tested drop-in assemblies optimized for specific equipment matrix architectures:</p>
                 
                 <div class="grid-3" style="margin-bottom: 50px;">
+                    <!-- Solution 1: Packaging -->
                     <div class="card card-solution solution-mini">
                         <div style="position: relative; z-index: 2;">
                             <span style="font-size: 11px; color: #fff; background: #000; padding: 2px 6px; text-transform: uppercase; font-weight: bold; border-radius: 3px;">Application 01</span>
@@ -110,6 +116,7 @@
                         </div>
                     </div>
 
+                    <!-- Solution 2: Commercial Graphics -->
                     <div class="card card-solution solution-standard">
                         <div style="position: relative; z-index: 2;">
                             <span style="font-size: 11px; color: #fff; background: #000; padding: 2px 6px; text-transform: uppercase; font-weight: bold; border-radius: 3px;">Application 02</span>
@@ -126,6 +133,7 @@
                         </div>
                     </div>
 
+                    <!-- Solution 3: Textile Loop -->
                     <div class="card card-solution solution-max">
                         <div style="position: relative; z-index: 2;">
                             <span style="font-size: 11px; color: #fff; background: #000; padding: 2px 6px; text-transform: uppercase; font-weight: bold; border-radius: 3px;">Application 03</span>
@@ -144,6 +152,7 @@
                 </div>
 
 
+                <!-- ⚙️ 板块 2：柔性定制内容 (Advanced Customization Blueprint) -->
                 <h3 style="font-size: 20px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: #333;">2. Need Tailored Modifications? Advanced Customization Blueprint</h3>
                 <p style="color: #666; font-size: 15px; margin-top: 0; margin-bottom: 25px;">If our standard setups do not perfectly match your internal plumbing spacing or unique fluid properties, KOYINTA provides full adaptive modular modifications:</p>
 
@@ -183,6 +192,7 @@
                 </div>
 
 
+                <!-- 📊 板块 3：硬核 product 技术参数表格区 -->
                 <h3 style="font-size: 20px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;">3. Certified Engineering Specifications</h3>
                 <div class="specs-table-wrapper">
                     <table class="specs-table">
@@ -225,6 +235,7 @@
                     </table>
                 </div>
 
+                <!-- Technical Validation Resources & Download Link -->
                 <div style="margin-top: 30px; padding: 25px; background-color: #f9f9f9; border-left: 4px solid #000; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
                     <div style="max-width: 700px;">
                         <h4 style="margin: 0 0 8px 0; font-size: 17px; color: #333;">Need Contractual Validation Challenges?</h4>
@@ -242,6 +253,7 @@
             </div>
         </section>
 
+        <!-- Category 2: Supplementary Filtration Systems -->
         <section class="section section-light">
             <div class="container">
                 <h2 class="section-title">Supplementary Filtration Systems</h2>
@@ -266,6 +278,7 @@
             </div>
         </section>
 
+        <!-- Category 3: Clean Fluidic Systems -->
         <section class="section">
             <div class="container">
                 <h2 class="section-title">Ink Delivery & System Components</h2>
@@ -291,6 +304,7 @@
         </section>
     </main>
 
+    <!-- Unified Footer Structure -->
     <footer class="site-footer">
         <div class="container">
             <p>&copy; 2026 KOYINTA. All rights reserved.</p>
