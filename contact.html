@@ -32,35 +32,75 @@
         <!-- Contact Hero -->
         <section class="hero">
             <div class="container">
-                <h1>Initiate Technical Sourcing</h1>
+                <h1>Initiate Technical Sourcing & Inquiries</h1>
                 <p class="hero-desc">
-                    Connect with our application engineers for GL45 safety components, high-purity PTFE filtration, or custom OEM fluidic configurations.
+                    Connect directly with our engineering team for GL45 safety caps, high-purity filtration, evaluation samples, or custom OEM requests.
                 </p>
             </div>
         </section>
 
-        <!-- Contact Grid -->
+        <!-- Main Contact & Inquiry Form Grid -->
         <section class="section section-light">
             <div class="container">
-                <h2 class="section-title">Get in Touch</h2>
-                <p class="section-desc">Connect with our corporate team directly for B2B procurement, OEM custom requests, or regional distribution partnerships.</p>
-                
-                <div class="grid-2" style="align-items: flex-start;">
+                <div class="grid-2" style="align-items: flex-start; gap: 40px;">
                     
-                    <!-- Left: Direct Channels & Instant Assistance -->
-                    <div style="padding-top: 10px;">
-                        <p style="color: #4b5563; font-size: 16px; line-height: 1.7; margin-bottom: 36px;">
-                            For strategic OEM/ODM alignment, bulk distributor pricing, or technical evaluation samples, reach out directly via email or our dedicated instant support channel.
-                        </p>
-                        
-                        <div style="margin-bottom: 32px;">
-                            <h4 style="font-size: 13px; text-transform: uppercase; color: #9ca3af; letter-spacing: 0.06em; margin-bottom: 6px; font-weight: 600;">Direct Sourcing Account</h4>
-                            <a href="mailto:dora@koyinta.com" style="font-size: 22px; color: #2563eb; font-weight: 700; text-decoration: none; letter-spacing: -0.01em;">dora@koyinta.com</a>
+                    <!-- Left Column: Interactive Contact Form (Bound to your Formspree Endpoint) -->
+                    <div style="background-color: #ffffff; padding: 35px; border-radius: 8px; border: 1px solid #e5e7eb; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+                        <h3 style="font-size: 20px; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Send Us a Direct Message</h3>
+                        <p style="font-size: 14px; color: #64748b; margin-bottom: 24px;">Fill out your requirements below, and our technical sales team will reply within 12 hours.</p>
+
+                        <!-- Active Formspree Form -->
+                        <form action="https://formspree.io/f/xbldqypr" method="POST" style="display: flex; flex-direction: column; gap: 16px;">
+                            <div>
+                                <label style="display: block; font-size: 13px; font-weight: 600; color: #334155; margin-bottom: 6px;">Your Name *</label>
+                                <input type="text" name="name" required placeholder="e.g., John Smith" style="width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 14px; box-sizing: border-box;">
+                            </div>
+
+                            <div style="display: flex; gap: 16px;">
+                                <div style="flex: 1;">
+                                    <label style="display: block; font-size: 13px; font-weight: 600; color: #334155; margin-bottom: 6px;">Work Email *</label>
+                                    <input type="email" name="email" required placeholder="john@company.com" style="width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 14px; box-sizing: border-box;">
+                                </div>
+                                <div style="flex: 1;">
+                                    <label style="display: block; font-size: 13px; font-weight: 600; color: #334155; margin-bottom: 6px;">Company Name</label>
+                                    <input type="text" name="company" placeholder="e.g., Lab Instruments Ltd" style="width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 14px; box-sizing: border-box;">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label style="display: block; font-size: 13px; font-weight: 600; color: #334155; margin-bottom: 6px;">Product Interest</label>
+                                <select name="product_interest" style="width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 14px; box-sizing: border-box; background-color: #fff;">
+                                    <option value="GL45 Safety Caps">GL45 Solvent Safety Caps & Exhaust Filters</option>
+                                    <option value="Capsule Filters">High-Purity PTFE Capsule Filters</option>
+                                    <option value="HPLC Accessories">HPLC Fittings, Tubing & Manifolds</option>
+                                    <option value="OEM Private Label">Custom OEM / Private Label Service</option>
+                                    <option value="Evaluation Samples">Request Free/Trial Evaluation Samples</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label style="display: block; font-size: 13px; font-weight: 600; color: #334155; margin-bottom: 6px;">Message / Technical Requirements *</label>
+                                <textarea name="message" rows="4" required placeholder="Please describe your target application, estimated quantity, or thread specifications..." style="width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 14px; box-sizing: border-box;"></textarea>
+                            </div>
+
+                            <button type="submit" style="background-color: #2563eb; color: #ffffff; border: none; padding: 12px 24px; font-size: 15px; font-weight: 600; border-radius: 4px; cursor: pointer; transition: background 0.2s;">
+                                Send Inquiry Now
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Right Column: Direct Contacts & Sample/Logistics Policy -->
+                    <div>
+                        <!-- Direct Communication Cards -->
+                        <div style="margin-bottom: 24px; background-color: #ffffff; padding: 25px; border-radius: 8px; border: 1px solid #e5e7eb;">
+                            <h4 style="font-size: 12px; text-transform: uppercase; color: #64748b; letter-spacing: 0.05em; margin-bottom: 6px; font-weight: 700;">Direct Sourcing Account</h4>
+                            <a href="mailto:dora@koyinta.com" style="font-size: 20px; color: #2563eb; font-weight: 700; text-decoration: none;">dora@koyinta.com</a>
+                            <p style="font-size: 13px; color: #64748b; margin-top: 4px; margin-bottom: 0;">Direct line to Dora Wong (Managing Partner & Lead Technical Sourcing Agent)</p>
                         </div>
 
                         <!-- Integrated WhatsApp Channel -->
-                        <div style="margin-bottom: 32px; background-color: #f0fdf4; padding: 18px; border-radius: 6px; border: 1px solid #bbf7d0; display: inline-block; width: 100%; box-sizing: border-box;">
-                            <h4 style="font-size: 12px; text-transform: uppercase; color: #16a34a; letter-spacing: 0.06em; margin-bottom: 6px; font-weight: 700;">Instant Assistance (Urgent Sourcing & Samples)</h4>
+                        <div style="margin-bottom: 24px; background-color: #f0fdf4; padding: 20px; border-radius: 8px; border: 1px solid #bbf7d0;">
+                            <h4 style="font-size: 12px; text-transform: uppercase; color: #16a34a; letter-spacing: 0.05em; margin-bottom: 6px; font-weight: 700;">Instant Urgent Support</h4>
                             <div style="display: flex; align-items: center; gap: 8px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#16a34a" viewBox="0 0 24 24">
                                     <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.232 5.235.001 11.64.001c3.106.001 6.027 1.211 8.225 3.413 2.199 2.201 3.408 5.123 3.407 8.23-.003 6.406-5.235 11.638-11.64 11.638-2.017-.001-4.004-.523-5.766-1.517L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.925 1.451 5.35.002 9.704-4.354 9.706-9.708.001-2.595-1.007-5.034-2.842-6.87C16.599 2.19 14.162 1.182 11.57 1.181c-5.353 0-9.706 4.354-9.709 9.708-.001 1.83.495 3.614 1.436 5.197l-.985 3.593 3.684-.966zm10.155-6.853c-.279-.14-1.647-.812-1.902-.906-.256-.094-.442-.14-.628.14-.186.279-.718.906-.88 1.092-.162.186-.324.21-.603.07-.279-.14-1.18-.435-2.247-1.387-.83-.741-1.39-1.655-1.552-1.934-.163-.28-.017-.43.123-.569.126-.125.279-.325.419-.489.14-.163.186-.279.279-.465.093-.186.046-.349-.023-.489-.069-.14-.628-1.512-.86-2.07-.226-.544-.455-.47-.628-.478-.162-.007-.349-.009-.535-.009-.186 0-.489.07-.745.349-.256.279-.977.954-.977 2.329s1.001 2.701 1.14 2.887c.14.186 1.967 3.003 4.767 4.21 2.33 1.004 2.802.804 3.302.757.5-.047 1.647-.674 1.88-1.325.233-.651.233-1.21.163-1.325-.069-.115-.256-.185-.535-.326z"/>
@@ -69,23 +109,27 @@
                             </div>
                         </div>
 
-                        <div>
-                            <h4 style="font-size: 13px; text-transform: uppercase; color: #9ca3af; letter-spacing: 0.06em; margin-bottom: 6px; font-weight: 600;">General Inquiries</h4>
-                            <a href="mailto:info@koyinta.com" style="font-size: 16px; color: #4b5563; text-decoration: none; font-weight: 500;">info@koyinta.com</a>
-                        </div>
-                    </div>
+                        <!-- Sample Evaluation & Shipping Policy -->
+                        <div style="background-color: #ffffff; padding: 25px; border-radius: 8px; border: 1px solid #e5e7eb;">
+                            <h3 style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 12px; letter-spacing: -0.01em;">
+                                Sample Evaluation & Express Shipping Policy
+                            </h3>
+                            
+                            <div style="margin-bottom: 14px;">
+                                <h5 style="font-size: 13px; color: #2563eb; margin: 0 0 4px 0; font-weight: 600;">■ B2B Evaluation Samples</h5>
+                                <p style="font-size: 13px; color: #64748b; line-height: 1.5; margin: 0;">
+                                    Standard GL45 safety caps and capsule filter samples are available upon request for lab fitment and chemical testing.
+                                </p>
+                            </div>
 
-                    <!-- Right: Technical Specification Guide -->
-                    <div style="background-color: #ffffff; padding: 35px; border-radius: 8px; border: 1px solid #e5e7eb; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-                        <h3 style="font-size: 17px; font-weight: 700; color: #111827; margin-bottom: 20px; letter-spacing: -0.01em;">
-                            To expedite technical spec-matching, please specify:
-                        </h3>
-                        <ul class="feature-list" style="margin-bottom: 0;">
-                            <li><strong>Product Interest:</strong> GL45 Safety Caps, Exhaust Filters, Capsule Filters, or Vacuum Systems</li>
-                            <li><strong>Thread / Fitting Specs:</strong> e.g., GL45, 1/4"-28 UNF, M6, NPT, or Barb Outer Diameter</li>
-                            <li><strong>Chemical Compatibility:</strong> Solvents/Liquids used (HPLC organic phase, UV inks, aggressive acids/bases)</li>
-                            <li><strong>OEM / Private Label:</strong> Require custom logo laser-etching, specific port counts, or private packaging</li>
-                        </ul>
+                            <div>
+                                <h5 style="font-size: 13px; color: #2563eb; margin: 0 0 4px 0; font-weight: 600;">■ Express Logistics Network</h5>
+                                <p style="font-size: 13px; color: #64748b; line-height: 1.5; margin: 0;">
+                                    We partner with DHL Express, FedEx, and UPS Worldwide for fast door-to-door air freight dispatch (3-5 business days) with full real-time tracking.
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>
@@ -104,7 +148,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#10b981" viewBox="0 0 24 24" style="display: inline-block; vertical-align: middle;">
                     <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.232 5.235.001 11.64.001c3.106.001 6.027 1.211 8.225 3.413 2.199 2.201 3.408 5.123 3.407 8.23-.003 6.406-5.235 11.638-11.64 11.638-2.017-.001-4.004-.523-5.766-1.517L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.925 1.451 5.35.002 9.704-4.354 9.706-9.708.001-2.595-1.007-5.034-2.842-6.87C16.599 2.19 14.162 1.182 11.57 1.181c-5.353 0-9.706 4.354-9.709 9.708-.001 1.83.495 3.614 1.436 5.197l-.985 3.593 3.684-.966zm10.155-6.853c-.279-.14-1.647-.812-1.902-.906-.256-.094-.442-.14-.628.14-.186.279-.718.906-.88 1.092-.162.186-.324.21-.603.07-.279-.14-1.18-.435-2.247-1.387-.83-.741-1.39-1.655-1.552-1.934-.163-.28-.017-.43.123-.569.126-.125.279-.325.419-.489.14-.163.186-.279.279-.465.093-.186.046-.349-.023-.489-.069-.14-.628-1.512-.86-2.07-.226-.544-.455-.47-.628-.478-.162-.007-.349-.009-.535-.009-.186 0-.489.07-.745.349-.256.279-.977.954-.977 2.329s1.001 2.701 1.14 2.887c.14.186 1.967 3.003 4.767 4.21 2.33 1.004 2.802.804 3.302.757.5-.047 1.647-.674 1.88-1.325.233-.651.233-1.21.163-1.325-.069-.115-.256-.185-.535-.326z"/>
                 </svg>
-                <a href="https://wa.me/8618225843084" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600; font-size: 14px; transition: opacity 0.2s;">
+                <a href="https://wa.me/8618225843084" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600; font-size: 14px;">
                     Urgent Technical Support via WhatsApp
                 </a>
             </div>
