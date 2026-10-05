@@ -3,35 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products | KOYINTA Precision Fluid Systems</title>
+    <title>Products | KOYINTA Precision Fluidics & Laboratory Safety</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         /* 工业大厂感表格与徽章通用样式 */
         .specs-table-wrapper { width: 100%; overflow-x: auto; margin: 30px 0; }
         .specs-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
-        .specs-table th { background-color: #000; color: #fff; padding: 12px 15px; font-weight: 600; }
+        .specs-table th { background-color: #111827; color: #fff; padding: 12px 15px; font-weight: 600; }
         .specs-table td { padding: 12px 15px; border-bottom: 1px solid #eee; color: #333; }
-        .specs-table tr:nth-child(even) { background-color: #f9f9f9; }
-        .custom-badge { display: inline-block; padding: 2px 8px; background: #eee; color: #333; font-size: 12px; font-weight: bold; margin-right: 5px; margin-bottom: 5px; border-radius: 3px; }
-        .solution-feature { font-size: 13px; color: #555; margin: 5px 0; padding-left: 10px; border-left: 2px solid #000; }
+        .specs-table tr:nth-child(even) { background-color: #f9fafb; }
+        .custom-badge { display: inline-block; padding: 2px 8px; background: #e5e7eb; color: #1f2937; font-size: 12px; font-weight: bold; margin-right: 5px; margin-bottom: 5px; border-radius: 3px; }
+        .solution-feature { font-size: 13px; color: #4b5563; margin: 5px 0; padding-left: 10px; border-left: 2px solid #2563eb; }
         
-        /* 🛠️ 终极解构主义：水印质感卡片布局 */
+        /* 🛠️ 水印质感卡片布局 */
         .card-solution {
             position: relative;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            border: 1px solid #eee;
+            border: 1px solid #e5e7eb;
             overflow: hidden; 
             z-index: 1;
             background-color: #fff;
             padding: 30px 25px; 
             min-height: 420px; 
+            border-radius: 8px;
         }
         
-        /* 💡 调整 1：文字比例从 65% 扩大到 70%，更舒展大气 */
         .solution-text-wrapper {
-            max-width: 70%;
+            max-width: 75%;
             position: relative;
             z-index: 2;
         }
@@ -40,7 +40,7 @@
             display: inline-block;
             text-align: center;
             padding: 12px 28px;
-            background-color: #000;
+            background-color: #111827;
             color: #fff;
             text-decoration: none;
             font-size: 14px;
@@ -53,26 +53,24 @@
             z-index: 2;
         }
         .solution-btn:hover {
-            background-color: #333;
+            background-color: #2563eb;
         }
         
-        /* 💡 调整 2：图片右移减少（只向右溢出10%让轮廓更完整），但透明度压到 0.08（极淡的水印感） */
         .card-solution::after {
             content: "";
             position: absolute;
-            top: 12%;         
-            right: -10%;      /* 💡 拉回来一些，让滤清器的经典瓶身轮廓更完整可见 */
+            top: 12%;        
+            right: -10%;      
             width: 65%;       
             height: 80%;
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center right;
-            opacity: 0.08;     /* 💡 关键微调：降到 8% 的极致透明度，带来高级的空气感，绝不干扰文字 */
+            opacity: 0.08;     
             z-index: 0;       
             pointer-events: none;
         }
         
-        /* 🔗 精准对应你的 PNG 文件名 */
         .solution-mini::after { background-image: url('assets/kxt-60-mini.png'); }
         .solution-standard::after { background-image: url('assets/kxt-60-standard.png'); }
         .solution-max::after { background-image: url('assets/kxt-60-max.png'); }
@@ -103,35 +101,80 @@
         <!-- Product Section Hero -->
         <section class="hero">
             <div class="container">
-                <h1>Industrial Inkjet & Fluid System Supplies</h1>
+                <h1>Precision Fluid Systems & Lab Safety Solutions</h1>
                 <p class="hero-desc">
-                    High-integrity consumables, field-proven turnkey filtration setups, and precision custom fluidic components for global OEM integrations.
+                    High-integrity filtration capsules, GL45 safety caps for solvent lines, chemical-resistant fittings, and OEM fluidic components engineered for global liquid chromatography and industrial printing.
                 </p>
             </div>
         </section>
 
-        <!-- Category 1: Star Products Area -->
+        <!-- Category 1: GL45 Safety Caps & Solvent Line Management -->
         <section class="section">
+            <div class="container">
+                <h2 class="section-title">GL45 Solvent Safety Caps & Exhaust Filtration</h2>
+                <p class="section-desc">
+                    Designed to protect laboratory personnel from harmful solvent vapors (VOCs) and maintain HPLC mobile phase purity with integrated PTFE check valves and activated carbon exhaust traps.
+                </p>
+
+                <div class="grid-3" style="margin-top: 30px;">
+                    <div class="card" style="border-top: 3px solid #2563eb;">
+                        <span style="font-size: 11px; color: #2563eb; background: #eff6ff; padding: 2px 6px; text-transform: uppercase; font-weight: bold; border-radius: 3px;">Lab Safety</span>
+                        <h3 style="margin-top: 10px; font-size: 18px;">GL45 Solvent Delivery Caps</h3>
+                        <p style="font-size: 13px; color: #666; line-height: 1.5; margin: 10px 0;">Multi-port configurations (2/3/4-port) with 1/4"-28 UNF thread fittings. Free-rotating inner body avoids line twisting during bottle replacement.</p>
+                        <div style="margin: 10px 0;">
+                            <span class="custom-badge">PTFE Core</span>
+                            <span class="custom-badge">1/4"-28 Thread</span>
+                            <span class="custom-badge">Air Check Valve</span>
+                        </div>
+                    </div>
+
+                    <div class="card" style="border-top: 3px solid #2563eb;">
+                        <span style="font-size: 11px; color: #2563eb; background: #eff6ff; padding: 2px 6px; text-transform: uppercase; font-weight: bold; border-radius: 3px;">VOC Protection</span>
+                        <h3 style="margin-top: 10px; font-size: 18px;">GL45 Waste Exhaust Filters</h3>
+                        <p style="font-size: 13px; color: #666; line-height: 1.5; margin: 10px 0;">Captures volatile organic compounds (VOCs) emitted from liquid waste containers using high-surface active carbon and 0.2µm PTFE air barriers.</p>
+                        <div style="margin: 10px 0;">
+                            <span class="custom-badge">Activated Carbon</span>
+                            <span class="custom-badge">0.2µm PTFE</span>
+                            <span class="custom-badge">Breakthrough Indicator</span>
+                        </div>
+                    </div>
+
+                    <div class="card" style="border-top: 3px solid #2563eb;">
+                        <span style="font-size: 11px; color: #2563eb; background: #eff6ff; padding: 2px 6px; text-transform: uppercase; font-weight: bold; border-radius: 3px;">Custom OEM</span>
+                        <h3 style="margin-top: 10px; font-size: 18px;">OEM Fluidic Fitting & Manifolds</h3>
+                        <p style="font-size: 13px; color: #666; line-height: 1.5; margin: 10px 0;">Custom PEEK, PTFE, and PVDF connective fittings, barb adaptors, and solvent inlet sink filters tailored for automated instruments.</p>
+                        <div style="margin: 10px 0;">
+                            <span class="custom-badge">PEEK / PTFE</span>
+                            <span class="custom-badge">Custom Ports</span>
+                            <span class="custom-badge">Laser Etching</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category 2: Digital Inkjet Capsule Filters -->
+        <section class="section section-light">
             <div class="container">
                 <h2 class="section-title">High-Performance Digital Inkjet Capsule Filters</h2>
                 <p class="section-desc">
-                    Engineered to maintain ultimate jetting stability and eliminate micro-particle crisis. We provide immediate off-the-shelf system drop-ins side by side with custom agile blueprints.
+                    Engineered to maintain ultimate jetting stability and eliminate micro-particle crisis. Immediate off-the-shelf system drop-ins alongside custom agile blueprints.
                 </p>
 
-                <!-- 📸 Core Product Showroom Image -->
+                <!-- Core Product Showroom Image -->
                 <div class="product-showroom" style="width: 100%; margin: 30px 0 40px 0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
                     <img src="assets/all-products.jpg" alt="KOYINTA Digital Inkjet Capsule Filters Portfolio" style="width: 100%; height: auto; display: block; object-fit: cover;">
                 </div>
 
-                <!-- 💥 板块 1：成熟应用解决方案 (Ready-to-Ship Solutions) -->
-                <h3 style="font-size: 20px; margin-top: 40px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: #000;">1. Ready-to-Ship Standard Solutions</h3>
-                <p style="color: #666; font-size: 15px; margin-bottom: 25px;">Select our pre-configured, rigorously field-tested drop-in assemblies optimized for specific equipment matrix architectures:</p>
+                <!-- Ready-to-Ship Solutions -->
+                <h3 style="font-size: 20px; margin-top: 40px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: #111827;">1. Ready-to-Ship Standard Solutions</h3>
+                <p style="color: #666; font-size: 15px; margin-bottom: 25px;">Select our pre-configured, field-tested drop-in assemblies optimized for specific equipment architectures:</p>
                 
                 <div class="grid-3" style="margin-bottom: 50px;">
-                    <!-- Solution 1: Packaging -->
+                    <!-- Solution 1 -->
                     <div class="card card-solution solution-mini">
                         <div class="solution-text-wrapper">
-                            <span style="font-size: 11px; color: #fff; background: #000; padding: 2px 6px; text-transform: uppercase; font-weight: bold; border-radius: 3px;">Application 01</span>
+                            <span style="font-size: 11px; color: #fff; background: #111827; padding: 2px 6px; text-transform: uppercase; font-weight: bold; border-radius: 3px;">Application 01</span>
                             <h3 style="margin-top: 10px; font-size: 18px; line-height: 1.3;">Corrugated & Packaging Loop</h3>
                             <p style="font-size: 13px; color: #666; line-height: 1.5; margin: 12px 0;">Optimized for high-speed single-pass packaging systems running heavy UV-curable or water-based industrial inks.</p>
                             <div style="margin: 15px 0;">
@@ -140,13 +183,13 @@
                                 <div class="solution-feature"><strong>Link:</strong> 1/4" NPT Interface</div>
                             </div>
                         </div>
-                        <a href="mailto:info@koyinta.com?subject=Inquiry: Packaging Filtration Loop Solution" class="solution-btn">Inquire Now</a>
+                        <a href="mailto:dora@koyinta.com?subject=Inquiry: Packaging Filtration Loop Solution" class="solution-btn">Inquire Now</a>
                     </div>
 
-                    <!-- Solution 2: Commercial Graphics -->
+                    <!-- Solution 2 -->
                     <div class="card card-solution solution-standard">
                         <div class="solution-text-wrapper">
-                            <span style="font-size: 11px; color: #fff; background: #000; padding: 2px 6px; text-transform: uppercase; font-weight: bold; border-radius: 3px;">Application 02</span>
+                            <span style="font-size: 11px; color: #fff; background: #111827; padding: 2px 6px; text-transform: uppercase; font-weight: bold; border-radius: 3px;">Application 02</span>
                             <h3 style="margin-top: 10px; font-size: 18px; line-height: 1.3;">Wide-Format Commercial Setup</h3>
                             <p style="font-size: 13px; color: #666; line-height: 1.5; margin: 12px 0;">Tailored for industrial graphics scanning printers requiring agile printhead carriage tracking and minimum hydraulic payload.</p>
                             <div style="margin: 15px 0;">
@@ -155,13 +198,13 @@
                                 <div class="solution-feature"><strong>Link:</strong> Male Luer Lock</div>
                             </div>
                         </div>
-                        <a href="mailto:info@koyinta.com?subject=Inquiry: Wide-Format Commercial Solution" class="solution-btn">Inquire Now</a>
+                        <a href="mailto:dora@koyinta.com?subject=Inquiry: Wide-Format Commercial Solution" class="solution-btn">Inquire Now</a>
                     </div>
 
-                    <!-- Solution 3: Textile Loop -->
+                    <!-- Solution 3 -->
                     <div class="card card-solution solution-max">
                         <div class="solution-text-wrapper">
-                            <span style="font-size: 11px; color: #fff; background: #000; padding: 2px 6px; text-transform: uppercase; font-weight: bold; border-radius: 3px;">Application 03</span>
+                            <span style="font-size: 11px; color: #fff; background: #111827; padding: 2px 6px; text-transform: uppercase; font-weight: bold; border-radius: 3px;">Application 03</span>
                             <h3 style="margin-top: 10px; font-size: 18px; line-height: 1.3;">High-Viscosity Textile Loop</h3>
                             <p style="font-size: 13px; color: #666; line-height: 1.5; margin: 12px 0;">Engineered specifically for high-loading reactive dyes, disperse inks, and highly volatile heavy organic pigment formulations.</p>
                             <div style="margin: 15px 0;">
@@ -170,17 +213,16 @@
                                 <div class="solution-feature"><strong>Link:</strong> 1/4" Swagelok Joint</div>
                             </div>
                         </div>
-                        <a href="mailto:info@koyinta.com?subject=Inquiry: High-Viscosity Textile Solution" class="solution-btn">Inquire Now</a>
+                        <a href="mailto:dora@koyinta.com?subject=Inquiry: High-Viscosity Textile Solution" class="solution-btn">Inquire Now</a>
                     </div>
                 </div>
 
-
-                <!-- ⚙️ 板块 2：柔性定制内容 (Advanced Customization Blueprint) -->
+                <!-- Customization Blueprint -->
                 <h3 style="font-size: 20px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: #333;">2. Need Tailored Modifications? Advanced Customization Blueprint</h3>
-                <p style="color: #666; font-size: 15px; margin-top: 0; margin-bottom: 25px;">If our standard setups do not perfectly match your internal plumbing spacing or unique fluid properties, KOYINTA provides full adaptive modular modifications:</p>
+                <p style="color: #666; font-size: 15px; margin-top: 0; margin-bottom: 25px;">If standard setups do not perfectly match your internal plumbing spacing or chemical properties, KOYINTA provides full adaptive modifications:</p>
 
                 <div class="grid-3" style="margin-bottom: 50px;">
-                    <div class="card" style="background-color: #fafafa;">
+                    <div class="card" style="background-color: #ffffff; border: 1px solid #e5e7eb;">
                         <span style="font-size: 12px; color: #888; text-transform: uppercase; font-weight: bold;">Config 01</span>
                         <h4 style="margin: 5px 0 12px 0; font-size: 16px;">Membrane Selection Matrix</h4>
                         <div>
@@ -192,17 +234,17 @@
                         <p style="font-size: 13px; color: #666; margin-top: 10px;">Available footprints across Mini, Standard, and Max dimensions to fulfill distinct chemical compatibility parameters.</p>
                     </div>
 
-                    <div class="card" style="background-color: #fafafa;">
+                    <div class="card" style="background-color: #ffffff; border: 1px solid #e5e7eb;">
                         <span style="font-size: 12px; color: #888; text-transform: uppercase; font-weight: bold;">Config 02</span>
                         <h4 style="margin: 5px 0 12px 0; font-size: 16px;">Photophobic Shell Formulations</h4>
                         <div>
                             <span class="custom-badge" style="background:#fff; border: 1px solid #ccc;">100% Transparent Polypropylene</span>
-                            <span class="custom-badge" style="background:#000; color:#fff;">Absolute UV-Block Composite Black</span>
+                            <span class="custom-badge" style="background:#111827; color:#fff;">Absolute UV-Block Composite Black</span>
                         </div>
                         <p style="font-size: 13px; color: #666; margin-top: 10px;">Defends premium sensitive polymers against ambient UV radiation wavelengths, stopping inside-chamber stagnation.</p>
                     </div>
 
-                    <div class="card" style="background-color: #fafafa;">
+                    <div class="card" style="background-color: #ffffff; border: 1px solid #e5e7eb;">
                         <span style="font-size: 12px; color: #888; text-transform: uppercase; font-weight: bold;">Config 03</span>
                         <h4 style="margin: 5px 0 12px 0; font-size: 16px;">Mechanical Coupling Ports</h4>
                         <div>
@@ -214,8 +256,7 @@
                     </div>
                 </div>
 
-
-                <!-- 📊 板块 3：硬核参数表格区 -->
+                <!-- Certified Specifications Table -->
                 <h3 style="font-size: 20px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;">3. Certified Engineering Specifications</h3>
                 <div class="specs-table-wrapper">
                     <table class="specs-table">
@@ -232,11 +273,11 @@
                             </tr>
                             <tr>
                                 <td><strong>Available Micron Ratings</strong></td>
-                                <td>1.5 &mu;m, 2.0 &mu;m, 3.0 &mu;m, 5.0 &mu;m, 10 &mu;m, 20 &mu;m, 50 &mu;m</td>
+                                <td>0.2 &mu;m, 0.45 &mu;m, 1.5 &mu;m, 2.0 &mu;m, 3.0 &mu;m, 5.0 &mu;m, 10 &mu;m, 20 &mu;m</td>
                             </tr>
                             <tr>
                                 <td><strong>Chemical pH Compatibility</strong></td>
-                                <td>pH 1 - 14 (Full-spectrum solvent, eco-solvent, aqueous, and UV chemical resistance)</td>
+                                <td>pH 1 - 14 (Full-spectrum HPLC organic phases, UV inks, aggressive acids/bases)</td>
                             </tr>
                             <tr>
                                 <td><strong>Max. Operating Temperature</strong></td>
@@ -258,16 +299,16 @@
                     </table>
                 </div>
 
-                <!-- Technical Validation Resources & Download Link -->
-                <div style="margin-top: 30px; padding: 25px; background-color: #f9f9f9; border-left: 4px solid #000; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <!-- Technical Download -->
+                <div style="margin-top: 30px; padding: 25px; background-color: #ffffff; border-left: 4px solid #2563eb; border: 1px solid #e5e7eb; border-left-width: 4px; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
                     <div style="max-width: 700px;">
-                        <h4 style="margin: 0 0 8px 0; font-size: 17px; color: #333;">Need Contractual Validation Challenges?</h4>
-                        <p style="margin: 0; color: #666; font-size: 14px; line-height: 1.5;">
+                        <h4 style="margin: 0 0 8px 0; font-size: 17px; color: #111827;">Need Contractual Validation Challenges?</h4>
+                        <p style="margin: 0; color: #4b5563; font-size: 14px; line-height: 1.5;">
                             Download our complete Technical Whitepaper for complete dynamic flow curves, particle-counting logs, and custom configuration codes.
                         </p>
                     </div>
                     <div>
-                        <a href="koyinta_technical_whitepaper.pdf" target="_blank" style="display: inline-block; padding: 12px 24px; background-color: #fff; color: #000; border: 2px solid #000; text-decoration: none; font-weight: bold; border-radius: 4px; font-size: 14px;">
+                        <a href="koyinta_technical_whitepaper.pdf" target="_blank" style="display: inline-block; padding: 12px 24px; background-color: #111827; color: #fff; text-decoration: none; font-weight: bold; border-radius: 4px; font-size: 14px; transition: background 0.2s;">
                             Download Technical Whitepaper (PDF)
                         </a>
                     </div>
@@ -276,10 +317,10 @@
             </div>
         </section>
 
-        <!-- Category 2: Supplementary Filtration Systems -->
-        <section class="section section-light">
+        <!-- Category 3: Supplementary Filtration Systems -->
+        <section class="section">
             <div class="container">
-                <h2 class="section-title">Supplementary Filtration Systems</h2>
+                <h2 class="section-title">Supplementary In-Line Filtration</h2>
                 <p class="section-desc">
                     Engineered to capture micro-aggregates without altering fluid properties or causing sudden hydraulic pressure drops.
                 </p>
@@ -287,55 +328,41 @@
                 <div class="grid-3">
                     <div class="card">
                         <h3>Anti-Sedimentation Disc Filters</h3>
-                        <p>Optimized for high-opacity packaging inks, minimizing the risk of titanium dioxide or heavy white pigment particle agglomeration.</p>
+                        <p>Optimized for high-opacity packaging inks and dense suspensions, minimizing the risk of heavy pigment particle agglomeration.</p>
                     </div>
                     <div class="card">
                         <h3>In-Line Last-Chance Filters</h3>
-                        <p>Positioned directly before printhead entry points as a critical sub-micron shield against unexpected mechanical debris.</p>
+                        <p>Positioned directly before printhead or micro-dispensing entry points as a critical sub-micron shield against unexpected debris.</p>
                     </div>
                     <div class="card">
                         <h3>100% PTFE Specialty Capsules</h3>
-                        <p>Fully encapsulated Teflon construction engineered for highly aggressive chemical solvents and specialized industrial fluids.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Category 3: Clean Fluidic Systems -->
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">Ink Delivery & System Components</h2>
-                <p class="section-desc">
-                    Ensuring smooth, laminar, pulseless flow from bulk storage distribution tanks to the microscopic nozzle rows.
-                </p>
-
-                <div class="grid-3">
-                    <div class="card">
-                        <h3>Precision Diaphragm Ink Pumps</h3>
-                        <p>Heavy-duty, micro-metering brushless DC pumps engineered for volatile chemical ink recirculation. Delivers stable pressure loops without pulsing.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Chemically Inert Tubing</h3>
-                        <p>Premium solvent-resistant fluid lines that prevent light penetration, oxygen permeation, and internal ink staining.</p>
-                    </div>
-                    <div class="card">
-                        <h3>System Maintenance Fluids</h3>
-                        <p>Formulated cleaning and flushing agents designed to safely break down stubborn ink residues during maintenance cycles.</p>
+                        <p>Fully encapsulated Teflon construction engineered for aggressive chemical solvents, strong acids, and HPLC eluent line prep.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Unified Footer Structure -->
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 KOYINTA. All rights reserved.</p>
+    <!-- Unified Footer Structure with WhatsApp -->
+    <footer class="site-footer" style="background-color: #111827; color: #ffffff; padding: 40px 0; border-top: 1px solid #1f2937;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+            <div>
+                <p style="margin: 0; color: #9ca3af; font-size: 14px;">&copy; 2026 KOYINTA. All rights reserved.</p>
+            </div>
+            <!-- Professional WhatsApp Integration -->
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#10b981" viewBox="0 0 24 24" style="display: inline-block; vertical-align: middle;">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.232 5.235.001 11.64.001c3.106.001 6.027 1.211 8.225 3.413 2.199 2.201 3.408 5.123 3.407 8.23-.003 6.406-5.235 11.638-11.64 11.638-2.017-.001-4.004-.523-5.766-1.517L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.925 1.451 5.35.002 9.704-4.354 9.706-9.708.001-2.595-1.007-5.034-2.842-6.87C16.599 2.19 14.162 1.182 11.57 1.181c-5.353 0-9.706 4.354-9.709 9.708-.001 1.83.495 3.614 1.436 5.197l-.985 3.593 3.684-.966zm10.155-6.853c-.279-.14-1.647-.812-1.902-.906-.256-.094-.442-.14-.628.14-.186.279-.718.906-.88 1.092-.162.186-.324.21-.603.07-.279-.14-1.18-.435-2.247-1.387-.83-.741-1.39-1.655-1.552-1.934-.163-.28-.017-.43.123-.569.126-.125.279-.325.419-.489.14-.163.186-.279.279-.465.093-.186.046-.349-.023-.489-.069-.14-.628-1.512-.86-2.07-.226-.544-.455-.47-.628-.478-.162-.007-.349-.009-.535-.009-.186 0-.489.07-.745.349-.256.279-.977.954-.977 2.329s1.001 2.701 1.14 2.887c.14.186 1.967 3.003 4.767 4.21 2.33 1.004 2.802.804 3.302.757.5-.047 1.647-.674 1.88-1.325.233-.651.233-1.21.163-1.325-.069-.115-.256-.185-.535-.326z"/>
+                </svg>
+                <a href="https://wa.me/8618225843084" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600; font-size: 14px;">
+                    Urgent Technical Support via WhatsApp
+                </a>
+            </div>
             <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="products.html">Products</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="index.html" style="color: #9ca3af; text-decoration: none; margin-left: 20px; font-size: 14px;">Home</a>
+                <a href="products.html" style="color: #9ca3af; text-decoration: none; margin-left: 20px; font-size: 14px;">Products</a>
+                <a href="about.html" style="color: #9ca3af; text-decoration: none; margin-left: 20px; font-size: 14px;">About</a>
+                <a href="contact.html" style="color: #9ca3af; text-decoration: none; margin-left: 20px; font-size: 14px;">Contact</a>
             </div>
         </div>
     </footer>

@@ -3,8 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solutions | KOYINTA Industrial Fluidic System Architectures</title>
+    <title>Solutions | KOYINTA Precision Fluidics & Lab Safety Architectures</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 工业级 UI 增强样式 */
+        .solution-badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 3px;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+        .badge-blue { background-color: #eff6ff; color: #2563eb; }
+        .badge-dark { background-color: #111827; color: #ffffff; }
+        .badge-green { background-color: #ecfdf5; color: #059669; }
+
+        .solution-card-extended {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 28px 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
+        }
+        .solution-card-extended:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+            border-color: #d1d5db;
+        }
+
+        .solution-features-list {
+            margin: 16px 0;
+            padding: 0;
+            list-style: none;
+        }
+        .solution-features-list li {
+            font-size: 13px;
+            color: #4b5563;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 16px;
+        }
+        .solution-features-list li::before {
+            content: "■";
+            font-size: 8px;
+            color: #2563eb;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        .cta-btn-card {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #111827;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 4px;
+            text-align: center;
+            transition: background 0.2s ease;
+        }
+        .cta-btn-card:hover {
+            background-color: #2563eb;
+        }
+    </style>
 </head>
 <body>
 
@@ -28,46 +97,147 @@
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero">
             <div class="container">
-                <h1>Application-Specific Fluid Solutions</h1>
+                <h1>Application-Specific Fluid & Lab Safety Solutions</h1>
                 <p class="hero-desc">
-                    Engineered configurations tailored to eliminate printhead crosstalk, particle sedimentation, and pressure fluctuations in high-load industrial scenarios.
+                    Engineered system architectures eliminating printhead crosstalk, VOC emissions, particle sedimentation, and line degradation across analytical laboratories and high-load industrial operations.
                 </p>
             </div>
         </section>
 
+        <!-- Section 1: Laboratory Safety & Chromatography Fluidics -->
         <section class="section">
             <div class="container">
-                <h2 class="section-title">Industry Standard Architectures</h2>
-                <p class="section-desc">We customize fluid lines based on the exact rheological behavior of your inks and specific mechanical printhead constraints.</p>
+                <h2 class="section-title">HPLC & Laboratory Solvent Management Architectures</h2>
+                <p class="section-desc">Standardized and custom fluid pathways for analytical chemistry, preventing mobile phase contamination and protecting personnel from volatile organic compounds (VOCs).</p>
 
-                <div class="grid-3">
-                    <div class="card">
-                        <h3>High-Opacity White Ink Systems</h3>
-                        <p>Integrated anti-sedimentation loops and continuous mechanical recirculation setups that keep heavy Titanium Dioxide (TiO₂) particles in stable suspension without nozzle clogging.</p>
+                <div class="grid-3" style="margin-top: 30px;">
+                    <!-- Architecture 1 -->
+                    <div class="solution-card-extended">
+                        <div>
+                            <span class="solution-badge badge-blue">Lab Safety & Solvent Line</span>
+                            <h3 style="font-size: 18px; margin: 0 0 10px 0; color: #111827;">Closed-Loop Solvent Delivery Systems</h3>
+                            <p style="font-size: 13px; color: #666; line-height: 1.5;">Configured with multi-port GL45 safety caps, PTFE air valves, and anti-twist freely rotating inner cores to preserve HPLC elution purity and stop air bubbles.</p>
+                            <ul class="solution-features-list">
+                                <li>1/4"-28 UNF / M6 thread integrations</li>
+                                <li>Integrated 0.2 µm PTFE air inlet check valve</li>
+                                <li>Prevents solvent evaporation & baseline noise</li>
+                            </ul>
+                        </div>
+                        <a href="mailto:dora@koyinta.com?subject=Inquiry: Closed-Loop Solvent Delivery Architecture" class="cta-btn-card">Request Architecture Spec</a>
                     </div>
-                    <div class="card">
-                        <h3>Aggressive Solvent & UV Lines</h3>
-                        <p>Complete fluid paths configured with certified 100% PTFE and chem-resistant elastomers. Zero swelling, zero degradation, and absolute zero extractable contamination.</p>
+
+                    <!-- Architecture 2 -->
+                    <div class="solution-card-extended">
+                        <div>
+                            <span class="solution-badge badge-blue">VOC Abatement</span>
+                            <h3 style="font-size: 18px; margin: 0 0 10px 0; color: #111827;">HPLC Waste Vapor Exhaust Extraction</h3>
+                            <p style="font-size: 13px; color: #666; line-height: 1.5;">Integrated exhaust filter loops containing high-porosity spherical active carbon and PTFE particulate barriers to trap toxic organic vapors from waste containers.</p>
+                            <ul class="solution-features-list">
+                                <li>Captures 99.5%+ volatile solvent vapors</li>
+                                <li>Breakthrough color indicator mechanism</li>
+                                <li>Fits universal GL45 & S60/61 waste jugs</li>
+                            </ul>
+                        </div>
+                        <a href="mailto:dora@koyinta.com?subject=Inquiry: HPLC Waste Vapor Extraction Architecture" class="cta-btn-card">Request Architecture Spec</a>
                     </div>
-                    <div class="card">
-                        <h3>Single-Pass High-Speed Calibration</h3>
-                        <p>Advanced hydraulic configuration balancing flow rate and dampening pressure spikes, ensuring flawless jetting uniformity across wide-format corrugated and textile print beds.</p>
+
+                    <!-- Architecture 3 -->
+                    <div class="solution-card-extended">
+                        <div>
+                            <span class="solution-badge badge-blue">Chromatography Components</span>
+                            <h3 style="font-size: 18px; margin: 0 0 10px 0; color: #111827;">Ultra-Pure Fluidic Manifolds & Fittings</h3>
+                            <p style="font-size: 13px; color: #666; line-height: 1.5;">Inert PEEK, PTFE, and PVDF fluidic connections, sink filters, and inline bubble traps engineered for high-pressure analytical instruments and bio-monitored loops.</p>
+                            <ul class="solution-features-list">
+                                <li>Zero dead volume internal geometries</li>
+                                <li>Full pH 1–14 chemical compatibility</li>
+                                <li>Custom OEM porting and laser marking</li>
+                            </ul>
+                        </div>
+                        <a href="mailto:dora@koyinta.com?subject=Inquiry: Pure Fluidic Components Architecture" class="cta-btn-card">Request Architecture Spec</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Industrial Digital Inkjet Systems -->
+        <section class="section section-light" style="background-color: #f9fafb;">
+            <div class="container">
+                <h2 class="section-title">Industrial Inkjet Fluid System Architectures</h2>
+                <p class="section-desc">Custom fluid lines tailored according to specific rheological ink behaviors, hydraulic shear thresholds, and printhead mechanical constraints.</p>
+
+                <div class="grid-3" style="margin-top: 30px;">
+                    <!-- Industrial Solution 1 -->
+                    <div class="solution-card-extended">
+                        <div>
+                            <span class="solution-badge badge-dark">High-Density Suspension</span>
+                            <h3 style="font-size: 18px; margin: 0 0 10px 0; color: #111827;">High-Opacity White Ink Systems</h3>
+                            <p style="font-size: 13px; color: #666; line-height: 1.5;">Integrated anti-sedimentation loops and continuous mechanical recirculation setups that keep heavy Titanium Dioxide (TiO₂) particles in stable suspension without nozzle clogging.</p>
+                            <ul class="solution-features-list">
+                                <li>Anti-sedimentation disc filter integration</li>
+                                <li>High-flow rate hydraulic balancing</li>
+                                <li>Reduces printhead downtime by 85%</li>
+                            </ul>
+                        </div>
+                        <a href="mailto:dora@koyinta.com?subject=Inquiry: White Ink Recirculation Solution" class="cta-btn-card">Consult Systems Engineer</a>
+                    </div>
+
+                    <!-- Industrial Solution 2 -->
+                    <div class="solution-card-extended">
+                        <div>
+                            <span class="solution-badge badge-dark">Corrosive Chemistry</span>
+                            <h3 style="font-size: 18px; margin: 0 0 10px 0; color: #111827;">Aggressive Solvent & UV Lines</h3>
+                            <p style="font-size: 13px; color: #666; line-height: 1.5;">Complete fluid paths configured with certified 100% PTFE, FFKM, and photophobic polymers. Zero swelling, zero degradation, and absolute zero extractable contamination.</p>
+                            <ul class="solution-features-list">
+                                <li>100% UV-block housing composites</li>
+                                <li>Eliminates monomer pre-curing in chambers</li>
+                                <li>Extreme chemical solvent tolerance</li>
+                            </ul>
+                        </div>
+                        <a href="mailto:dora@koyinta.com?subject=Inquiry: Corrosive Solvent & UV Line Solution" class="cta-btn-card">Consult Systems Engineer</a>
+                    </div>
+
+                    <!-- Industrial Solution 3 -->
+                    <div class="solution-card-extended">
+                        <div>
+                            <span class="solution-badge badge-dark">High-Speed Single-Pass</span>
+                            <h3 style="font-size: 18px; margin: 0 0 10px 0; color: #111827;">Single-Pass High-Speed Calibration</h3>
+                            <p style="font-size: 13px; color: #666; line-height: 1.5;">Advanced hydraulic configuration balancing flow rate and dampening pressure spikes, ensuring flawless jetting uniformity across wide-format corrugated and textile print beds.</p>
+                            <ul class="solution-features-list">
+                                <li>Pulse-dampening flow path designs</li>
+                                <li>Low pressure drop sub-micron capsule filters</li>
+                                <li>Scalable multi-printhead manifold setups</li>
+                            </ul>
+                        </div>
+                        <a href="mailto:dora@koyinta.com?subject=Inquiry: Single-Pass High-Speed Calibration Solution" class="cta-btn-card">Consult Systems Engineer</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 KOYINTA. All rights reserved.</p>
+    <!-- Unified Footer Structure with WhatsApp Integration -->
+    <footer class="site-footer" style="background-color: #111827; color: #ffffff; padding: 40px 0; border-top: 1px solid #1f2937;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+            <div>
+                <p style="margin: 0; color: #9ca3af; font-size: 14px;">&copy; 2026 KOYINTA. All rights reserved.</p>
+            </div>
+            <!-- Professional WhatsApp Integration -->
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#10b981" viewBox="0 0 24 24" style="display: inline-block; vertical-align: middle;">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.232 5.235.001 11.64.001c3.106.001 6.027 1.211 8.225 3.413 2.199 2.201 3.408 5.123 3.407 8.23-.003 6.406-5.235 11.638-11.64 11.638-2.017-.001-4.004-.523-5.766-1.517L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.925 1.451 5.35.002 9.704-4.354 9.706-9.708.001-2.595-1.007-5.034-2.842-6.87C16.599 2.19 14.162 1.182 11.57 1.181c-5.353 0-9.706 4.354-9.709 9.708-.001 1.83.495 3.614 1.436 5.197l-.985 3.593 3.684-.966zm10.155-6.853c-.279-.14-1.647-.812-1.902-.906-.256-.094-.442-.14-.628.14-.186.279-.718.906-.88 1.092-.162.186-.324.21-.603.07-.279-.14-1.18-.435-2.247-1.387-.83-.741-1.39-1.655-1.552-1.934-.163-.28-.017-.43.123-.569.126-.125.279-.325.419-.489.14-.163.186-.279.279-.465.093-.186.046-.349-.023-.489-.069-.14-.628-1.512-.86-2.07-.226-.544-.455-.47-.628-.478-.162-.007-.349-.009-.535-.009-.186 0-.489.07-.745.349-.256.279-.977.954-.977 2.329s1.001 2.701 1.14 2.887c.14.186 1.967 3.003 4.767 4.21 2.33 1.004 2.802.804 3.302.757.5-.047 1.647-.674 1.88-1.325.233-.651.233-1.21.163-1.325-.069-.115-.256-.185-.535-.326z"/>
+                </svg>
+                <a href="https://wa.me/8618225843084" target="_blank" style="color: #10b981; text-decoration: none; font-weight: 600; font-size: 14px;">
+                    Urgent Technical Support via WhatsApp
+                </a>
+            </div>
             <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="products.html">Products</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="index.html" style="color: #9ca3af; text-decoration: none; margin-left: 20px; font-size: 14px;">Home</a>
+                <a href="products.html" style="color: #9ca3af; text-decoration: none; margin-left: 20px; font-size: 14px;">Products</a>
+                <a href="about.html" style="color: #9ca3af; text-decoration: none; margin-left: 20px; font-size: 14px;">About</a>
+                <a href="contact.html" style="color: #9ca3af; text-decoration: none; margin-left: 20px; font-size: 14px;">Contact</a>
             </div>
         </div>
     </footer>
